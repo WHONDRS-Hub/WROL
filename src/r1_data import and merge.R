@@ -36,7 +36,7 @@ glimpse(indices)
 
 ##1.4 Load Other Chemistry  (ID = dataset, sample #)
 ##' WROL 
-chem_wrol <- read_csv(paste0(here, "/data/ancillary chemistry/wrol_chem_20230711.csv")) %>% 
+chem_wrol <- read_csv(paste0(here, "/data/ancillary chemistry/wrol_chem_20230915.csv")) %>% 
   drop_na(wrol_sample_id) %>% 
   mutate(.after = whondrs_id,
          dataset = "WROL",
@@ -45,12 +45,11 @@ chem_wrol <- read_csv(paste0(here, "/data/ancillary chemistry/wrol_chem_20230711
   drop_na(sample_n) %>% 
   left_join(., meta %>% select(sample, dataset, sample_n),
             by = c("dataset", "sample_n")) %>% 
-  drop_na(sample) %>% 
+  drop_na(sample) %>% #Some HRMS samples excluded due to poor mass calibration
   rename("DOC_mgL" = "DOC",
          "TN_mgL" = "TN") %>% 
   select(sample, DOC_mgL, TN_mgL, t, c, uva254, S275295, suva254) %>% 
   mutate(across(.cols = DOC_mgL:suva254, .fns = as.numeric))
-
 
 
 #Check for duplicates
@@ -58,6 +57,7 @@ chem_wrol %>% count(sample) %>% filter(n>1)
 
 
 ##' Yakima from RC2 data release (ID = Sample Name)
+#Does this need to be updated after revising data release?
 chem_yrb <- read_csv(paste0(here, "/data/ancillary chemistry/RC2_NPOC_TN_DIC_TSS_Ions_Summary_2021-2022.csv"),
                      skip = 2) %>% 
   slice(-c(1:11, 205)) %>% 
@@ -77,7 +77,7 @@ chem <- bind_rows(chem_wrol, chem_yrb)
 ##1.5 Load travel time
 ##' WROL sites (ID = dataset, sample_n)
 ##' 
-tt <- read_csv(paste0(here, "/data/travel time/meta_tt_fromTedB_18Aug2023.csv")) %>% 
+tt <- read_csv(paste0(here, "/data/travel time/meta_tt_fromTedB_18Aug2023_tb.csv")) %>% 
   select(sample, tt_hr, q_daily_cms) %>% 
   mutate(across(.cols = tt_hr:q_daily_cms, .fns = as.numeric))
 

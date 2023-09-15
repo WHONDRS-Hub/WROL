@@ -22,18 +22,18 @@ sample_ids <- trans %>% select(sample) %>%
 #   mutate(diff = lead(sample_n) - sample_n)
 
 #Check for duplicates
-sample_ids %>% group_by(dataset) %>% count(sample) %>% filter(n>1)
+sample_ids %>% group_by(dataset) %>% count() %>% filter(n>1)
 #no duplicates
 
 #Get site, date and sample number from WROL dataset
-wrol_meta <- read_csv(paste0(here, "/data/ancillary chemistry/wrol_chem_20230711_kr.csv")) %>% 
-  drop_na(wrol_sample_id) %>% 
+wrol_meta <- read_csv(paste0(here, "/data/ancillary chemistry/wrol_chem_20230915.csv")) %>% 
   mutate(.after = whondrs_id,
          dataset = "WROL",
          sample_n = as.numeric(whondrs_id),
          Date = dmy(sample_date),
          site_description = Watershed) %>%
-  select(Site, Date, sample_n, Watershed, site_description) %>% 
+  select(Site, Date, sample_n, Watershed, site_description, 
+         season_tb, wrol_mo_end_member) %>% 
   drop_na(sample_n) 
 
 #Check for duplicates
@@ -58,14 +58,16 @@ yrb_meta2 <- sample_ids %>% filter(dataset == "YRB") %>%
 yrb_meta2 %>% count(sample_n) %>% filter(n>1)
 #No duplicates
 
-#bind samples together
-meta <- bind_rows(wrol_meta2, yrb_meta2)
+#Add manual season classification from Ted B. just for YRB
+seasons_yrb <- read_csv(paste0(here, "/data/ancillary chemistry/seasons_yrb.csv")) %>% 
+  select(sample, season_tb)
 
-#1.0 Load manual season classification----
-seasons <- read_csv(paste0(here, "/data/ancillary chemistry/Seasons_FromTedB_KR2.csv")) %>% 
-  select(sample, season_tb, wrol_mo_end_member)
+yrb_meta3 <- yrb_meta2 %>% left_join(., seasons_yrb, by = "sample")
 
-#1.1 Add seasons ---- 
+#1.0 Combine metadata tables together
+meta <- bind_rows(wrol_meta2, yrb_meta3)
+
+#1.1 Add other season classes ---- 
 meta2 <- meta %>% 
   mutate(Month = month(Date),
          season = factor(case_when(Month %in% c(12, 1, 2) ~ "Winter",
@@ -75,8 +77,7 @@ meta2 <- meta %>%
          season_n = factor(case_when(Month %in% c(12, 1, 2) ~ 1,
                                      Month %in% 3:5 ~ 2,
                                      Month %in% 6:8 ~ 3,
-                                     Month %in% 9:11 ~ 4))) %>% 
-  left_join(., seasons, by = "sample")
+                                     Month %in% 9:11 ~ 4)))
 
 
 saveRDS(meta2, paste0(here, "/output/meta.Rds"))

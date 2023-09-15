@@ -15,7 +15,7 @@ library(ggpubr)
 meta <- readRDS(paste0(here, "/output/meta.Rds")) 
 sites <- meta$Site %>% as_factor() #52 Sites
 
-geospat <- read_csv(paste0(here, "/data/Geospatial_all_YRB_WROL_2023-05-01.csv"))
+geospat <- read_csv(paste0(here, "/data/geospat/Geospatial_all_YRB_WROL_2023-05-01.csv"))
 #Only 49 Sites from geospatial analysis
 
 sites_missing <- setdiff(sites, geospat$site)
@@ -23,8 +23,15 @@ sites_missing <- setdiff(sites, geospat$site)
 
 geospat %>% count(site) %>% filter(n>1) #no duplicated site names
 glimpse(geospat)
+
+#Add additional site info
+geospat_add <- read_csv(paste0(here, "/data/geospat/geospat_additional_sites_20230915.csv"))
+
+#Join
+geospat2 <- bind_rows(geospat, geospat_add) 
+  
 #Select targeted geospatial variables
-geospat2 <- geospat %>% 
+geospat3 <- geospat2 %>% 
   select(site, streamorde, ElevWs, #mean elevation in meters
          TmeanSite, #mean 30 year temperature in Celsius for selected years
          PrecipSite, #mean 30 year precipitation (mm)
@@ -50,22 +57,12 @@ geospat2 <- geospat %>%
          SandWs, #mean percent sand content of soils
          PermWs, #mean permeability of soils (cm/hour)
   )
-glimpse(geospat2)
-# saveRDS(geospat2, paste0(here, "/output/geospat_selected.Rds"))
-
-#Save remaining sites for filling data
-geospat_to_fill <- geospat2[0,] %>% add_row(site = sites_missing) %>% drop_na(site)
-write_csv(geospat_to_fill, paste0(here, "/output/geospat/geospat_to_fill.csv"))
-geospat_filled <- read_csv(paste0(here, "/output/geospat/geospat_to_fill_kr.csv"),
-                           skip = 1) %>% 
-  convert_as_factor(vars = c("site"#, "streamorde"
-                             ))
+glimpse(geospat3)
 
 
-geospat3 <- geospat2 %>% 
+geospat4 <- geospat3 %>% 
   convert_as_factor(vars = c("site"#, "streamorde"
                              )) %>% 
-  bind_rows(., geospat_filled) %>% 
   left_join(., meta %>% select(Site, Watershed), by = c("site" = "Site")) %>% 
   select(Watershed, site, everything()) %>% 
   distinct(site, .keep_all = TRUE) %>% 
@@ -73,16 +70,15 @@ geospat3 <- geospat2 %>%
   column_to_rownames(var = "site") %>% 
   drop_na(streamorde)
 
-gg_miss_var(geospat3) #No missing geospatial data per site
-
+gg_miss_var(geospat4) #3 sites missing some data
 
 
 
 #2.0 PCA----
 ##2.1 Define input variables----
-vars_active <- names(geospat3[,3:length(geospat3)])
-vars_supl <- names(geospat3[,1:2])
-vars_watershed <- geospat3 %>% 
+vars_active <- names(geospat4[,3:length(geospat4)])
+vars_supl <- names(geospat4[,1:2])
+vars_watershed <- geospat4 %>% 
   select(streamorde,
          ElevWs, #mean elevation in meters
          TmeanSite, #mean 30 year temperature in Celsius for selected years
@@ -103,7 +99,7 @@ vars_watershed <- geospat3 %>%
          PctConif2019Ws #percent deciduous forest
   ) %>% names()
 
-vars_lulc <- geospat3 %>% 
+vars_lulc <- geospat4 %>% 
   select(PctConif2019Ws, #percent deciduous forest,
          PctOw2019Ws, #percent open water in 2019
          PctMxFst2019Ws, #percent mixed forest
@@ -125,21 +121,21 @@ vars_lulc <- geospat3 %>%
   ) %>% names()
 
 #plot QQ plots to visually inspect for normality
-geospat3 %>% 
+geospat4 %>% 
   pivot_longer(all_of(vars_active)) %>% 
   group_by(name) %>% 
   ggqqplot("value", facet.by = "name", scale = "free")
-geospat3 %>% 
+geospat4 %>% 
   pivot_longer(all_of(vars_watershed)) %>% 
   group_by(name) %>% 
   ggqqplot("value", facet.by = "name", scale = "free")
-geospat3 %>% 
+geospat4 %>% 
   pivot_longer(all_of(vars_lulc)) %>% 
   group_by(name) %>% 
   ggqqplot("value", facet.by = "name", scale = "free")
 
 #Assess overall correlations
-corr <- cor(geospat3 %>% select(all_of(vars_active)))
+corr <- cor(geospat4 %>% select(all_of(vars_active)))
 png(height=6, width=6, units = "in", res = 500,
     file=paste0(here, "/output/geospat/corrplot_active.png"),
     type = "cairo")
@@ -150,24 +146,24 @@ dev.off()
 
 
 #get column indices for PCA input
-pca_vars_active <- match(vars_active, names(geospat3))
-pca_vars_supl <- match(vars_supl, names(geospat3))
-pca_vars_watershed <- match(vars_watershed, names(geospat3))
-pca_vars_lulc <- match(vars_lulc, names(geospat3))
+pca_vars_active <- match(vars_active, names(geospat4))
+pca_vars_supl <- match(vars_supl, names(geospat4))
+pca_vars_watershed <- match(vars_watershed, names(geospat4))
+pca_vars_lulc <- match(vars_lulc, names(geospat4))
 
 ##2.2 Run PCA----
-rownames(geospat3)
-res.pca_active <- PCA(X = geospat3, scale.unit = TRUE,
+rownames(geospat4)
+res.pca_active <- PCA(X = geospat4, scale.unit = TRUE,
                quali.sup = pca_vars_supl)
-res.pca_watershed <-PCA(X = geospat3 %>% 
+res.pca_watershed <-PCA(X = geospat4 %>% 
                           select(all_of(c(pca_vars_supl, pca_vars_watershed))),
                         scale.unit = TRUE,
                         quali.sup = pca_vars_supl)
-res.pca_lulc <-PCA(X = geospat3 %>% 
+res.pca_lulc <-PCA(X = geospat4 %>% 
                           select(all_of(c(pca_vars_supl, pca_vars_lulc))),
                         scale.unit = TRUE,
                         quali.sup = pca_vars_supl)
-res.pca_lulc_west <-PCA(X = geospat3 %>% 
+res.pca_lulc_west <-PCA(X = geospat4 %>% 
                           filter(Watershed != "Connecticut") %>% 
                           select(all_of(c(pca_vars_supl, pca_vars_lulc))),
                    scale.unit = TRUE,
@@ -324,10 +320,10 @@ fviz_contrib(res.pca_lulc_west, choice = "var", axes = 2, top = 100)
 ###Sand, Clay, Deciduous, and Conifer are driving variability###
 
 ##2.4Extract PCA loadings----
-geospat4 <- pca_ind_lulc$coord %>% as_tibble() %>% 
+geospat5 <- pca_ind_lulc$coord %>% as_tibble() %>% 
   rownames_to_column(var = "rowid") %>% 
   mutate(across(rowid, as.integer)) %>% 
-  left_join(geospat3 %>% rownames_to_column("site"), ., by = "rowid") %>% 
+  left_join(geospat4 %>% rownames_to_column("site"), ., by = "rowid") %>% 
   select(-c(rowid, Dim.3, Dim.4, Dim.5)) %>% 
   rename("lulc_pca1" = "Dim.1",
          "lulc_pca2" = "Dim.2") %>% 
@@ -336,7 +332,7 @@ geospat4 <- pca_ind_lulc$coord %>% as_tibble() %>%
          claysand_decidconif = clay_sand/decid_conif)
 
 #Plot principal components
-ggplot(geospat4) +
+ggplot(geospat5) +
   geom_point(aes(x= lulc_pca1, y= lulc_pca2, color = Watershed),
              size = 4) +
   theme_bw()
@@ -360,11 +356,11 @@ ggsave(paste0(here, "/output/geospat/lulc_pca1v2.png"))
 # geospat2 <- readRDS(paste0(here, "/output/geospat/geospat_indices.Rds"))
 
 #number of types
-k <- geospat4 %>% select(contains("Pct")) %>% colnames() %>% length()
+k <- geospat5 %>% select(contains("Pct")) %>% colnames() %>% length()
 
 #Adapted Shannon Diversity Evenness
 #-sum(proportion type*log proportion for each site)/log(k)
-geospat5 <- geospat4 %>% 
+geospat6 <- geospat5 %>% 
   # rownames_to_column("site") %>% 
   select(Watershed, site, contains("Pct")) %>% 
   pivot_longer(cols = contains("Pct")) %>% 
@@ -377,32 +373,32 @@ geospat5 <- geospat4 %>%
   ungroup() %>% 
   distinct(site, .keep_all = TRUE) %>% 
   select(site, lulc_H, lulc_evenness) %>% 
-  left_join(geospat4, ., by = "site")
+  left_join(geospat5, ., by = "site")
 
 # geospat6 <- geospat5 %>% select(-Watershed)
 # saveRDS(geospat6, paste0(here, "/output/geospat/geospat_indices.Rds"))
 
 #4.0 Plots -----
 
-ggplot(geospat5) +
+ggplot(geospat6) +
   geom_boxplot(aes(x=Watershed, y= lulc_evenness)) +
   geom_jitter(aes(x=Watershed, y= lulc_evenness, color = site), size = 3) +
   theme_bw()
 ggsave(paste0(here, "/output/geospat/lulc_eveness.png"))
 
-ggplot(geospat5) +
+ggplot(geospat6) +
   geom_boxplot(aes(x=Watershed, y= lulc_H)) +
   geom_jitter(aes(x=Watershed, y= lulc_H, color = site), size = 3) +
   theme_bw()
 ggsave(paste0(here, "/output/geospat/lulc_H.png"))
 
-ggplot(geospat5) +
+ggplot(geospat6) +
   geom_point(aes(x=SandWs, y= ClayWs, color = OmWs, shape = Watershed),
              size = 4) +
   theme_bw()
 ggsave(paste0(here, "/output/geospat/clay_sand_om.png"))
 
-ggplot(geospat5) +
+ggplot(geospat6) +
   geom_point(aes(y=ClayWs/SandWs, x= PctConif2019Ws/PctDecid2019Ws, color = Watershed),
              size = 4) +
   scale_x_log10() +
@@ -412,7 +408,7 @@ ggplot(geospat5) +
 ggsave(paste0(here, "/output/geospat/ConDec_ClaySand.png"))
 
 #5.0 SAVE
-saveRDS(geospat5 %>% select(-Watershed),
+saveRDS(geospat6 %>% select(-Watershed),
         paste0(here, "/output/geospat/geospat_indices.Rds"))
 
 
@@ -421,3 +417,13 @@ to_remove <- ls() %>% as_tibble() %>%
   filter(str_detect(value, "here", negate = TRUE)) %>%
   pull()
 rm(list = to_remove)
+
+
+#old code
+#Save remaining sites for filling data
+# geospat_to_fill <- geospat2[0,] %>% add_row(site = sites_missing) %>% drop_na(site)
+# write_csv(geospat_to_fill, paste0(here, "/output/geospat/geospat_to_fill.csv"))
+# geospat_filled <- read_csv(paste0(here, "/output/geospat/geospat_to_fill_kr.csv"),
+#                            skip = 1) %>% 
+#   convert_as_factor(vars = c("site"#, "streamorde"
+#   ))
