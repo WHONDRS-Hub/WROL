@@ -33,7 +33,9 @@ expl_vars <- dat2 %>%
   select(WsAreaSqKm, tt_hr, lulc_evenness, PctDecid2019Ws, PctConif2019Ws) %>% 
   colnames()
 dep_vars <- dat2 %>% 
-  select(DOC_mgL, number.of.peaks, AI_Mod.mean, total.transformations, normalized.transformations) %>% 
+  select(DOC_mgL, number.of.peaks, AI_Mod.mean,
+         # total.transformations, 
+         normalized.transformations) %>% 
   colnames()
 
 #pivot long for DOM metrics representing richness, diversity, and composition (AI)
@@ -46,7 +48,8 @@ dat3 <- dat2 %>%
   mutate(across(where(is.character), as.factor),
          dep_names = fct_relevel(dep_names, "DOC_mgL", "number.of.peaks",
                                  "AI_Mod.mean", 
-                                 "total.transformations", "normalized.transformations"),
+                                 # "total.transformations", 
+                                 "normalized.transformations"),
          expl_names = fct_relevel(expl_names, "WsAreaSqKm", "tt_hr", 
                                   "lulc_evenness", "PctConif2019Ws", "PctDecid2019Ws"))
 
@@ -57,7 +60,8 @@ dat4 <- dat2 %>%
   mutate(across(where(is.character), as.factor),
          dep_names = fct_relevel(dep_names, "DOC_mgL", "number.of.peaks",
                                  "AI_Mod.mean", 
-                                 "total.transformations", "normalized.transformations"),
+                                 # "total.transformations",
+                                 "normalized.transformations"),
          Watershed = fct_relevel(Watershed, "Yakima", "Deschutes", 
                                  "Willamette", "Gunnison", "Connecticut"))
 
@@ -81,7 +85,7 @@ labels <- c(`Yakima` = "Yakima",
             `DOC_mgL` = "DOC (mg/L)",
             `number.of.peaks` = "Num. Peaks",
             `AI_Mod.mean` = "AI",
-            `total.transformations` = "Tot. Trans.",
+            # `total.transformations` = "Tot. Trans.",
             `normalized.transformations` = "Norm. Trans.")
 
 # ggplot(dat) +
@@ -119,46 +123,53 @@ ggsave(paste0(here, "/figs/fs1_DepVarsVsExplVars_AllSamples.png"),
 dat4 %>% ggplot(mapping= aes(x= WsAreaSqKm, y= dep_values)) +
   geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  scale_x_log10() +
+  scale_x_log10(limits = c(10, 10000),
+                breaks = c(1, 10, 100, 1000, 10000),
+                labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
   labs(x = bquote("Watershed Area ("*km^2*")"), y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")),
-                   small.r = TRUE, small.p = TRUE) 
+  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
+                   small.r = TRUE, small.p = TRUE) +
+  theme(axis.text.x = element_text(size= 9))
   
 ggsave(paste0(here, "/figs/f1_DepVarsVsWsArea_ByWatershed.png"),
-       width = 11, height = 8)
+       width = 8, height = 6)
 
 ##4.2 Dependent vars vs Transit Time ----
 dat4 %>% ggplot(mapping= aes(x= tt_hr, y= dep_values)) +
   geom_jitter(width = 0.01) + 
   geom_smooth(method = "lm", se=TRUE) +
-  scale_x_log10() +
+  scale_x_log10(breaks = scales::trans_breaks("log10", function(x) 10^round(x, 0)),
+                labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
   labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")),
-                   small.r = TRUE, small.p = TRUE) 
+  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
+                   small.r = TRUE, small.p = TRUE) +
+  theme(axis.text.x = element_text(size= 9)) +
+  expand_limits(x = 10)
 
 ggsave(paste0(here, "/figs/f2_DepVarsVsWRT_ByWatershed.png"),
-       width = 11, height = 8)
+       width = 8, height = 6)
 
 ##4.3 Dependent vars vs LULC evenness, no log transform ----
 dat4 %>% ggplot(mapping= aes(x= lulc_evenness, y= dep_values)) +
   geom_jitter(width = 0.01) + 
   geom_smooth(method = "lm", se=TRUE) +
-  # scale_x_log10() +
+  # scale_x_continuous(labels = round(x, -1)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
   labs(x = "LULC Evenness", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")),
-                   small.r = TRUE, small.p = TRUE)
-
+  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
+                   small.r = TRUE, small.p = TRUE) +
+  theme(axis.text.x = element_text(size= 9)) 
+  
 ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness_ByWatershed.png"),
-       width = 11, height = 8)
+       width = 8, height = 6)
 
 ##4.4 Dependent vars vs % Coniferous ----
 dat4 %>% ggplot(mapping= aes(x= PctConif2019Ws, y= dep_values)) +
@@ -169,11 +180,12 @@ dat4 %>% ggplot(mapping= aes(x= PctConif2019Ws, y= dep_values)) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
   labs(x = "Coniferous (%)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")),
-                   small.r = TRUE, small.p = TRUE)
+  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
+                   small.r = TRUE, small.p = TRUE) +
+  theme(axis.text.x = element_text(size= 9))
 
 ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_ByWatershed.png"),
-       width = 11, height = 8)
+       width = 8, height = 6)
 
 ##4.5 Dependent vars vs % Deciduous ----
 #Exclude watersheds with mostly <1% deciduous cover
@@ -187,8 +199,9 @@ dat4 %>%
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
   labs(x = "Deciduous (%)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")),
-                   small.r = TRUE, small.p = TRUE)
+  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
+                   small.r = TRUE, small.p = TRUE) +
+  theme(axis.text.x = element_text(size= 9)) 
 
 ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid_ByWatershed.png"),
        width = 8, height = 10)
