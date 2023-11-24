@@ -115,17 +115,21 @@ lm_log_mods_watershed <- dat3 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
-         RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
+         RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2))),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values_log))) %>% 
   unnest(glance)
 
 lm_log_mods_watershed2 <- lm_log_mods_watershed %>% 
-  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df) %>% 
-  mutate(p = case_when(p.value < 0.05 ~ "< 0.05",
+  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
+  mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
                        TRUE ~ "n.s.")) %>% 
   mutate(r.sq.adj = case_when(p != "n.s." ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
+         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+                                                   formatC(round(r, 2), format = 'f',
+                                                                      digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
 
 write_csv(lm_log_mods_watershed2, paste0(here, "/figs/tables/lm_log_mods_watershed.csv"))
@@ -143,17 +147,21 @@ lm_log_mean_watershed <- dat5 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values_log, use = "e")),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
 lm_log_mean_watershed2 <- lm_log_mods_watershed %>% 
-  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df) %>% 
+  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
   mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
                        TRUE ~ "n.s.")) %>% 
   mutate(r.sq.adj = case_when(p != "n.s." ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
+         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+                                                   formatC(round(r, 2), format = 'f',
+                                                           digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
 
 write_csv(lm_log_mean_watershed2, paste0(here, "/figs/tables/lm_log_mean_watershed.csv"))
@@ -167,17 +175,21 @@ lm_mods_watershed <- dat3 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values)),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
 lm_mods_watershed2 <- lm_mods_watershed %>% 
-  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df) %>% 
+  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
   mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
                        TRUE ~ "n.s.")) %>% 
   mutate(r.sq.adj = case_when(p != "n.s." ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
+         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+                                                   formatC(round(r, 2), format = 'f',
+                                                           digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
 
 write_csv(lm_mods_watershed2, paste0(here, "/figs/tables/lm_mods_watershed.csv"))
@@ -191,24 +203,28 @@ lm_mods_mean_watershed <- dat5 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values)),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
 lm_mods_mean_watershed2 <- lm_mods_mean_watershed %>% 
-  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df) %>% 
+  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
   mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
                        TRUE ~ "n.s.")) %>% 
   mutate(r.sq.adj = case_when(p != "n.s." ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
+         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+                                                   formatC(round(r, 2), format = 'f',
+                                                           digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
 
 write_csv(lm_mods_mean_watershed2, paste0(here, "/figs/tables/lm_mods_mean_watershed.csv"))
 
 
 #5.0 Plots----
-##5.1 Mean dependent vars vs Watershed Area
+##5.1 Mean dependent vars vs Watershed Area----
 #plotting averaged data by site
 stats <- lm_log_mean_watershed2 %>% 
   filter(expl_names == "WsAreaSqKm")
@@ -239,7 +255,7 @@ dat5 %>%
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = bquote("Watershed Area ("*km^2*")"), y = "Dependent Variables") +
   geom_text(data = stats, 
-            mapping = aes(x = x_pos, y = y_pos, label = r2_labels),
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
@@ -274,7 +290,7 @@ dat4 %>% ggplot(mapping= aes(x= WsAreaSqKm, y= dep_values)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = bquote("Watershed Area ("*km^2*")"), y = "Dependent Variables") +
   geom_text(data = stats, 
-            mapping = aes(x = x_pos, y = y_pos, label = r2_labels),
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
@@ -313,7 +329,7 @@ dat5 %>%
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
   geom_text(data = stats, 
-            mapping = aes(x = x_pos, y = y_pos, label = r2_labels),
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
@@ -323,7 +339,7 @@ dat5 %>%
 ggsave(paste0(here, "/figs/f2_DepVarsVsWRT_mean.png"),
        width = 8, height = 6)
 
-##5.4 Dependent variable vs Water Residence Time ---
+##5.4 Dependent variable vs Water Residence Time ----
 stats <- lm_log_mods_watershed2 %>% 
   filter(expl_names == "tt_hr")
 
@@ -348,7 +364,7 @@ dat4 %>% ggplot(mapping= aes(x= tt_hr, y= dep_values)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
   geom_text(data = stats, 
-            mapping = aes(x = x_pos, y = y_pos, label = r2_labels),
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
@@ -360,61 +376,159 @@ ggsave(paste0(here, "/figs/f2_DepVarsVsWRT.png"),
 
 
 
+##5.5 Dependent vars vs LULC evenness, no log transform ----
+stats <- lm_mods_watershed2 %>% 
+  filter(expl_names == "lulc_evenness")
 
+label_coord <- dat3 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 0.25,#max(expl_values, na.rm = T)*0.9,
+         y_pos = max(dep_values, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "lulc_evenness") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
 
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names"))
 
-
-##4.2 Dependent vars vs Transit Time ----
-dat4 %>% ggplot(mapping= aes(x= tt_hr, y= dep_values)) +
-  geom_jitter(width = 0.01) + 
-  geom_smooth(method = "lm", se=TRUE) +
-  scale_x_log10(breaks = scales::trans_breaks("log10", function(x) 10^round(x, 0)),
-                labels = scales::trans_format("log10", scales::math_format(10^.x))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
-                   small.r = TRUE, small.p = TRUE) +
-  theme(axis.text.x = element_text(size= 9)) +
-  expand_limits(x = 10)
-
-ggsave(paste0(here, "/figs/f2_DepVarsVsWRT_ByWatershed.png"),
-       width = 8, height = 6)
-
-##4.3 Dependent vars vs LULC evenness, no log transform ----
 dat4 %>% ggplot(mapping= aes(x= lulc_evenness, y= dep_values)) +
-  geom_jitter(width = 0.01) + 
+  geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  # scale_x_continuous(labels = round(x, -1)) +
+  scale_x_continuous(limits = c(0,0.7)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "LULC Evenness", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
-  labs(x = "LULC Evenness", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
-                   small.r = TRUE, small.p = TRUE) +
-  theme(axis.text.x = element_text(size= 9)) 
-  
-ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness_ByWatershed.png"),
+  theme(axis.text.x = element_text(size= 9))
+
+ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness.png"),
        width = 8, height = 6)
 
-##4.4 Dependent vars vs % Coniferous ----
+##5.6  Mean dependent vars vs LULC evenness, no log transform ----
+stats <- lm_mods_mean_watershed2 %>% 
+  filter(expl_names == "lulc_evenness")
+
+label_coord <- dat5 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 0.25,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "lulc_evenness") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
+
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names"))
+
+dat5 %>% 
+  pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
+  ggplot() +
+  geom_jitter(data = dat4, mapping= aes(x= lulc_evenness, y = dep_values),
+              width = 0.02, shape = 1) + 
+  geom_point(mapping= aes(x= lulc_evenness, y = dep_mean)) + 
+  geom_errorbar(mapping= aes(x= lulc_evenness, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
+  geom_smooth(mapping= aes(x= lulc_evenness, y = dep_mean), method = "lm", se=TRUE) +
+  scale_x_continuous(limits = c(0, 0.7)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "LULC Evenness", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
+  facet_grid(rows = vars(dep_names), cols = vars(Watershed),
+             labeller = as_labeller(labels), scales = "free") +
+  theme(axis.text.x = element_text(size= 9))
+
+ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness_mean.png"),
+       width = 8, height = 6)
+
+
+
+
+##5.7 Dependent vars vs coniferous, no log transform ----
+stats <- lm_mods_watershed2 %>% 
+  filter(expl_names == "PctConif2019Ws")
+
+label_coord <- dat3 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 50, #max(expl_values, na.rm = T)*0.5,
+         y_pos = max(dep_values, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "PctConif2019Ws") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
+
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names"))
+
 dat4 %>% ggplot(mapping= aes(x= PctConif2019Ws, y= dep_values)) +
   geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  # scale_x_log10() +
+  scale_x_continuous(limits = c(0,100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "Coniferous (%)", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
-  labs(x = "Coniferous (%)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
-                   small.r = TRUE, small.p = TRUE) +
   theme(axis.text.x = element_text(size= 9))
 
-ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_ByWatershed.png"),
+ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif.png"),
        width = 8, height = 6)
 
-##4.5 Dependent vars vs % Deciduous ----
+##5.8  Mean dependent vars vs LULC evenness, no log transform ----
+stats <- lm_mods_mean_watershed2 %>% 
+  filter(expl_names == "PctConif2019Ws")
+
+label_coord <- dat5 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 50,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "PctConif2019Ws") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
+
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names"))
+
+dat5 %>% 
+  pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
+  ggplot() +
+  geom_jitter(data = dat4, mapping= aes(x= PctConif2019Ws, y = dep_values),
+              width = 0.02, shape = 1) + 
+  geom_point(mapping= aes(x= PctConif2019Ws, y = dep_mean)) + 
+  geom_errorbar(mapping= aes(x= PctConif2019Ws, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
+  geom_smooth(mapping= aes(x= PctConif2019Ws, y = dep_mean), method = "lm", se=TRUE) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "Coniferous (%)", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
+  facet_grid(rows = vars(dep_names), cols = vars(Watershed),
+             labeller = as_labeller(labels), scales = "free") +
+  theme(axis.text.x = element_text(size= 9))
+
+ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_mean.png"),
+       width = 8, height = 6)
+
+
+
+
+
+
+
+
+##5.9 Dependent vars vs % Deciduous ----
 #Exclude watersheds with mostly <1% deciduous cover
 dat4 %>% 
   filter(Watershed %in% c("Gunnison", "Connecticut")) %>%
@@ -500,6 +614,17 @@ dat4 %>%
 ggsave(paste0(here, "/figs/fs5_DepVarsBoxplot_BySeason.png"),
        width = 8, height = 8)
 
+
+
+
+#clean environment
+to_remove <- ls() %>% as_tibble() %>%
+  filter(str_detect(value, "here", negate = TRUE)) %>%
+  pull()
+rm(list = to_remove)
+
+
+#Other----
 #6.0 Correlation Tables ----
 ##6.1 Linear correlation with all variables, Watersheds combined ----
 lm_mods_all <- dat3 %>%
@@ -524,8 +649,8 @@ write_csv(lm_mods_all2, paste0(here, "/figs/tables/lm_mods_all.csv"))
 ##6.2 Linear correlation with all variables, Watersheds combined log transformed ----
 lm_log_mods_all <- dat3 %>% 
   mutate(expl_values2 = case_when(expl_names == "PctDecid2019Ws" & 
-                                   expl_values == 0 ~ 0.01,
-                                 TRUE ~ expl_values),
+                                    expl_values == 0 ~ 0.01,
+                                  TRUE ~ expl_values),
          expl_values_log = log10(expl_values2)) %>% 
   group_by(expl_names, dep_names) %>% 
   nest() %>% 
@@ -593,16 +718,6 @@ lm_log_mods_watershed2 <- lm_log_mods_watershed %>%
 
 write_csv(lm_log_mods_watershed2, paste0(here, "/figs/tables/lm_log_mods_watershed.csv"))
 
-
-
-#clean environment
-to_remove <- ls() %>% as_tibble() %>%
-  filter(str_detect(value, "here", negate = TRUE)) %>%
-  pull()
-rm(list = to_remove)
-
-
-#Other----
 ## Plot of all explanatory vs dependent variables, all samples combined ----
 
 # dat3 %>% ggplot(mapping= aes(x= expl_values, y= dep_values)) +
