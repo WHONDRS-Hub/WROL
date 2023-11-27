@@ -5,7 +5,7 @@ library(tidyverse)
 # library(ggpubr)
 # library(ggpmisc)
 library(naniar)
-# library(rstatix)
+library(rstatix)
 
 #1.0 Input and Rearrange Data----
 dat <- readRDS(paste0(here, "/output/dat_wide.Rds")) %>% 
@@ -39,7 +39,7 @@ dep_vars <- dat2 %>%
   colnames()
 
 #pivot long for DOM metrics representing richness, diversity, and composition (AI)
-#pivot long for all explanatory and dependent variables
+#AND pivot long for all explanatory and dependent variables
 dat3 <- dat2 %>% 
   pivot_longer(cols = all_of(dep_vars),
                names_to= "dep_names", values_to = "dep_values") %>% 
@@ -116,7 +116,7 @@ lm_log_mods_watershed <- dat3 %>%
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2))),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values_log))) %>% 
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values_log, use="complete.obs"))) %>% 
   unnest(glance)
 
 lm_log_mods_watershed2 <- lm_log_mods_watershed %>% 
@@ -147,7 +147,7 @@ lm_log_mean_watershed <- dat5 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values_log, use = "e")),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values_log, use="complete.obs")),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
@@ -175,7 +175,7 @@ lm_mods_watershed <- dat3 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values)),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values, use="complete.obs")),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
@@ -203,7 +203,7 @@ lm_mods_mean_watershed <- dat5 %>%
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values)),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values, use="complete.obs")),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
@@ -224,7 +224,7 @@ write_csv(lm_mods_mean_watershed2, paste0(here, "/figs/tables/lm_mods_mean_water
 
 
 #5.0 Plots----
-##5.1 Mean dependent vars vs Watershed Area----
+##5.1a Mean dependent vars vs Watershed Area----
 #plotting averaged data by site
 stats <- lm_log_mean_watershed2 %>% 
   filter(expl_names == "WsAreaSqKm")
@@ -265,7 +265,7 @@ dat5 %>%
 ggsave(paste0(here, "/figs/f1_DepVarsVsWsArea_mean.png"),
        width = 8, height = 6)
 
-##5.2 Dependent vars vs Watershed Area ----
+##5.1b Dependent vars vs Watershed Area ----
 stats <- lm_log_mods_watershed2 %>% 
   filter(expl_names == "WsAreaSqKm")
 
@@ -299,7 +299,8 @@ dat4 %>% ggplot(mapping= aes(x= WsAreaSqKm, y= dep_values)) +
   
 ggsave(paste0(here, "/figs/f1_DepVarsVsWsArea.png"),
        width = 8, height = 6)
-##5.3 Mean Dependent variable vs Water Residence Time----
+
+##5.2a Mean Dependent variable vs Water Residence Time----
 stats <- lm_log_mean_watershed2 %>% 
   filter(expl_names == "tt_hr")
 
@@ -339,7 +340,7 @@ dat5 %>%
 ggsave(paste0(here, "/figs/f2_DepVarsVsWRT_mean.png"),
        width = 8, height = 6)
 
-##5.4 Dependent variable vs Water Residence Time ----
+##5.2b Dependent variable vs Water Residence Time ----
 stats <- lm_log_mods_watershed2 %>% 
   filter(expl_names == "tt_hr")
 
@@ -376,7 +377,7 @@ ggsave(paste0(here, "/figs/f2_DepVarsVsWRT.png"),
 
 
 
-##5.5 Dependent vars vs LULC evenness, no log transform ----
+##5.3a Dependent vars vs LULC evenness, no log transform ----
 stats <- lm_mods_watershed2 %>% 
   filter(expl_names == "lulc_evenness")
 
@@ -409,7 +410,7 @@ dat4 %>% ggplot(mapping= aes(x= lulc_evenness, y= dep_values)) +
 ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness.png"),
        width = 8, height = 6)
 
-##5.6  Mean dependent vars vs LULC evenness, no log transform ----
+##5.3b  Mean dependent vars vs LULC evenness, no log transform ----
 stats <- lm_mods_mean_watershed2 %>% 
   filter(expl_names == "lulc_evenness")
 
@@ -450,7 +451,7 @@ ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness_mean.png"),
 
 
 
-##5.7 Dependent vars vs coniferous, no log transform ----
+##5.4a Dependent vars vs coniferous, no log transform ----
 stats <- lm_mods_watershed2 %>% 
   filter(expl_names == "PctConif2019Ws")
 
@@ -483,7 +484,7 @@ dat4 %>% ggplot(mapping= aes(x= PctConif2019Ws, y= dep_values)) +
 ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif.png"),
        width = 8, height = 6)
 
-##5.8  Mean dependent vars vs LULC evenness, no log transform ----
+##5.4b  Mean dependent vars vs LULC evenness, no log transform ----
 stats <- lm_mods_mean_watershed2 %>% 
   filter(expl_names == "PctConif2019Ws")
 
@@ -524,27 +525,84 @@ ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_mean.png"),
 
 
 
-
-
-
-
-##5.9 Dependent vars vs % Deciduous ----
+##5.5a Dependent vars vs % Deciduous ----
 #Exclude watersheds with mostly <1% deciduous cover
-dat4 %>% 
-  filter(Watershed %in% c("Gunnison", "Connecticut")) %>%
+stats <- lm_mods_mean_watershed2 %>% 
+  filter(expl_names == "PctDecid2019Ws")
+
+label_coord <- dat5 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 50,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "PctDecid2019Ws") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
+
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names")) %>% 
+  filter(Watershed %in% c("Gunnison", "Connecticut"))
+
+dat5 %>% 
+  filter(Watershed %in% c("Gunnison", "Connecticut")) %>% 
+  pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
+  ggplot() +
+  geom_jitter(data = dat4 %>% filter(Watershed %in% c("Gunnison", "Connecticut")),
+              mapping= aes(x= PctDecid2019Ws, y = dep_values),
+              width = 0.02, shape = 1) + 
+  geom_point(mapping= aes(x= PctDecid2019Ws, y = dep_mean)) + 
+  geom_errorbar(mapping= aes(x= PctDecid2019Ws, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
+  geom_smooth(mapping= aes(x= PctDecid2019Ws, y = dep_mean), method = "lm", se=TRUE) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "Deciduous (%)", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
+  facet_grid(rows = vars(dep_names), cols = vars(Watershed),
+             labeller = as_labeller(labels), scales = "free") +
+  theme(axis.text.x = element_text(size= 9))
+
+
+ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid_mean.png"),
+       width = 8, height = 10)
+
+##5.5b ----
+stats <- lm_mods_watershed2 %>% 
+  filter(expl_names == "PctDecid2019Ws")
+
+label_coord <- dat5 %>% 
+  group_by(dep_names, expl_names) %>% 
+  mutate(x_pos = 50,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  ungroup() %>% 
+  distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
+  filter(expl_names == "PctDecid2019Ws") %>% 
+  select(Watershed, dep_names, x_pos, y_pos)
+
+stats <- stats %>% 
+  left_join(., label_coord, by = c("Watershed", "dep_names")) %>% 
+  filter(Watershed %in% c("Gunnison", "Connecticut"))
+
+dat4 %>%
+  filter(Watershed %in% c("Gunnison", "Connecticut")) %>% 
   ggplot(mapping= aes(x= PctDecid2019Ws, y= dep_values)) +
   geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  # scale_x_log10() +
+  scale_x_continuous(limits = c(0,100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
+  labs(x = "Deciduous (%)", y = "Dependent Variables") +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos, y = y_pos, label = r_labels),
+            parse = TRUE,
+            size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free") +
-  labs(x = "Deciduous (%)", y = "Dependent Variables") +
-  stat_correlation(use_label(c("rr", "p")), p.digits = 2,
-                   small.r = TRUE, small.p = TRUE) +
-  theme(axis.text.x = element_text(size= 9)) 
+  theme(axis.text.x = element_text(size= 9))
 
-ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid_ByWatershed.png"),
+
+ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid.png"),
        width = 8, height = 10)
 
 
