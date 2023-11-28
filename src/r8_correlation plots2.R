@@ -100,6 +100,9 @@ labels <- c(`Yakima` = "Yakima",
             # `total.transformations` = "Tot. Trans.",
             `normalized.transformations` = "Norm. Trans.")
 
+dat2 %>% #filter(Watershed == "Willamette") %>% 
+  ggplot()+
+  geom_point(mapping=aes(x=tt_hr, y = Site))
 
 #4.0 Correlations ----
 ## Pearson correlation, all variables, by watershed, explanatory vars log transformed ---- 
@@ -151,7 +154,7 @@ lm_log_mean_watershed <- dat5 %>%
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
-lm_log_mean_watershed2 <- lm_log_mods_watershed %>% 
+lm_log_mean_watershed2 <- lm_log_mean_watershed %>% 
   select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
   mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
                        TRUE ~ "n.s.")) %>% 
@@ -249,7 +252,7 @@ dat5 %>%
   geom_point(mapping= aes(x= WsAreaSqKm, y = dep_mean)) + 
   geom_errorbar(mapping= aes(x= WsAreaSqKm, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
   geom_smooth(mapping= aes(x= WsAreaSqKm, y = dep_mean), method = "lm", se=TRUE) +
-  scale_x_log10(limits = c(10, 10000),
+  scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
@@ -284,7 +287,7 @@ stats <- stats %>%
 dat4 %>% ggplot(mapping= aes(x= WsAreaSqKm, y= dep_values)) +
   geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  scale_x_log10(limits = c(10, 10000),
+  scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
@@ -320,16 +323,16 @@ dat5 %>%
   pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= tt_hr, y = dep_values),
-              width = 0.02, shape = 1) + 
-  geom_point(mapping= aes(x= tt_hr, y = dep_mean)) + 
+              width = 0.1, shape = 1) + 
+  geom_point(mapping= aes(x= tt_hr, y = dep_mean)) +
   geom_errorbar(mapping= aes(x= tt_hr, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
   geom_smooth(mapping= aes(x= tt_hr, y = dep_mean), method = "lm", se=TRUE) +
-  scale_x_log10(limits = c(10, 10000),
+  scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
-  geom_text(data = stats, 
+  geom_text(data = stats,
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
@@ -359,7 +362,7 @@ stats <- stats %>%
 dat4 %>% ggplot(mapping= aes(x= tt_hr, y= dep_values)) +
   geom_jitter(width = 0.02) + 
   geom_smooth(method = "lm", se=TRUE) +
-  scale_x_log10(limits = c(10, 10000),
+  scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
@@ -525,7 +528,7 @@ ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_mean.png"),
 
 
 
-##5.5a Dependent vars vs % Deciduous ----
+##5.5a Mean Dependent vars vs % Deciduous ----
 #Exclude watersheds with mostly <1% deciduous cover
 stats <- lm_mods_mean_watershed2 %>% 
   filter(expl_names == "PctDecid2019Ws")
@@ -568,7 +571,7 @@ dat5 %>%
 ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid_mean.png"),
        width = 8, height = 10)
 
-##5.5b ----
+##5.5b Dependent vars vs % Deciduous----
 stats <- lm_mods_watershed2 %>% 
   filter(expl_names == "PctDecid2019Ws")
 
@@ -601,7 +604,7 @@ dat4 %>%
              labeller = as_labeller(labels), scales = "free") +
   theme(axis.text.x = element_text(size= 9))
 
-#
+
 ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid.png"),
        width = 8, height = 10)
 
