@@ -119,7 +119,10 @@ lm_log_mods_watershed <- dat3 %>%
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2))),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values_log, use="complete.obs"))) %>% 
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_values, .x$expl_values_log, use="complete.obs")),
+         p_cor = map_dbl(.x = data, .f = ~cor.test(.x$dep_values, .x$expl_values_log,
+                                                   alternative = "two.sided",
+                                                   method = "pearson")$p.value)) %>% 
   unnest(glance)
 
 lm_log_mods_watershed2 <- lm_log_mods_watershed %>% 
@@ -151,7 +154,10 @@ lm_log_mean_watershed <- dat5 %>%
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
          r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values_log, use="complete.obs")),
-         RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
+         RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2))),
+         p_cor = map_dbl(.x = data, .f = ~cor.test(.x$dep_mean, .x$expl_values_log,
+                                                   alternative = "two.sided",
+                                                   method = "pearson")$p.value)) %>% 
   unnest(glance)
 
 lm_log_mean_watershed2 <- lm_log_mean_watershed %>% 
@@ -248,22 +254,24 @@ dat5 %>%
   pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= WsAreaSqKm, y = dep_values),
-              width = 0.02, shape = 1) + 
+              width = 0.02, shape = 1, color = "grey") + 
   geom_point(mapping= aes(x= WsAreaSqKm, y = dep_mean)) + 
   geom_errorbar(mapping= aes(x= WsAreaSqKm, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
-  geom_smooth(mapping= aes(x= WsAreaSqKm, y = dep_mean), method = "lm", se=TRUE) +
+  geom_smooth(mapping= aes(x= WsAreaSqKm, y = dep_mean), method = "lm", se=TRUE, fill = "light blue") +
   scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = bquote("Watershed Area ("*km^2*")"), y = "Dependent Variables") +
+  labs(x = bquote("Watershed Area ("*km^2*")"), y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f1_DepVarsVsWsArea_mean.png"),
        width = 8, height = 6)
@@ -286,19 +294,21 @@ stats <- stats %>%
 
 dat4 %>% ggplot(mapping= aes(x= WsAreaSqKm, y= dep_values)) +
   geom_jitter(width = 0.02) + 
-  geom_smooth(method = "lm", se=TRUE) +
+  geom_smooth(method = "lm", se=TRUE, fill = "light blue") +
   scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = bquote("Watershed Area ("*km^2*")"), y = "Dependent Variables") +
+  labs(x = bquote("Watershed Area ("*km^2*")"), y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
   
 ggsave(paste0(here, "/figs/f1_DepVarsVsWsArea.png"),
        width = 8, height = 6)
@@ -323,22 +333,24 @@ dat5 %>%
   pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= tt_hr, y = dep_values),
-              width = 0.1, shape = 1) + 
+              width = 0.1, shape = 1, color = "grey") + 
   geom_point(mapping= aes(x= tt_hr, y = dep_mean)) +
   geom_errorbar(mapping= aes(x= tt_hr, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
-  geom_smooth(mapping= aes(x= tt_hr, y = dep_mean), method = "lm", se=TRUE) +
+  geom_smooth(mapping= aes(x= tt_hr, y = dep_mean), method = "lm", se=TRUE, fill = "light blue") +
   scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
+  labs(x = "Water Residence Time (h)", y = NULL) +
   geom_text(data = stats,
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch= "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f2_DepVarsVsWRT_mean.png"),
        width = 8, height = 6)
@@ -361,19 +373,21 @@ stats <- stats %>%
 
 dat4 %>% ggplot(mapping= aes(x= tt_hr, y= dep_values)) +
   geom_jitter(width = 0.02) + 
-  geom_smooth(method = "lm", se=TRUE) +
+  geom_smooth(method = "lm", se=TRUE, fill = "light blue") +
   scale_x_log10(limits = c(1, 10000),
                 breaks = c(1, 10, 100, 1000, 10000),
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Water Residence Time (h)", y = "Dependent Variables") +
+  labs(x = "Water Residence Time (h)", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f2_DepVarsVsWRT.png"),
        width = 8, height = 6)
@@ -398,17 +412,19 @@ stats <- stats %>%
 
 dat4 %>% ggplot(mapping= aes(x= lulc_evenness, y= dep_values)) +
   geom_jitter(width = 0.02) + 
-  geom_smooth(method = "lm", se=TRUE) +
+  geom_smooth(method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0,0.7)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "LULC Evenness", y = "Dependent Variables") +
+  labs(x = "LULC Evenness", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness.png"),
        width = 8, height = 6)
@@ -433,20 +449,22 @@ dat5 %>%
   pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= lulc_evenness, y = dep_values),
-              width = 0.02, shape = 1) + 
+              width = 0.02, shape = 1, color = "grey") + 
   geom_point(mapping= aes(x= lulc_evenness, y = dep_mean)) + 
   geom_errorbar(mapping= aes(x= lulc_evenness, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
-  geom_smooth(mapping= aes(x= lulc_evenness, y = dep_mean), method = "lm", se=TRUE) +
+  geom_smooth(mapping= aes(x= lulc_evenness, y = dep_mean), method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0, 0.7)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "LULC Evenness", y = "Dependent Variables") +
+  labs(x = "LULC Evenness", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f3_DepVarsVsLulcEvenness_mean.png"),
        width = 8, height = 6)
@@ -472,17 +490,19 @@ stats <- stats %>%
 
 dat4 %>% ggplot(mapping= aes(x= PctConif2019Ws, y= dep_values)) +
   geom_jitter(width = 0.02) + 
-  geom_smooth(method = "lm", se=TRUE) +
+  geom_smooth(method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0,100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Coniferous (%)", y = "Dependent Variables") +
+  labs(x = "Coniferous (%)", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif.png"),
        width = 8, height = 6)
@@ -507,20 +527,22 @@ dat5 %>%
   pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= PctConif2019Ws, y = dep_values),
-              width = 0.02, shape = 1) + 
+              width = 0.02, shape = 1, color = "grey") + 
   geom_point(mapping= aes(x= PctConif2019Ws, y = dep_mean)) + 
   geom_errorbar(mapping= aes(x= PctConif2019Ws, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
-  geom_smooth(mapping= aes(x= PctConif2019Ws, y = dep_mean), method = "lm", se=TRUE) +
+  geom_smooth(mapping= aes(x= PctConif2019Ws, y = dep_mean), method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0, 100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Coniferous (%)", y = "Dependent Variables") +
+  labs(x = "Coniferous (%)", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 ggsave(paste0(here, "/figs/f4_DepVarsVsPctConif_mean.png"),
        width = 8, height = 6)
@@ -552,20 +574,22 @@ dat5 %>%
   ggplot() +
   geom_jitter(data = dat4 %>% filter(Watershed %in% c("Gunnison", "Connecticut")),
               mapping= aes(x= PctDecid2019Ws, y = dep_values),
-              width = 0.02, shape = 1) + 
+              width = 0.02, shape = 1, color ="grey") + 
   geom_point(mapping= aes(x= PctDecid2019Ws, y = dep_mean)) + 
   geom_errorbar(mapping= aes(x= PctDecid2019Ws, ymin = dep_mean-dep_sd, ymax= dep_mean+dep_sd)) +
-  geom_smooth(mapping= aes(x= PctDecid2019Ws, y = dep_mean), method = "lm", se=TRUE) +
+  geom_smooth(mapping= aes(x= PctDecid2019Ws, y = dep_mean), method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0, 100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Deciduous (%)", y = "Dependent Variables") +
+  labs(x = "Deciduous (%)", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 
 ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid_mean.png"),
@@ -592,17 +616,19 @@ dat4 %>%
   filter(Watershed %in% c("Gunnison", "Connecticut")) %>% 
   ggplot(mapping= aes(x= PctDecid2019Ws, y= dep_values)) +
   geom_jitter(width = 0.02) + 
-  geom_smooth(method = "lm", se=TRUE) +
+  geom_smooth(method = "lm", se=TRUE, fill="light blue") +
   scale_x_continuous(limits = c(0,100)) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
-  labs(x = "Deciduous (%)", y = "Dependent Variables") +
+  labs(x = "Deciduous (%)", y = NULL) +
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
-             labeller = as_labeller(labels), scales = "free") +
-  theme(axis.text.x = element_text(size= 9))
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
 
 
 ggsave(paste0(here, "/figs/f5_DepVarsVsPctDecid.png"),
