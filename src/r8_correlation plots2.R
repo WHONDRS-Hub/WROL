@@ -160,6 +160,16 @@ lm_log_mean_watershed <- dat5 %>%
                                                    method = "pearson")$p.value)) %>% 
   unnest(glance)
 
+lm_log_mean_watershed_slopes <- lm_log_mean_watershed %>% 
+  mutate(tidy = map(.x = model, .f = ~broom::tidy(.x))) %>% 
+  select(Watershed, dep_names, expl_names, tidy, r, RMSE, p_cor) %>% 
+  unnest(tidy) %>% 
+  filter(dep_names == "normalized.transformations",
+         expl_names %in% c("WsAreaSqKm", "tt_hr"),
+         term != "(Intercept)") %>% 
+  mutate(dep_incr = estimate * log10(100),
+         pc_dep_incr = (dep_incr/estimate)*100)
+
 lm_log_mean_watershed2 <- lm_log_mean_watershed %>% 
   select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
   mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
