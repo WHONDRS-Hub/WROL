@@ -12,7 +12,11 @@ meta <- readRDS(paste0(here, "/output/meta.Rds"))
 ##Note: metadata missing 3 WROL samples?
 
 ##1.2 Load geospatial - complete for all sites (ID = Site ID)
-geospat <- readRDS(paste0(here, "/output/geospat/geospat_indices.Rds"))
+comids <- read_csv(paste0(here, "/data/travel time/COMIDs.csv")) %>% 
+  select(-Watershed)
+geospat <- readRDS(paste0(here, "/output/geospat/geospat_indices.Rds")) %>% 
+  left_join(., comids, by = c("site" = "Site"))
+
 
 ##1.3 Load FT ICR-MS indices (ID = sample name)
 #Mass difference transformation analysis results
@@ -81,6 +85,28 @@ tt <- read_csv(paste0(here, "/data/travel time/meta_tt_fromTedB_18Aug2023_tb.csv
   select(sample, tt_hr, q_daily_cms) %>% 
   mutate(across(.cols = tt_hr:q_daily_cms, .fns = as.numeric))
 
+##1.6 Water Temperature
+YRB_watT <- read_csv(paste0(here, "/data/waterTemp/RC2_Ultrameter_WaterChem_Summary.csv"),
+                     skip = 26) %>% 
+  select(Date, Site_ID, Ultrameter_Temperature_Mean) %>% 
+  rename("Site" = "Site_ID",
+         "Twat_degC" = "Ultrameter_Temperature_Mean") %>% 
+  left_join(meta, ., by = c("Site", "Date")) %>% 
+  select(sample, Twat_degC) %>% 
+  drop_na(Twat_degC)
+
+WROL_watT <- read_csv(paste0(here, "/data/waterTemp/meta_waterTemp_degC_WROL_tb.csv")) %>% 
+  rename("Twat_degC" = "watTemp_degC") %>% 
+  select(sample, Twat_degC) %>% 
+  drop_na(Twat_degC)
+
+watT <- bind_rows(YRB_watT, WROL_watT)
+
+##1.7 Damkohler Numbers per sample
+Da <- read_csv(paste0(here, "/data/waterTemp/Da_ShaodaLiu.csv")) %>% 
+  rename("depth_m" = "depth",
+         "vf_m_day" = "vf_md") %>% 
+  select(sample, depth_m, vf_m_day, Da)
 
 #2.0 Save input data ----
 
@@ -88,9 +114,17 @@ dat <- list(meta = meta,
           geospat = geospat,
           indices = indices,
           chem = chem, 
-          tt = tt)
+          tt = tt,
+          watT = watT,
+          Da = Da)
 
 saveRDS(dat, paste0(here, "/output/dat_compiled_ls.Rds"))
+
+#clean environment
+to_remove <- ls() %>% as_tibble() %>%
+  filter(str_detect(value, "here", negate = TRUE)) %>%
+  pull()
+rm(list = to_remove)
 
 
 #3.0 Merge data wide ----
@@ -100,6 +134,8 @@ list2env(x=readRDS(paste0(here, "/output/dat_compiled_ls.Rds")),
 dat <- inner_join(meta, geospat, by = c("Site" = "site")) %>% 
   left_join(., indices, by = "sample") %>% 
   left_join(., tt, by = "sample") %>% 
+  left_join(., watT, by = "sample") %>% 
+  left_join(., Da, by = "sample") %>% 
   left_join(., chem, by = "sample")
 glimpse(dat)
 

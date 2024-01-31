@@ -4,6 +4,7 @@ here <- here()
 library(tidyverse)
 library(ggpubr)
 library(naniar)
+library(ggpmisc)
 
 #1.0 Input data----
 # list2env(x=readRDS(paste0(here, "/output/dat_compiled_ls.Rds")),
@@ -33,9 +34,25 @@ t <- get_selection(v)
 dat <- readRDS(paste0(here, "/output/dat_wide.Rds"))
 glimpse(dat)
 
-ggplot(dat) +
-  geom_point(mapping=aes(x=lulc_evenness, y= normalized.transformations,
-                         color = Watershed)) +
+ggplot(data = dat) +
+  geom_point(mapping= aes(x= lulc_evenness, 
+                          # y= NtoC.mean,
+                          y=CHON_norm,
+                          color = Watershed)) +
+  # geom_smooth(mapping= aes(x= tt_hr, y= normalized.transformations), 
+  #             method = "lm", se=TRUE, fill = "light blue") +
+  # stat_poly_eq(use_label(c("eq", "p")),
+  #              mapping= aes(x= tt_hr, y= normalized.transformations)) +
+  scale_x_log10() +
+  theme_bw() +
+  facet_wrap(~Watershed, scales = "free")
+glimpse(dat)
+
+ggplot(data = dat, mapping= aes(x= tt_hr, y= normalized.transformations)) +
+  geom_point() +
+  geom_smooth(method = "lm", se=TRUE, fill = "light blue") +
+  stat_poly_eq(use_label(c("eq", "p", "R2"))) +
+  scale_x_log10() +
   theme_bw()
 
 #check missing data by variable
