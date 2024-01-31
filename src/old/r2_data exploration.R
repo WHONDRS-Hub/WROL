@@ -35,7 +35,7 @@ dat <- readRDS(paste0(here, "/output/dat_wide.Rds"))
 glimpse(dat)
 
 ggplot(data = dat) +
-  geom_point(mapping= aes(x= lulc_evenness, 
+  geom_point(mapping= aes(x= normalized.transformations, 
                           # y= NtoC.mean,
                           y=CHON_norm,
                           color = Watershed)) +
