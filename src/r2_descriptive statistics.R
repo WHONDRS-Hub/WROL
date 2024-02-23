@@ -36,6 +36,7 @@ dat2 <- dat %>%
          CHON,
          CHON_norm,
          number.of.peaks,
+         peaks.with.formula,
          total.transformations, normalized.transformations,
          AI_Mod.mean)
 
@@ -43,7 +44,8 @@ expl_vars <- dat2 %>%
   select(WsAreaSqKm, tt_hr, Da, lulc_evenness, PctDecid2019Ws, PctConif2019Ws) %>% 
   colnames()
 dep_vars <- dat2 %>% 
-  select(DOC_mgL, number.of.peaks, AI_Mod.mean, CHON_norm, CHON,
+  select(DOC_mgL, number.of.peaks, peaks.with.formula,
+         AI_Mod.mean, CHON_norm, CHON,
          # total.transformations, 
          normalized.transformations) %>% 
   colnames()

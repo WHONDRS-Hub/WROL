@@ -54,7 +54,8 @@ dat3 <- dat2 %>%
   pivot_longer(cols = all_of(expl_vars),
                names_to= "expl_names", values_to = "expl_values") %>% 
   mutate(across(where(is.character), as.factor),
-         dep_names = fct_relevel(dep_names, "DOC_mgL", "number.of.peaks",
+         dep_names = fct_relevel(dep_names, "DOC_mgL", "peaks.with.formula",
+                                 # "number.of.peaks",
                                  "AI_Mod.mean", "CHON_norm",
                                  # "total.transformations", 
                                  "normalized.transformations"),
@@ -66,7 +67,8 @@ dat4 <- dat2 %>%
   pivot_longer(cols = all_of(dep_vars),
                names_to= "dep_names", values_to = "dep_values") %>% 
   mutate(across(where(is.character), as.factor),
-         dep_names = fct_relevel(dep_names, "DOC_mgL", "number.of.peaks",
+         dep_names = fct_relevel(dep_names, "DOC_mgL", "peaks.with.formula",
+                                 # "number.of.peaks",
                                  "AI_Mod.mean", "CHON_norm",
                                  # "total.transformations",
                                  "normalized.transformations"),
@@ -103,7 +105,9 @@ dat6 <- dat3 %>%
   #              names_to= "expl_names", values_to = "expl_values") %>% 
   mutate(across(where(is.character), as.factor),
          expl_names = fct_relevel(expl_names, "WsAreaSqKm", "tt_hr", "Da", 
-                                  "lulc_evenness", "PctConif2019Ws", "PctDecid2019Ws"))
+                                  "lulc_evenness", "PctConif2019Ws", "PctDecid2019Ws"),
+         Watershed = fct_relevel(Watershed, "Yakima", "Deschutes", 
+                                 "Willamette", "Gunnison", "Connecticut"))
 
 glimpse(dat6)
 
@@ -170,12 +174,13 @@ lm_log_mods_watershed2 <- lm_log_mods_watershed %>%
 
 write_csv(lm_log_mods_watershed2, paste0(here, "/figs/tables/lm_log_mods_watershed.csv"))
 
-## Pearson correlation, all variables, by watershed, explanatory vars log transformed, mean dep vars ----
-lm_log_mean_watershed <- dat5 %>% 
-  mutate(expl_values2 = case_when(expl_names == "PctDecid2019Ws" & 
-                                    expl_values == 0 ~ 0.01,
-                                  TRUE ~ expl_values),
-         expl_values_log = log10(expl_values2)) %>% 
+## Pearson correlation, all variables, by watershed, explanatory vars log transformed, mean vars ----
+glimpse(dat6)
+lm_log_mean_watershed <- dat6 %>% 
+  mutate(expl_mean2 = case_when(expl_names == "PctDecid2019Ws" & 
+                                    expl_mean == 0 ~ 0.01,
+                                  TRUE ~ expl_mean),
+         expl_values_log = log10(expl_mean2)) %>% 
   group_by(Watershed, expl_names, dep_names) %>% 
   nest() %>% 
   mutate(model = map(data,
@@ -243,16 +248,16 @@ lm_mods_watershed2 <- lm_mods_watershed %>%
 
 write_csv(lm_mods_watershed2, paste0(here, "/figs/tables/lm_mods_watershed.csv"))
 
-## Pearson correlation, all variables, by watershed, mean dep vars ----
-lm_mods_mean_watershed <- dat5 %>% 
+## Pearson correlation, all variables, by watershed, mean vars ----
+lm_mods_mean_watershed <- dat6 %>% 
   group_by(Watershed, expl_names, dep_names) %>% 
   nest() %>% 
   mutate(model = map(data,
-                     .f = ~lm(dep_mean ~ expl_values,
+                     .f = ~lm(dep_mean ~ expl_mean,
                               data = .)),
          glance = map(.x = model, .f = ~broom::glance(.x)),
          preds = map(model, broom::augment),
-         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_values, use="complete.obs")),
+         r = map_dbl(.x = data, .f = ~cor(.x$dep_mean, .x$expl_mean, use="complete.obs")),
          RMSE = map_dbl(preds, .f = ~sqrt(mean(.x$.resid^2)))) %>% 
   unnest(glance)
 
@@ -369,8 +374,8 @@ label_coord <- dat5 %>%
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
 
-t <- dat5 %>% 
-  pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
+dat6 %>% 
+  pivot_wider(names_from = expl_names, values_from = expl_mean) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= tt_hr, y = dep_values),
               width = 0.1, shape = 1, color = "grey") + 
@@ -448,8 +453,8 @@ label_coord <- dat5 %>%
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
 
-dat5 %>% 
-  pivot_wider(names_from = expl_names, values_from = expl_values) %>% 
+dat6 %>% 
+  pivot_wider(names_from = expl_names, values_from = expl_mean) %>% 
   ggplot() +
   geom_jitter(data = dat4, mapping= aes(x= Da, y = dep_values),
               width = 0.1, shape = 1, color = "grey") + 

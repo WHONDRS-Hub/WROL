@@ -24,18 +24,22 @@ geospat <- readRDS(paste0(here, "/output/geospat/geospat_indices.Rds")) %>%
 trans <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/RC2_WROL_Total_and_Normalized_Transformations_083023.csv"))
 
 #Compound Class Summary
-compound_class <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_Compound_Class_Summary.csv")) %>% rename("sample" = "...1")
+# compound_class <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_Compound_Class_Summary.csv")) %>% rename("sample" = "...1")
+compound_class <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 202402/WROL_RC2_Compound_Class_Summary.csv")) %>% rename("sample" = "...1")
 #Elemental Composition Summary
-elemental_comp <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_Elemental_Composition_Summary.csv")) %>% rename("sample" = "...1")
+# elemental_comp <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_Elemental_Composition_Summary.csv")) %>% rename("sample" = "...1")
+elemental_comp <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 202402/WROL_RC2_Elemental_Composition_Summary.csv")) %>% rename("sample" = "...1")
 
 #Molecular Indices Summary
-mol_info <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_MolInfo_Summary.csv")) %>% rename("sample" = "...1")
+# mol_info <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 20230828/WROL_RC2_MolInfo_Summary.csv")) %>% rename("sample" = "...1")
+mol_info <- read_csv(paste0(here, "/data/WROL-RC2 Transformations Updated 202402/WROL_RC2_MolInfo_Summary.csv")) %>% rename("sample" = "...1") %>% 
+  select(-number.of.peaks)
 
 indices <- left_join(trans, mol_info, by = "sample") %>% 
   left_join(., compound_class, by = "sample") %>% 
   left_join(., elemental_comp, by = "sample") %>% 
   select(-contains(c(".median", ".sd", ";", "NA"))) %>% 
-  mutate(across(Lignin:CHOSP, .fns= ~./number.of.peaks, .names= "{.col}_norm"))
+  mutate(across(Lignin:CHOSP, .fns= ~./peaks.with.formula*100, .names= "{.col}_norm"))
 glimpse(indices)
 
 ##1.4 Load Other Chemistry  (ID = dataset, sample #)
