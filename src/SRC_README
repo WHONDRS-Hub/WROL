@@ -1,7 +1,3 @@
-r0_Generate_Summary_ICR_Files.R
-  inputs: processed FT-ICR MS Sample Data and Molecular Data
-  output: Average molecular indices per sample
-  
 r1_sample_meta.R
   input: sample IDs output from putative biochemical transformation calculation
   input: sample site and dates for Yakima watershed
