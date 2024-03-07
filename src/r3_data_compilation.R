@@ -21,13 +21,13 @@ geospat <- readRDS(paste0(here, "/output/geospat/geospat_indices.Rds")) %>%
 trans <- read_csv(paste0(here, "/data/WROL-RC2_Transformations_Updated_20230828/RC2_WROL_Total_and_Normalized_Transformations_083023.csv"))
 
 #Compound Class Summary
-compound_class <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_Compound_Class_Summary.csv")) %>% rename("sample" = "...1")
+compound_class <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_Compound_Class_Summary.csv"))
 
 #Elemental Composition Summary
-elemental_comp <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_Elemental_Composition_Summary.csv")) %>% rename("sample" = "...1")
+elemental_comp <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_Elemental_Composition_Summary.csv"))
 
 #Molecular Indices Summary
-mol_info <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_MolInfo_Summary.csv")) %>% rename("sample" = "...1") %>% 
+mol_info <- read_csv(paste0(here, "/data/WROL-RC2_MolecularInfo_Updated_202402/WROL_RC2_MolInfo_Summary.csv")) %>% 
   select(-number.of.peaks)
 
 indices <- left_join(trans, mol_info, by = "sample") %>% 
@@ -52,8 +52,8 @@ chem_wrol <- read_csv(paste0(here, "/data/ancillary_chemistry/wrol_chem_20230915
   drop_na(sample) %>% #Some HRMS samples excluded due to poor mass calibration
   rename("DOC_mgL" = "DOC",
          "TN_mgL" = "TN") %>% 
-  select(sample, DOC_mgL, TN_mgL, t, c, uva254, S275295, suva254) %>% 
-  mutate(across(.cols = DOC_mgL:suva254, .fns = as.numeric))
+  select(sample, DOC_mgL, TN_mgL) %>% 
+  mutate(across(.cols = DOC_mgL:TN_mgL, .fns = as.numeric))
 
 
 #Check for duplicates
@@ -85,8 +85,7 @@ tt <- read_csv(paste0(here, "/data/travel_time/meta_tt_fromTedB_18Aug2023_tb.csv
   mutate(across(.cols = tt_hr:q_daily_cms, .fns = as.numeric))
 
 ##1.6 Water Temperature
-YRB_watT <- read_csv(paste0(here, "/data/waterTemp/RC2_Ultrameter_WaterChem_Summary.csv"),
-                     skip = 26) %>% 
+YRB_watT <- read_csv(paste0(here, "/data/waterTemp/RC2_Ultrameter_WaterChem_Summary.csv")) %>% 
   select(Date, Site_ID, Ultrameter_Temperature_Mean) %>% 
   rename("Site" = "Site_ID",
          "Twat_degC" = "Ultrameter_Temperature_Mean") %>% 

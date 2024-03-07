@@ -1,4 +1,4 @@
-Watershed,Site,WsAreaSqKm,tt_hr,Da,lulc_evenness,PctDecid2019Ws,PctConif2019Ws,DOC_mgL,number.of.peaks,peaks.with.formula,AI_Mod.mean,CHON_norm,CHON,normalized.transformations
+Watershed,Site,WsAreaSqKm,tt_hr,Da,lulc_evenness,PctDecid2019Ws,PctConif2019Ws,DOC_mgL,number.of.peaks,peaks.with.formula,AI.Mod.mean,CHON_norm,CHON,normalized.transformations
 Connecticut,CT-BUNN,4,4,NA,4,4,4,3,4,4,4,4,4,4
 Connecticut,CT-EBRA,4,4,4,4,4,4,4,4,4,4,4,4,4
 Connecticut,CT-FARM,3,3,3,3,3,3,3,3,3,3,3,3,3

@@ -35,7 +35,7 @@ dat2 <- dat %>%
          number.of.peaks,
          peaks.with.formula,
          total.transformations, normalized.transformations,
-         AI_Mod.mean)
+         AI.Mod.mean)
 
 #Select explanatory and dependent variable names
 expl_vars <- dat2 %>% 
@@ -43,7 +43,7 @@ expl_vars <- dat2 %>%
   colnames()
 dep_vars <- dat2 %>% 
   select(DOC_mgL, number.of.peaks, peaks.with.formula,
-         AI_Mod.mean, CHON_norm, CHON,
+         AI.Mod.mean, CHON_norm, CHON,
          # total.transformations, 
          normalized.transformations) %>% 
   colnames()

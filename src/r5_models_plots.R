@@ -29,7 +29,7 @@ dat2 <- dat %>%
          TN_mgL,
          number.of.peaks, peaks.with.formula,
          total.transformations, normalized.transformations,
-         AI_Mod.mean, CHON_norm)
+         AI.Mod.mean, CHON_norm)
 
 #Select explanatory and dependent variable names
 expl_vars <- dat2 %>% 
@@ -37,7 +37,7 @@ expl_vars <- dat2 %>%
   colnames()
 dep_vars <- dat2 %>% 
   select(DOC_mgL, peaks.with.formula,
-         AI_Mod.mean, CHON_norm,
+         AI.Mod.mean, CHON_norm,
          normalized.transformations) %>% 
   colnames()
 
@@ -50,7 +50,7 @@ dat3 <- dat2 %>%
                names_to= "expl_names", values_to = "expl_values") %>% 
   mutate(across(where(is.character), as.factor),
          dep_names = fct_relevel(dep_names, "DOC_mgL", "peaks.with.formula",
-                                 "AI_Mod.mean", "CHON_norm",
+                                 "AI.Mod.mean", "CHON_norm",
                                  "normalized.transformations"),
          expl_names = fct_relevel(expl_names, "WsAreaSqKm", "tt_hr", "Da",
                                   "lulc_evenness", "PctConif2019Ws", "PctDecid2019Ws"))
@@ -61,7 +61,7 @@ dat4 <- dat2 %>%
                names_to= "dep_names", values_to = "dep_values") %>% 
   mutate(across(where(is.character), as.factor),
          dep_names = fct_relevel(dep_names, "DOC_mgL", "peaks.with.formula",
-                                 "AI_Mod.mean", "CHON_norm",
+                                 "AI.Mod.mean", "CHON_norm",
                                  "normalized.transformations"),
          Watershed = fct_relevel(Watershed, "Yakima", "Deschutes", 
                                  "Willamette", "Gunnison", "Connecticut"))
@@ -116,7 +116,7 @@ labels <- c(`Yakima` = "Yakima",
             `PctDecid2019Ws` = "Decid. (%)",
             `DOC_mgL` = "DOC (mg/L)",
             `peaks.with.formula` = "Richness",
-            `AI_Mod.mean` = "AI_mod",
+            `AI.Mod.mean` = "AI_mod",
             `CHON_norm` = "CHON (% RA)",
             `normalized.transformations` = "Norm. Trans.")
 
