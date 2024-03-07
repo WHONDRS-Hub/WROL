@@ -5,21 +5,19 @@ a,,,,column_header
 adj.r.squared,,,,column_header
 AgKffactWs,,,,column_header
 AI,,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
-AI.mean,,,,column_header
-AI_mean,,,,column_header
-AI_median,,,,column_header
-AI_Mod,,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI_Mod.mean,,,,column_header
-AI_Mod.mean_cv,,,,column_header
-AI_Mod.mean_max,,,,column_header
-AI_Mod.mean_mean,,,,column_header
-AI_Mod.mean_min,,,,column_header
-AI_Mod.mean_n,,,,column_header
-AI_Mod.mean_sd,,,,column_header
-AI_Mod_mean,,,,column_header
-AI_Mod_median,,,,column_header
-AI_Mod_sd,,,,column_header
-AI_sd,,,,column_header
+AI.mean,,Mean aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
+AI.median,,Median aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
+AI.Mod,,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean,,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_cv,,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_max,,Maximun value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_mean,,Mean value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_min,,Minimun values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_n,,Numer of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_sd,,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod_median,,Median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod_sd,,Standard deviation of median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI_sd,,Standard deviation of  aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AluminumSite,weight_percent,Site level aluminum concentrations.,numeric,column_header
 AluminumWs,weight_percent,Watershed scale average aluminum concentrations.,numeric,column_header
 Amino_Sugar,,,,column_header
