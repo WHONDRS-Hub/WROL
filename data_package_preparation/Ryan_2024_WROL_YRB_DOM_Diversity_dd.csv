@@ -1,13 +1,6 @@
 # Bibi pulled all column headers. No need to edit this column.,"# directions: First, read through existing units and edit for accuracy. Then, fill in remaining cells in this column with the unit spelling out all abbreviations (e.g., ""meters"" not ""m""). If unit doesn't apply, write ""N/A"".","# directions: First, read through existing definitions and edit for accuracy. Then, fill out this column with the definition of the header. Include information that covers what the data are and why it's relevant to your data package. Use full sentences (capital first letter and period at end). Try to avoid using commas (use semi colors or reword if possible). Spell out all abbreviations and acryonmns (e.g., ""Fourier-transform ion cyclotron resonance (FTICR)"" not ""FTICR"").",# fill in the class/structure of the header column. Choose between numeric; text; date; time; datetime,# Bibi pulled all column headers. No need to edit this column.
 Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
-...1,,,,column_header
-a,,,,column_header
-adj.r.squared,,,,column_header
-AgKffactWs,,,,column_header
-AI,,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
-AI.mean,,Mean aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
-AI.median,,Median aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
-AI.Mod,,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
 AI.Mod.mean,,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_cv,,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_max,,Maximun value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
@@ -15,37 +8,25 @@ AI.Mod.mean_mean,,Mean value in mean modified aromaticity index calculated as pe
 AI.Mod.mean_min,,Minimun values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_n,,Numer of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_sd,,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod_median,,Median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod_sd,,Standard deviation of median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI_sd,,Standard deviation of  aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AluminumSite,weight_percent,Site level aluminum concentrations.,numeric,column_header
-AluminumWs,weight_percent,Watershed scale average aluminum concentrations.,numeric,column_header
+AI.Mod.median,,,,column_header
+AI.Mod.sd,,,,column_header
+AI.mean,,,,column_header
+AI.median,,,,column_header
+AI.sd,,,,column_header
+AI_Mod,N/A,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 Amino_Sugar,,,,column_header
 Amino_Sugar_norm,,,,column_header
-arbolatesu,,,,column_header
-areasqkm,,,,column_header
-AriditySite,,,,column_header
-AridityWs,,,,column_header
-b,,,,column_header
-bs1_class,,Boundaries used to assign compound classes to molecular formula. Boundary sets 1 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
-bs2_class,,Boundaries used to assign compound classes to molecular formula. Boundary sets 2 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
-bs3_class,,Boundaries used to assign compound classes to molecular formula. Boundary sets  3 further integrate stoichiometry to assign modified compound classes (Rivas-Urbach et al.; 2018).,text,column_header
-C,,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-c,,,,column_header
+C,N/A,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 C/N,,,,column_header
-C13,,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-CalciumSite,weight_percent,Site level calcium concentrations.,numeric,column_header
-CalciumWs,weight_percent,Watershed scale average calcium concentrations.,numeric,column_header
-CanalDensWs,,,,column_header
-Candidates,,Possible known molecules the analyzed molecule could be. Assigned by checking against a known database. Value of -1 when molecule was not checked against database.,numeric,column_header
-Carbohydrate,,,,column_header
-Carbohydrate_Amino Sugar,,,,column_header
-Carbohydrate_norm,,,,column_header
-CatAreaSqKm,,,,column_header
-CatPctFull,,,,column_header
+C13,N/A,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 CHO,peaks,Total number of CHO molecular formulae identified by FTICR-MS,numeric,Column_header
-CHO_norm,,,,column_header
 CHON,peaks,Total number of CHON molecular formulae identified by FTICR-MS,numeric,Column_header
+CHONP,peaks,Total number of CHONP molecular formulae identified by FTICR-MS,numeric,Column_header
+CHONP_norm,,,,column_header
+CHONS,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by FTICR-MS,datetime,Column_header
+CHONSP,peaks,Total number of CHONSP  molecular formulae identified by FTICR-MS,numeric,Column_header
+CHONSP_norm,,,,column_header
+CHONS_norm,,,,column_header
 CHON_cv,,,,column_header
 CHON_max,,,,column_header
 CHON_mean,,,,column_header
@@ -59,30 +40,44 @@ CHON_norm_min,,,,column_header
 CHON_norm_n,,,,column_header
 CHON_norm_sd,,,,column_header
 CHON_sd,,,,column_header
-CHONP,peaks,Total number of CHONP molecular formulae identified by FTICR-MS,numeric,Column_header
-CHONP_norm,,,,column_header
-CHONS,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by FTICR-MS,datetime,Column_header
-CHONS_norm,,,,column_header
-CHONSP,peaks,Total number of CHONSP  molecular formulae identified by FTICR-MS,numeric,Column_header
-CHONSP_norm,,,,column_header
 CHOP,peaks,Total number of CHOP (carbon-hydrogen-oxygen-phosphorus) molecular formulae identified by FTICR-MS,numeric,Column_header
 CHOP_norm,,,,column_header
 CHOS,peaks,Total number of CHOS molecular formulae identified by FTICR-MS,numeric,Column_header
-CHOS_norm,,,,column_header
 CHOSP,peaks,Total number of CHOSP molecular formulae identified by FTICR-MS,numeric,Column_header
 CHOSP_norm,,,,column_header
-Class,,Inferred chemical classes as per Kim et al.; 2003.,text,column_header
+CHOS_norm,,,,column_header
+CHO_norm,,,,column_header
+COMID,N/A,NHDPlus version 2 common identifier (COMID). The COMID can be used to extract geospatial variables from various sources.,numeric,column_header
+Candidates,N/A,Possible known molecules the analyzed molecule could be. Assigned by checking against a known database. Value of -1 when molecule was not checked against database.,numeric,column_header
+Carbohydrate,,,,column_header
+Carbohydrate_Amino_Sugar,,,,column_header
+Carbohydrate_Amino_Sugar_norm,,,,column_header
+Carbohydrate_norm,,,,column_header
+CatAreaSqKm,,,,column_header
+Class,N/A,Inferred chemical classes as per Kim et al.; 2003.,text,column_header
 ClayWs,,,,column_header
-CoalMineDensWs,,,,column_header
 Column_or_Row_Name,N/A,Column or row headers from each csv file in the dataset.,text,column_header
-COMID,,NHDPlus version 2 common identifier (COMID). The COMID can be used to extract geospatial variables from various sources.,numeric,column_header
-comid,,,,column_header
-COMID_Notes,,,,column_header
 Cond_Hydrocarbon,,,,column_header
 Cond_Hydrocarbon_norm,,,,column_header
 Connecticut,,,,column_header
-CopperSite,parts_per_million,Site level copper concentrations.,numeric,column_header
-CopperWs,parts_per_million,Watershed scale average copper concentrations.,numeric,column_header
+DBE.O.mean,,,,column_header
+DBE.O.median,,,,column_header
+DBE.O.sd,,,,column_header
+DBE.mean,,,,column_header
+DBE.median,,,,column_header
+DBE.sd,,,,column_header
+DBE_1,,,,column_header
+DBE_AI,N/A,The minimum number of C-C double bonds plus rings in a common molecular structure containing heteroatoms. Calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE_O,N/A,Double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DOC,,,,column_header
+DOC_SD,,,,column_header
+DOC_mgL,,,,column_header
+DOC_mgL_cv,,,,column_header
+DOC_mgL_max,,,,column_header
+DOC_mgL_mean,,,,column_header
+DOC_mgL_min,,,,column_header
+DOC_mgL_n,,,,column_header
+DOC_mgL_sd,,,,column_header
 Da,,,,column_header
 Da_cv,,,,column_header
 Da_max,,,,column_header
@@ -91,187 +86,53 @@ Da_min,,,,column_header
 Da_n,,,,column_header
 Da_sd,,,,column_header
 DamDensWs,,,,column_header
-DamNIDStorWs,,,,column_header
-DamNrmStorWs,,,,column_header
 Data_Type,N/A,Type of data (numeric; text; date; time; datetime).,text,column_header
-dataset,,,,column_header
 Date,YYYY-MM-DD,Date of sample collection.,date,column_header
 Date_End,YYYY-MM-DD,The latest date in the file.,date,column_header
 Date_Start,YYYY-MM-DD,The earliest date in the file.,date,column_header
-DBE.mean,,,,column_header
-DBE_1,,,,column_header
-DBE_AI,,The minimum number of C-C double bonds plus rings in a common molecular structure containing heteroatoms. Calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
-DBE_mean,,,,column_header
-DBE_median,,,,column_header
-DBE_O,,Double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
-DBE_O.mean,,,,column_header
-DBE_O_mean,,,,column_header
-DBE_O_median,,,,column_header
-DBE_O_sd,,,,column_header
-DBE_sd,,,,column_header
 Definition,N/A,Description of the information in a given column or row in the dataset.,text,column_header
-delGcox0PerCmol,,Gibbs free energy of the carbon oxidation half reaction under standard conditions (pH = 0). Calculated as  per LaRowe and Van Cappellen; 2011.,numeric,column_header
-delGcoxPerCmol,,Gibbs free energy of the carbon oxidation half reaction at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
-delGd,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
-delGd0,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 0. Calculated as per Song et al.; 2023.,numeric,column_header
-dep_names,,,,column_header
-depth,,,,column_header
-depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
 Deschutes,,,,column_header
-df,,,,column_header
-Dist,,,,column_header
-Dist.minus,,,,column_header
-Dist.plus,,,,column_header
-distinct,,,,column_header
-divdasqkm,,,,column_header
-divergence,,,,column_header
-dndraincou,,,,column_header
-dnhydroseq,,,,column_header
-dnlevel,,,,column_header
-dnlevelpat,,,,column_header
-dnminorhyd,,,,column_header
-DOC,,,,column_header
-DOC_mgL,,,,column_header
-DOC_mgL_cv,,,,column_header
-DOC_mgL_max,,,,column_header
-DOC_mgL_mean,,,,column_header
-DOC_mgL_min,,,,column_header
-DOC_mgL_n,,,,column_header
-DOC_mgL_sd,,,,column_header
-DOC_SD,,,,column_header
-El_comp,,Assigned elemental group(s) that are known.,text,column_header
-elevfixed,,,,column_header
+El_comp,N/A,Assigned elemental group(s) that are known.,text,column_header
 ElevWs,,,,column_header
-enabled,,,,column_header
 Error_ppm,parts_per_million,Parts per million error calculated as [expected molecular mass - measured molecular mass]/expected molecular mass * 1e6).,numeric,column_header
-expl_names,,,,column_header
-fcode,,,,column_header
-fdate,,,,column_header
-Fe,,,,column_header
-Fe2,,,,column_header
-Fe2_Flag,,,,column_header
-Fe3,,,,column_header
-fi,,,,column_header
-fi_new,,,,column_header
-Field_Name,,Name of field of header rows before data.,text,column_header
-Field_Staff,,"The name of field staff involved in data collection; recorded as ""FirstName_LastName"" and separated by semicolons.",text,column_header
+Field_Name,N/A,Name of field of header rows before data.,text,column_header
+Field_Staff,N/A,"The name of field staff involved in data collection; recorded as ""FirstName_LastName"" and separated by semicolons.",text,column_header
 File_Description,N/A,A brief description of the files in the data package.,text,column_header
 File_Name,N/A,Name of files in the data package.,text,column_header
 File_Path,N/A,File path within the data package.,text,column_header
-final,,,,column_header
-flowdir,,,,column_header
-freshness,,,,column_header
-frommeas,,,,column_header
-fromnode,,,,column_header
-ftype,,,,column_header
-geometry,,,,column_header
-GFE,,Gibbs free energy of the carbon oxidation half reaction under standard conditions. Calculated as per LaRowe and Van Cappellen; 2011.,numeric,column_header
-GFE_0.mean,,,,column_header
-GFE_0_mean,,,,column_header
-GFE_0_median,,,,column_header
-GFE_0_sd,,,,column_header
-GFE_7.mean,,,,column_header
-GFE_7_mean,,,,column_header
-GFE_7_median,,,,column_header
-GFE_7_sd,,,,column_header
-GFEperC_0.mean,,,,column_header
-GFEperC_0_mean,,,,column_header
-GFEperC_0_median,,,,column_header
-GFEperC_0_sd,,,,column_header
-GFEperC_7.mean,,,,column_header
-GFEperC_7_mean,,,,column_header
-GFEperC_7_median,,,,column_header
-GFEperC_7_sd,,,,column_header
-gnis_id,,,,column_header
-gnis_name,,,,column_header
+GFE,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions. Calculated as per LaRowe and Van Cappellen; 2011.,numeric,column_header
 GPS_Accuracy,feet,Accuracy of GPS location data accuracy; measured in feet.,numeric,column_header
 Gunnison,,,,column_header
-H,,Hydrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-hix,,,,column_header
+H,N/A,Hydrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 HtoC.mean,,,,column_header
-HtoC_mean,,,,column_header
-HtoC_median,,,,column_header
-HtoC_ratio,,Hydrogen to carbon ratio.,numeric,column_header
-HtoC_sd,,,,column_header
-huc10,,,,column_header
-huc12,,,,column_header
-huc2,,,,column_header
-huc4,,,,column_header
-huc6,,,,column_header
-huc8,,,,column_header
-HUDen2010Ws,,,,column_header
-hwnodesqkm,,,,column_header
-hwtype,,,,column_header
+HtoC.median,,,,column_header
+HtoC.sd,,,,column_header
+HtoC_ratio,N/A,Hydrogen to carbon ratio.,numeric,column_header
 HydrlCondWs,,,,column_header
-hydroseq,,,,column_header
-id,,,,column_header
-InorgNWetDep_2008Ws,,,,column_header
-IronSite,weight_percent,Site level iron concentrations.,numeric,column_header
-IronWs,weight_percent,Watershed scale average iron concentrations.,numeric,column_header
-kdefect.CH2,,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
 KenDef.mean,,,,column_header
-KenDef_mean,,,,column_header
-KenDef_median,,,,column_header
-KenDef_sd,,,,column_header
+KenDef.median,,,,column_header
+KenDef.sd,,,,column_header
 KenMass.mean,,,,column_header
-KenMass_mean,,,,column_header
-KenMass_median,,,,column_header
-KenMass_sd,,,,column_header
+KenMass.median,,,,column_header
+KenMass.sd,,,,column_header
 KffactWs,,,,column_header
-kmass.CH2,,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
-lakefract,,,,column_header
-lambdaO2_0.mean,,,,column_header
-lambdaO2_0_mean,,,,column_header
-lambdaO2_0_median,,,,column_header
-lambdaO2_0_sd,,,,column_header
-lambdaO2_7.mean,,,,column_header
-lambdaO2_7_mean,,,,column_header
-lambdaO2_7_median,,,,column_header
-lambdaO2_7_sd,,,,column_header
-lamO2,,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
-lamO20,,Thermodynamic efficiency (defined by lambda) at standard state (pH = 0). Calculated as per Song et al.; 2020.,numeric,column_header
 Latitude,decimal_degrees_WGS1984,Geographic location (latitude) of site.,numeric,column_header
-latitude_dec_deg,,,,column_header
-lengthkm,,,,column_header
-levelpathi,,,,column_header
 Lignin,,,,column_header
-Lignin_Amino Sugar,,,,column_header
-Lignin_norm,,,,column_header
+Lignin_Amino_Sugar,,,,column_header
+Lignin_Amino_Sugar_norm,,,,column_header
 Lignin_Tannin,,,,column_header
+Lignin_Tannin_norm,,,,column_header
+Lignin_norm,,,,column_header
 Lipid,,,,column_header
-Lipid_norm,,,,column_header
 Lipid_Protein,,,,column_header
+Lipid_Protein_norm,,,,column_header
+Lipid_norm,,,,column_header
 Longitude,decimal_degrees_WGS1984,Geographic location (longitude) of site.,numeric,column_header
-longitude_dec_deg,,,,column_header
-lulc_evenness,,,,column_header
-lulc_evenness_cv,,,,column_header
-lulc_evenness_max,,,,column_header
-lulc_evenness_mean,,,,column_header
-lulc_evenness_min,,,,column_header
-lulc_evenness_n,,,,column_header
-lulc_evenness_sd,,,,column_header
-lulc_H,,,,column_header
-m,,,,column_header
-ManganeseSite,parts_per_million,Site level manganese concentrations.,numeric,column_header
-ManganeseWs,parts_per_million,Watershed scale average manganese concentrations.,numeric,column_header
-manta_probe1,,,,column_header
-manta_probe2,,,,column_header
 Mass,mass_to_charge_ratio,Measured ionic mass. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
-mass.mean,,,,column_header
-mass_mean,,,,column_header
-mass_median,,,,column_header
-mass_sd,,,,column_header
-MAST_2008,,,,column_header
-MAST_2009,,,,column_header
-MAST_2013,,,,column_header
-MAST_2014,,,,column_header
-Material,,Type of sample (e.g. Liquid>aqueous; sediment; etc). Uses a controlled vocabulary from IGSN SESAR (https://www.geosamples.org/).,text,column_header
-max,,,,column_header
-maxelevraw,,,,column_header
-maxelevsmo,,,,column_header
+Material,N/A,Type of sample (e.g. Liquid>aqueous; sediment; etc). Uses a controlled vocabulary from IGSN SESAR (https://www.geosamples.org/).,text,column_header
 Mean_00000_NH4_mg_per_L_as_NH4,milligrams_per_liter,"Mean ammonium reported as ammonium (rather than as nitrogen).  5-digit prefix typically refers to a US Geological Survey (USGS) parameter code in the column headers of this data package. The USGS does not have a parameter code for ammonium that is appropriate, so 00000 is used as a placeholder to keep column name formats consistent. For each sampling event (e.g. SPS_005_ION), the NPOC values of each of the three biological replicates (e.g. SPS_005_ION-1; SPS_005_ION-2; SPS_005_ION-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
 Mean_00530_TSS_mg_per_L,milligrams_per_liter,"Mean total suspended solids. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_TSS), the NPOC values of each of the three biological replicates (e.g. SPS_005_TSS-1; SPS_005_TSS-2; SPS_005_TSS-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
-Mean_00602_TN_mg_per_L_as_N,milligrams_per_liter,"Mean dissolved nitrogen [nitrate + nitrite + ammonia + organic-N] reported as nitrogen. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. CM_005_Water); the TN values of each of the three biological replicates (e.g.CM_005_TN-1; CM_005_TN-2; CMC_005_TN-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher; the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00602_TN_mg_per_L_as_N,milligrams_per_liter,"Mean dissolved nitrogen [nitrate + nitrite + ammonia + organic-N] reported as nitrogen. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. CM_005_Water); the TN values of each of the three biological replicates (e.g.CM_005_TN-1; CM_005_TN-2; CMC_005_TN-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher; the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean. Methods information is embedded in first few rows with methods codes that are defined in the file that ends in ""Methods_Codes.csv"".",numeric,column_header
 Mean_00653_PO4_mg_per_L_as_PO4,milligrams_per_liter,"Mean phosphate reported as phosphate (rather than as phosphorus). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_ION), the NPOC values of each of the three biological replicates (e.g. SPS_005_ION-1; SPS_005_ION-2; SPS_005_ION-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
 Mean_00681_NPOC_mg_per_L_as_C,milligrams_per_liter,"Mean dissolved organic carbon data measured as non-purgeable organic carbon (NPOC) and reported as carbon. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_OCN), the NPOC values of each of the three biological replicates (e.g. SPS_005_OCN-1; SPS_005_OCN-2; SPS_005_OCN-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
 Mean_00691_DIC_mg_per_L_as_C,milligrams_per_liter,"Mean dissolved inorganic carbon reported as carbon. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_DIC), the NPOC values of each of the three biological replicates (e.g. SPS_005_DIC-1; SPS_005_DIC-2; SPS_005_DIC-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
@@ -286,95 +147,37 @@ Mean_01130_Li_mg_per_L,milligrams_per_liter,"Mean lithium. 5-digit prefix refers
 Mean_71851_NO3_mg_per_L_as_NO3,milligrams_per_liter,"Mean nitrate reported as nitrate (rather than as nitrogen). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_ION), the NPOC values of each of the three biological replicates (e.g. SPS_005_ION-1; SPS_005_ION-2; SPS_005_ION-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
 Mean_71856_NO2_mg_per_L_as_NO2,milligrams_per_liter,"Mean nitrite reported as nitrite (rather than as nitrogen). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_ION), the NPOC values of each of the three biological replicates (e.g. SPS_005_ION-1; SPS_005_ION-2; SPS_005_ION-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
 Mean_71870_Br_mg_per_L,milligrams_per_liter,"Mean bromide. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. SPS_005_ION), the NPOC values of each of the three biological replicates (e.g. SPS_005_ION-1; SPS_005_ION-2; SPS_005_ION-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
-Mean_Missing_Reps,,Indication of whether all replicates (reps) are included in the calculation of the mean (with a FALSE flag) or all replicates are not included (with a TRUE flag).,text,column_header
-min,,,,column_header
-minelevraw,,,,column_header
-minelevsmo,,,,column_header
+Mean_Missing_Reps,N/A,Indication of whether all replicates (reps) are included in the calculation of the mean (with a FALSE flag) or all replicates are not included (with a TRUE flag).,text,column_header
 Missing_Value_Codes,N/A,"Cells with missing data are represented with a missing value code rather than an empty cell. This column describes which missing value codes were used. The recommendation for numeric data is ""-9999"" and for character data is ""N/A"". Some files also use a missing value format specific to when a data value is below the limit of detection or above/below the standard curve. For these cases: a text string is included in the format ""[data type]_*|*_Raw_Not_Corrected|*_Final_Corrected"" in which the asterisks are the denoted individual data values. See the associated methods deviation (DTL_003) for more details.",text,column_header
-MolForm,,Molecular Formula.,text,column_header
-mon,,,,column_header
+MolForm,N/A,Molecular Formula.,text,column_header
 Month,,,,column_header
-monthly_end_member,,,,column_header
-MSST_2008,,,,column_header
-MSST_2009,,,,column_header
-MSST_2013,,,,column_header
-MSST_2014,,,,column_header
-MWST_2008,,,,column_header
-MWST_2009,,,,column_header
-MWST_2013,,,,column_header
-MWST_2014,,,,column_header
-N,,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+N,N/A,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 NA,,,,column_header
-Na,,Sodium atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-Name,,Column headers from each csv file in the dataset.,text,column_header
-name,,,,column_header
-NeutralMass,,Zero-charge or neutral molecular mass. Calculated from observed ionic mass by balancing charge with protons or electrons).,numeric,column_header
-NH4_2008Ws,,,,column_header
-NO3_2008Ws,,,,column_header
-nobs,,,,column_header
-normalized.transformations,,,,column_header
-normalized.transformations_cv,,,,column_header
-normalized.transformations_max,,,,column_header
-normalized.transformations_mean,,,,column_header
-normalized.transformations_min,,,,column_header
-normalized.transformations_n,,,,column_header
-normalized.transformations_sd,,,,column_header
-NOSC,,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC,N/A,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.mean,,,,column_header
-NOSC_mean,,,,column_header
-NOSC_median,,,,column_header
-NOSC_sd,,,,column_header
-Notes,,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
-notes,,,,column_header
+NOSC.median,,,,column_header
+NOSC.sd,,,,column_header
+Na,N/A,Sodium atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+Name,N/A,Column headers from each csv file in the dataset.,text,column_header
+NeutralMass,N/A,Zero-charge or neutral molecular mass. Calculated from observed ionic mass by balancing charge with protons or electrons).,numeric,column_header
+Notes,N/A,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
 NtoC.mean,,,,column_header
-NtoC_mean,,,,column_header
-NtoC_median,,,,column_header
-NtoC_ratio,,Nitrogen to Carbon ratio.,numeric,column_header
-NtoC_sd,,,,column_header
+NtoC.median,,,,column_header
+NtoC.sd,,,,column_header
+NtoC_ratio,N/A,Nitrogen to Carbon ratio.,numeric,column_header
 NtoP.mean,,,,column_header
-NtoP_mean,,,,column_header
-NtoP_median,,,,column_header
-NtoP_ratio,,Nitrogen to Phosphorous ratio.,numeric,column_header
-NtoP_sd,,,,column_header
-num.trans.involved.in,,,,column_header
-number.of.peaks,,,,column_header
-number.of.peaks_cv,,,,column_header
-number.of.peaks_max,,,,column_header
-number.of.peaks_mean,,,,column_header
-number.of.peaks_min,,,,column_header
-number.of.peaks_n,,,,column_header
-number.of.peaks_sd,,,,column_header
-number_of_peaks,,,,column_header
-Number_of_reps,,,,column_header
-O,,Oxygen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-old_name/alias,,,,column_header
-OmernikIIISite,,,,column_header
-OmernikIIIWs,,,,column_header
-OmernikIISite,,,,column_header
-OmernikIIWs,,,,column_header
-OmernikISite,,,,column_header
-OmernikIWs,,,,column_header
+NtoP.median,,,,column_header
+NtoP.sd,,,,column_header
+NtoP_ratio,N/A,Nitrogen to Phosphorous ratio.,numeric,column_header
+O,N/A,Oxygen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 OmWs,,,,column_header
 Other,,,,column_header
 Other_norm,,,,column_header
 OtoC.mean,,,,column_header
-OtoC_mean,,,,column_header
-OtoC_median,,,,column_header
-OtoC_ratio,,Oxygen to Carbon ratio.,numeric,column_header
-OtoC_sd,,,,column_header
-P,,Phosphorous atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-p,,,,column_header
-p.value,,,,column_header
-pathlength,,,,column_header
-pathtimema,,,,column_header
-PctAg2006Slp10Ws,,,,column_header
-PctAg2006Slp20Ws,,,,column_header
-PctAlkIntruVolWs,,,,column_header
-PctAlluvCoastWs,,,,column_header
-PctBl2019Ws,,,,column_header
-PctCarbResidWs,,,,column_header
-PctCoastCrsWs,,,,column_header
-PctColluvSedWs,,,,column_header
+OtoC.median,,,,column_header
+OtoC.sd,,,,column_header
+OtoC_ratio,N/A,Oxygen to Carbon ratio.,numeric,column_header
+P,N/A,Phosphorous atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 PctConif2019Ws,,,,column_header
 PctConif2019Ws_cv,,,,column_header
 PctConif2019Ws_max,,,,column_header
@@ -390,127 +193,29 @@ PctDecid2019Ws_mean,,,,column_header
 PctDecid2019Ws_min,,,,column_header
 PctDecid2019Ws_n,,,,column_header
 PctDecid2019Ws_sd,,,,column_header
-PctEolCrsWs,,,,column_header
-PctEolFineWs,,,,column_header
-PctExtruVolWs,,,,column_header
-PctFire2000Ws,,,,column_header
-PctFire2001Ws,,,,column_header
-PctFire2002Ws,,,,column_header
-PctFire2003Ws,,,,column_header
-PctFire2004Ws,,,,column_header
-PctFire2005Ws,,,,column_header
-PctFire2006Ws,,,,column_header
-PctFire2007Ws,,,,column_header
-PctFire2008Ws,,,,column_header
-PctFire2009Ws,,,,column_header
-PctFire2010Ws,,,,column_header
-PctGlacLakeCrsWs,,,,column_header
-PctGlacLakeFineWs,,,,column_header
-PctGlacTilClayWs,,,,column_header
-PctGlacTilCrsWs,,,,column_header
-PctGlacTilLoamWs,,,,column_header
-PctGrs2019Ws,,,,column_header
-PctHay2019Ws,,,,column_header
 PctHbWet2019Ws,,,,column_header
-PctHydricWs,,,,column_header
-PctIce2019Ws,,,,column_header
-PctImp2001Ws,,,,column_header
-PctImp2004Ws,,,,column_header
-PctImp2006Ws,,,,column_header
-PctImp2008Ws,,,,column_header
-PctImp2011Ws,,,,column_header
-PctImp2013Ws,,,,column_header
-PctImp2016Ws,,,,column_header
 PctImp2019Ws,,,,column_header
 PctMxFst2019Ws,,,,column_header
-PctNonCarbResidWs,,,,column_header
 PctOw2019Ws,,,,column_header
-PctSalLakeWs,,,,column_header
-PctShrb2019Ws,,,,column_header
-PctSilicicWs,,,,column_header
 PctUrbHi2019Ws,,,,column_header
-PctUrbLo2019Ws,,,,column_header
-PctUrbMd2019Ws,,,,column_header
-PctUrbOp2019Ws,,,,column_header
-PctWaterWs,,,,column_header
 PctWdWet2019Ws,,,,column_header
-peak,,,,column_header
-peak.x,,,,column_header
-peak.y,,,,column_header
-peaks.with.formula,,,,column_header
-peaks.with.formula_cv,,,,column_header
-peaks.with.formula_max,,,,column_header
-peaks.with.formula_mean,,,,column_header
-peaks.with.formula_min,,,,column_header
-peaks.with.formula_n,,,,column_header
-peaks.with.formula_sd,,,,column_header
-peaks_with_formula,,,,column_header
 PermWs,,,,column_header
-perOverSUVA,,,,column_header
-PhosphSite,weight_percent,Site level phosphorus concentrations.,numeric,column_header
-PhosphWs,weight_percent,Watershed scale average phosphorus concentrations.,numeric,column_header
-points,,,,column_header
 PopDen2010Ws,,,,column_header
 PrecipSite,,,,column_header
 Protein,,,,column_header
-Protein_Amino Sugar,,,,column_header
+Protein_Amino_Sugar,,,,column_header
+Protein_Amino_Sugar_norm,,,,column_header
 Protein_Lignin,,,,column_header
-Protein_Lignin_Amino Sugar,,,,column_header
+Protein_Lignin_Amino_Sugar,,,,column_header
+Protein_Lignin_Amino_Sugar_norm,,,,column_header
+Protein_Lignin_norm,,,,column_header
 Protein_norm,,,,column_header
 PtoC.mean,,,,column_header
-PtoC_mean,,,,column_header
-PtoC_median,,,,column_header
-PtoC_ratio,,Phosphorus to Carbon ratio.,numeric,column_header
-PtoC_sd,,,,column_header
-q_daily_cms,,,,column_header
-q_daily_mm,,,,column_header
-qa_01,,,,column_header
-qa_02,,,,column_header
-qa_03,,,,column_header
-qa_04,,,,column_header
-qa_05,,,,column_header
-qa_06,,,,column_header
-qa_07,,,,column_header
-qa_08,,,,column_header
-qa_09,,,,column_header
-qa_10,,,,column_header
-qa_11,,,,column_header
-qa_12,,,,column_header
-qa_ma,,,,column_header
-qc_01,,,,column_header
-qc_02,,,,column_header
-qc_03,,,,column_header
-qc_04,,,,column_header
-qc_05,,,,column_header
-qc_06,,,,column_header
-qc_07,,,,column_header
-qc_08,,,,column_header
-qc_09,,,,column_header
-qc_10,,,,column_header
-qc_11,,,,column_header
-qc_12,,,,column_header
-qc_ma,,,,column_header
-qe_01,,,,column_header
-qe_02,,,,column_header
-qe_03,,,,column_header
-qe_04,,,,column_header
-qe_05,,,,column_header
-qe_06,,,,column_header
-qe_07,,,,column_header
-qe_08,,,,column_header
-qe_09,,,,column_header
-qe_10,,,,column_header
-qe_11,,,,column_header
-qe_12,,,,column_header
-qe_ma,,,,column_header
-r,,,,column_header
-r.sq.adj,,,,column_header
-r.squared,,,,column_header
-r_labels,,,,column_header
-r2_labels,,,,column_header
-rareahload,,,,column_header
+PtoC.median,,,,column_header
+PtoC.sd,,,,column_header
+PtoC_ratio,N/A,Phosphorus to Carbon ratio.,numeric,column_header
 RC2_0001,,,,column_header
-RC2_0002,,,,column_header
+RC2_0002,,"[bibi note for VGC: fill in the info for ""RC2_0001"". No need to fill in the rest. Write what the 4 digits represent]",,column_header
 RC2_0003,,,,column_header
 RC2_0004,,,,column_header
 RC2_0005,,,,column_header
@@ -702,177 +407,39 @@ RC2_0208,,,,column_header
 RC2_0209,,,,column_header
 RC2_0210,,,,column_header
 RC2_0211,,,,column_header
-RckDepWs,,,,column_header
-RdCrsSlpWtdWs,,,,column_header
-RdCrsWs,,,,column_header
-RdDensWs,,,,column_header
-reachcode,,,,column_header
-remaining,,,,column_header
-removed,,,,column_header
-resolution,,,,column_header
 RMSE,,,,column_header
-rpuid,,,,column_header
-rtndiv,,,,column_header
+RdDensWs,,,,column_header
 RunoffWs,,,,column_header
-S,,Sulphur atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-S275295,,,,column_header
-S280450,,,,column_header
-S350400,,,,column_header
-Sample,,,,column_header
-sample,,,,column_header
-sample_date,,,,column_header
-sample_n,,,,column_header
-Sample_Name,,"Name of sample. If the sample name includes the material (i.e. ##_###_Water), the row is referring to all of samples of that analysis of a given material. Individual samples follow the format of [Parent_ID]_[analysis-specific indicator code]-[replicate number] (i.e. ##_###_OCN-1). Not all sample types have replicates. See  file ending in ""readme.pdf"" for more details.",text,column_header
-samples,,,,column_header
+S,N/A,Sulphur atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+Sample_Name,N/A,"Name of sample. If the sample name includes the material (i.e. ##_###_Water), the row is referring to all of samples of that analysis of a given material. Individual samples follow the format of [Parent_ID]_[analysis-specific indicator code]-[replicate number] (i.e. ##_###_OCN-1). Not all sample types have replicates. See  file ending in ""readme.pdf"" for more details.",text,column_header
 Sampling_Event,,,,column_header
 SandWs,,,,column_header
-season,,,,column_header
-season_n,,,,column_header
-season_tb,,,,column_header
-shape_length,,,,column_header
 Site,,,,column_header
-site,,,,column_header
-site_description,,,,column_header
-Site_ID,,Site ID. Three-digit alphanumeric code used to identify site.,text,column_header
-Site_Name,,Name of site.,text,column_header
-slope,milligrams_per_liter_per_centimeter,Slope of the linear regression between dissolved oxygen and column length,,column_header
-slopelenkm,,,,column_header
-SN_2008Ws,,,,column_header
-SR,,,,column_header
+Site_ID,N/A,Site ID. Three-digit alphanumeric code used to identify site.,text,column_header
+Site_Name,N/A,Name of site.,text,column_header
 Standard,N/A,ESS-DIVE Reporting Format or other standard applied to the data file.,text,column_header
-startflag,,,,column_header
-statistic,,,,column_header
-streamcalc,,,,column_header
-streamleve,,,,column_header
-streamorde,,,,column_header
-surfarea,,,,column_header
-suva254,,,,column_header
-suva254corr,,,,column_header
-t,,,,column_header
+TN,,,,column_header
+TN_SD,,,,column_header
+TN_mgL,,,,column_header
+TSS_mgL,,,,column_header
 Tannin,,,,column_header
-Tannin_Cond Hydrocarbon,,,,column_header
+Tannin_Cond_Hydrocarbon,,,,column_header
+Tannin_Cond_Hydrocarbon_norm,,,,column_header
 Tannin_norm,,,,column_header
 Term_Type,N/A,Indicates whether the header is a column header or row header.,text,column_header
-terminalfl,,,,column_header
-terminalpa,,,,column_header
-tidal,,,,column_header
 Time_Arriving,hh:mm UTC-07:00,Site arrival time. Recorded in Pacific Standard Time.,time,column_header
 Time_Leaving,hh:mm UTC-07:00,Site departure time. Recorded in Pacific Standard Time.,time,column_header
-Time_Zone,,Local time zone.,text,column_header
-TmaxSite,,,,column_header
+Time_Zone,N/A,Local time zone.,text,column_header
 TmeanSite,,,,column_header
-TminSite,,,,column_header
-TN,,,,column_header
-TN_mgL,,,,column_header
-TN_SD,,,,column_header
-tomeas,,,,column_header
-tonode,,,,column_header
-total.transformations,,,,column_header
-Total_Fe_Flag,,,,column_header
-totala250450,,,,column_header
-totala300340,,,,column_header
-totdasqkm,,,,column_header
-totma,,,,column_header
-Trans.name,,,,column_header
-TSS_mgL,,,,column_header
-tt_hr,,,,column_header
-tt_hr_cv,,,,column_header
-tt_hr_max,,,,column_header
-tt_hr_mean,,,,column_header
-tt_hr_min,,,,column_header
-tt_hr_n,,,,column_header
-tt_hr_sd,,,,column_header
 Twat_degC,,,,column_header
-Ultrameter_pH_1,,,,column_header
-Ultrameter_pH_2,pH,pH in standard units. Second of three consecutive Ultrameter pH measurements.,numeric,column_header
-Ultrameter_pH_3,pH,pH in standard units. Third of three consecutive Ultrameter pH measurements.,numeric,column_header
-Ultrameter_pH_Mean,pH,The mean value calculated for three consecutive Ultrameter pH measurements.,numeric,column_header
-Ultrameter_pH_Outlier,,The binary value of the statistical outlier (whether the parameter value lies outside the interquartile range) among three consecutive Ultrameter pH measurements.,numeric,column_header
-Ultrameter_pH_Range,pH,The spread of the data (maximum value minus the minimum value) calculated for three consecutive Ultrameter pH measurements.,numeric,column_header
-Ultrameter_Specific_Conductance_1,,,,column_header
-Ultrameter_Specific_Conductance_2,,,,column_header
-Ultrameter_Specific_Conductance_3,,,,column_header
-Ultrameter_Specific_Conductance_Mean,microsiemens_per_centimeter,The mean value calculated for three consecutive Ultrameter specific conductance measurements.,numeric,column_header
-Ultrameter_Specific_Conductance_Outlier,,The binary value of the statistical outlier (whether the parameter value lies outside the interquartile range) among three consecutive Ultrameter specific conductance measurements.,numeric,column_header
-Ultrameter_Specific_Conductance_Range,microsiemens_per_centimeter,The spread of the data (maximum value minus the minimum value) calculated for three consecutive Ultrameter specific conductance measurements.,numeric,column_header
-Ultrameter_Temperature_1,,,,column_header
-Ultrameter_Temperature_2,,,,column_header
-Ultrameter_Temperature_3,,,,column_header
-Ultrameter_Temperature_Mean,,,,column_header
-Ultrameter_Temperature_Outlier,,,,column_header
-Ultrameter_Temperature_Range,degree_celsius,The spread of the data (maximum value minus the minimum value) calculated for three consecutive Ultrameter temperature measurements.,numeric,column_header
-Ultrameter_Time_1,hh:mm UTC-08:00,Time of first set of Ultrameter measurements using a specified InstallationMethod_ID; completed to the known precision; and recorded in Pacific Standard Time.,time,column_header
-Ultrameter_Time_2,hh:mm UTC-08:00,Time of second set of Ultrameter measurements using a specified InstallationMethod_ID; completed to the known precision; and recorded in Pacific Standard Time.,time,column_header
-Ultrameter_Time_3,hh:mm UTC-08:00,Time of third set of Ultrameter measurements using a specified InstallationMethod_ID; completed to the known precision; and recorded in Pacific Standard Time.,time,column_header
-Ultrameter_Total_Dissolved_Solids_1,,,,column_header
-Ultrameter_Total_Dissolved_Solids_2,,,,column_header
-Ultrameter_Total_Dissolved_Solids_3,,,,column_header
-Ultrameter_Total_Dissolved_Solids_Mean,parts_per_million,The mean value calculated for three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
-Ultrameter_Total_Dissolved_Solids_Outlier,,The binary value of the statistical outlier (whether the parameter value lies outside the interquartile range) among three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
-Ultrameter_Total_Dissolved_Solids_Range,parts_per_million,The spread of the data (maximum value minus the minimum value) calculated for three consecutive Ultrameter total dissolved solids measurements.,numeric,column_header
+Ultrameter_Temperature_Mean,degree_celsius,The mean value calculated for three consecutive Ultrameter temperature measurements.,numeric,column_header
 Unit,N/A,Unit of measurement that applies to a given column in the data package.,text,column_header
-Unsat Hydrocarbon_Cond Hydrocarbon,,,,column_header
 Unsat_Hydrocarbon,,,,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon,,,,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,,,,column_header
 Unsat_Hydrocarbon_norm,,,,column_header
-uphydroseq,,,,column_header
-uplevelpat,,,,column_header
-uva254,,,,column_header
-uva254corr,,,,column_header
-uva412,,,,column_header
-va_01,,,,column_header
-va_02,,,,column_header
-va_03,,,,column_header
-va_04,,,,column_header
-va_05,,,,column_header
-va_06,,,,column_header
-va_07,,,,column_header
-va_08,,,,column_header
-va_09,,,,column_header
-va_10,,,,column_header
-va_11,,,,column_header
-va_12,,,,column_header
-va_ma,,,,column_header
-vc_01,,,,column_header
-vc_02,,,,column_header
-vc_03,,,,column_header
-vc_04,,,,column_header
-vc_05,,,,column_header
-vc_06,,,,column_header
-vc_07,,,,column_header
-vc_08,,,,column_header
-vc_09,,,,column_header
-vc_10,,,,column_header
-vc_11,,,,column_header
-vc_12,,,,column_header
-vc_ma,,,,column_header
-ve_01,,,,column_header
-ve_02,,,,column_header
-ve_03,,,,column_header
-ve_04,,,,column_header
-ve_05,,,,column_header
-ve_06,,,,column_header
-ve_07,,,,column_header
-ve_08,,,,column_header
-ve_09,,,,column_header
-ve_10,,,,column_header
-ve_11,,,,column_header
-ve_12,,,,column_header
-ve_ma,,,,column_header
-vf_m_day,,,,column_header
-vf_md,,,,column_header
-vpuid,,,,column_header
-vpuin,,,,column_header
-vpuout,,,,column_header
-Watershed,,,,column_header
-watTemp_degC,,,,column_header
-wbareacomi,,,,column_header
-wbareatype,,,,column_header
-whondrs_id,,,,column_header
-Willamette,,,,column_header
-wrol_mo_end_member,,,,column_header
-wrol_sample_id,,,,column_header
 WROL2019_001,,,,column_header
-WROL2019_002,,,,column_header
+WROL2019_002,,"[bibi note for VGC: fill in the info for ""WROL2019_001"". No need to fill in the rest. Write what the 3 digits represent]",,column_header
 WROL2019_003,,,,column_header
 WROL2019_004,,,,column_header
 WROL2019_005,,,,column_header
@@ -1040,6 +607,9 @@ WROL2019_212,,,,column_header
 WROL2019_213,,,,column_header
 WROL2019_215,,,,column_header
 WROL2019_216,,,,column_header
+WWTPAllDensWs,,,,column_header
+Watershed,,,,column_header
+Willamette,,,,column_header
 WsAreaSqKm,,,,column_header
 WsAreaSqKm_cv,,,,column_header
 WsAreaSqKm_max,,,,column_header
@@ -1047,27 +617,103 @@ WsAreaSqKm_mean,,,,column_header
 WsAreaSqKm_min,,,,column_header
 WsAreaSqKm_n,,,,column_header
 WsAreaSqKm_sd,,,,column_header
-WsPctFull,,,,column_header
-WsPctFull.x,,,,column_header
-WsPctFull.x.x,,,,column_header
-WsPctFull.x.x.x,,,,column_header
-WsPctFull.x.x.x.x,,,,column_header
-WsPctFull.x.x.x.x.x,,,,column_header
-WsPctFull.x.x.x.x.x.x,,,,column_header
-WsPctFull.x.x.x.x.x.x.x,,,,column_header
-WsPctFull.x.x.x.x.x.x.x.x,,,,column_header
-WsPctFull.x.x.x.x.x.x.x.x.x,,,,column_header
-WsPctFull.y,,,,column_header
-WsPctFull.y.y,,,,column_header
-WsPctFull.y.y.y,,,,column_header
-WsPctFull.y.y.y.y,,,,column_header
-WsPctFull.y.y.y.y.y,,,,column_header
-WsPctFull.y.y.y.y.y.y,,,,column_header
-WsPctFull.y.y.y.y.y.y.y,,,,column_header
-WsPctFull.y.y.y.y.y.y.y.y,,,,column_header
-WsPctFull.y.y.y.y.y.y.y.y.y,,,,column_header
-WtDepWs,,,,column_header
-WWTPAllDensWs,,,,column_header
-WWTPMajorDensWs,,,,column_header
-WWTPMinorDensWs,,,,column_header
 Yakima,,,,column_header
+adj.r.squared,,,,column_header
+areasqkm,,,,column_header
+bs1_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 1 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
+bs2_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 2 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
+bs3_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets  3 further integrate stoichiometry to assign modified compound classes (Rivas-Urbach et al.; 2018).,text,column_header
+comid,,,,column_header
+dataset,,,,column_header
+delGcox0PerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions (pH = 0). Calculated as  per LaRowe and Van Cappellen; 2011.,numeric,column_header
+delGcoxPerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
+delGd,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
+delGd0,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 0. Calculated as per Song et al.; 2023.,numeric,column_header
+dep_names,,,,column_header
+depth,,,,column_header
+depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
+df,,,,column_header
+expl_names,,,,column_header
+fdate,,,,column_header
+gnis_id,,,,column_header
+gnis_name,,,,column_header
+id,,,,column_header
+kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
+kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
+lamO2,N/A,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
+lamO20,N/A,Thermodynamic efficiency (defined by lambda) at standard state (pH = 0). Calculated as per Song et al.; 2020.,numeric,column_header
+latitude_dec_deg,,,,column_header
+longitude_dec_deg,,,,column_header
+lulc_H,,,,column_header
+lulc_evenness,,,,column_header
+lulc_evenness_cv,,,,column_header
+lulc_evenness_max,,,,column_header
+lulc_evenness_mean,,,,column_header
+lulc_evenness_min,,,,column_header
+lulc_evenness_n,,,,column_header
+lulc_evenness_sd,,,,column_header
+mass.mean,,,,column_header
+mass.median,,,,column_header
+mass.sd,,,,column_header
+max,,,,column_header
+min,,,,column_header
+mon,,,,column_header
+monthly_end_member,,,,column_header
+name,,,,column_header
+nobs,,,,column_header
+normalized.transformations,,,,column_header
+normalized.transformations_cv,,,,column_header
+normalized.transformations_max,,,,column_header
+normalized.transformations_mean,,,,column_header
+normalized.transformations_min,,,,column_header
+normalized.transformations_n,,,,column_header
+normalized.transformations_sd,,,,column_header
+number.of.peaks,,,,column_header
+number.of.peaks_cv,,,,column_header
+number.of.peaks_max,,,,column_header
+number.of.peaks_mean,,,,column_header
+number.of.peaks_min,,,,column_header
+number.of.peaks_n,,,,column_header
+number.of.peaks_sd,,,,column_header
+p,,,,column_header
+p.value,,,,column_header
+peaks.with.formula,,,,column_header
+peaks.with.formula_cv,,,,column_header
+peaks.with.formula_max,,,,column_header
+peaks.with.formula_mean,,,,column_header
+peaks.with.formula_min,,,,column_header
+peaks.with.formula_n,,,,column_header
+peaks.with.formula_sd,,,,column_header
+q_daily_cms,,,,column_header
+q_daily_mm,,,,column_header
+r,,,,column_header
+r.sq.adj,,,,column_header
+r.squared,,,,column_header
+r2_labels,,,,column_header
+r_labels,,,,column_header
+resolution,,,,column_header
+sample,,,,column_header
+sample_date,,,,column_header
+sample_n,,,,column_header
+season,,,,column_header
+season_n,,,,column_header
+season_tb,,,,column_header
+site,,,,column_header
+site_description,,,,column_header
+slope,milligrams_per_liter_per_centimeter,Slope of the linear regression between dissolved oxygen and column length,,column_header
+statistic,,,,column_header
+streamorde,,,,column_header
+total.transformations,,,,column_header
+tt_hr,,,,column_header
+tt_hr_cv,,,,column_header
+tt_hr_max,,,,column_header
+tt_hr_mean,,,,column_header
+tt_hr_min,,,,column_header
+tt_hr_n,,,,column_header
+tt_hr_sd,,,,column_header
+vf_m_day,,,,column_header
+vf_md,,,,column_header
+watTemp_degC,,,,column_header
+whondrs_id,,,,column_header
+wrol_mo_end_member,,,,column_header
+wrol_sample_id,,,,column_header
