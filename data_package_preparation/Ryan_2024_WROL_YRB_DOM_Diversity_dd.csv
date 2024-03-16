@@ -1,99 +1,99 @@
 # Bibi pulled all column headers. No need to edit this column.,"# directions: First, read through existing units and edit for accuracy. Then, fill in remaining cells in this column with the unit spelling out all abbreviations (e.g., ""meters"" not ""m""). If unit doesn't apply, write ""N/A"".","# directions: First, read through existing definitions and edit for accuracy. Then, fill out this column with the definition of the header. Include information that covers what the data are and why it's relevant to your data package. Use full sentences (capital first letter and period at end). Try to avoid using commas (use semi colors or reword if possible). Spell out all abbreviations and acryonmns (e.g., ""Fourier-transform ion cyclotron resonance (FTICR)"" not ""FTICR"").",# fill in the class/structure of the header column. Choose between numeric; text; date; time; datetime,# Bibi pulled all column headers. No need to edit this column.
 Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
 AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
-AI.Mod.mean,,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_cv,,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_max,,Maximun value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_mean,,Mean value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_min,,Minimun values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_n,,Numer of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_sd,,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.median,,,,column_header
-AI.Mod.sd,,,,column_header
-AI.mean,,,,column_header
-AI.median,,,,column_header
-AI.sd,,,,column_header
+AI.Mod.mean,N/A,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_cv,N/A,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_max,N/A,Maximun value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_mean,N/A,Mean value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_min,N/A,Minimun values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_n,N/A,Numer of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_sd,N/A,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.median,N/A,Median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.sd,N/A,Standard deviation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.mean,N/A,Mean aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.median,N/A,Median aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.sd,N/A,Standard deviation of aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI_Mod,N/A,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-Amino_Sugar,,,,column_header
-Amino_Sugar_norm,,,,column_header
+Amino_Sugar,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class,numeric,column_header
+Amino_Sugar_norm,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 C,N/A,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-C/N,,,,column_header
+C/N,N/A,Carbon and Nitrogen ratio,numeric,column_header
 C13,N/A,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 CHO,peaks,Total number of CHO molecular formulae identified by FTICR-MS,numeric,Column_header
 CHON,peaks,Total number of CHON molecular formulae identified by FTICR-MS,numeric,Column_header
 CHONP,peaks,Total number of CHONP molecular formulae identified by FTICR-MS,numeric,Column_header
-CHONP_norm,,,,column_header
-CHONS,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by FTICR-MS,datetime,Column_header
+CHONP_norm,peaks,Total number of CHONP molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHONS,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by FTICR-MS,numeric,Column_header
 CHONSP,peaks,Total number of CHONSP  molecular formulae identified by FTICR-MS,numeric,Column_header
-CHONSP_norm,,,,column_header
-CHONS_norm,,,,column_header
-CHON_cv,,,,column_header
-CHON_max,,,,column_header
-CHON_mean,,,,column_header
-CHON_min,,,,column_header
-CHON_n,,,,column_header
-CHON_norm,,,,column_header
-CHON_norm_cv,,,,column_header
-CHON_norm_max,,,,column_header
-CHON_norm_mean,,,,column_header
-CHON_norm_min,,,,column_header
-CHON_norm_n,,,,column_header
-CHON_norm_sd,,,,column_header
-CHON_sd,,,,column_header
+CHONSP_norm,peaks,Total number of CHONSP molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHONS_norm,peaks,Total number of CHONS molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHON_cv,peaks,Coefficient of variation of the total number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
+CHON_max,peaks,Maximun value for the total number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
+CHON_mean,peaks,Mean value for the total number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
+CHON_min,peaks,Minimun value for the total number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
+CHON_n,peaks,Number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
+CHON_norm,peaks,Total number of CHON molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHON_norm_cv,peaks,Coefficient of variation of the normalized CHON molecular formulae ,numeric,column_header
+CHON_norm_max,peaks,Maximun value for the normalized CHON molecular formulae ,numeric,column_header
+CHON_norm_mean,peaks,Mean value for the normalized CHON molecular formulae ,numeric,column_header
+CHON_norm_min,peaks,Minimun value for the normalized CHON molecular formulae ,numeric,column_header
+CHON_norm_n,peaks,Number of normalized CHON molecular formulae ,numeric,column_header
+CHON_norm_sd,peaks,Standard deviation of normalized CHON molecular formulae ,numeric,column_header
+CHON_sd,peaks,Standard deviation of total CHON molecular formulae ,numeric,column_header
 CHOP,peaks,Total number of CHOP (carbon-hydrogen-oxygen-phosphorus) molecular formulae identified by FTICR-MS,numeric,Column_header
-CHOP_norm,,,,column_header
+CHOP_norm,peaks,Total number of CHOP molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
 CHOS,peaks,Total number of CHOS molecular formulae identified by FTICR-MS,numeric,Column_header
 CHOSP,peaks,Total number of CHOSP molecular formulae identified by FTICR-MS,numeric,Column_header
-CHOSP_norm,,,,column_header
-CHOS_norm,,,,column_header
-CHO_norm,,,,column_header
+CHOSP_norm,peaks,Total number of CHOSP molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHOS_norm,peaks,Total number of CHOS molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
+CHO_norm,peaks,Total number of CHO molecular formulae identified by FTICR-MS divided by the total number of peaks with molecular formulae assigned in a sample,numeric,column_header
 COMID,N/A,NHDPlus version 2 common identifier (COMID). The COMID can be used to extract geospatial variables from various sources.,numeric,column_header
 Candidates,N/A,Possible known molecules the analyzed molecule could be. Assigned by checking against a known database. Value of -1 when molecule was not checked against database.,numeric,column_header
-Carbohydrate,,,,column_header
-Carbohydrate_Amino_Sugar,,,,column_header
-Carbohydrate_Amino_Sugar_norm,,,,column_header
-Carbohydrate_norm,,,,column_header
-CatAreaSqKm,,,,column_header
+Carbohydrate,peaks,Number of molecular formulae in the Carbohydrate-like chemical class,numeric,column_header
+Carbohydrate_Amino_Sugar,peaks,Number of molecular formulae in the Carbohydrate_Amino_Sugar-like chemical class,numeric,column_header
+Carbohydrate_Amino_Sugar_norm,peaks,Number of molecular formulae in the Carbohydrate_Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Carbohydrate_norm,peaks,Number of molecular formulae in the Carbohydrate-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+CatAreaSqKm,square_kilometer,Catchment area in square kilometers ,numeric,column_header
 Class,N/A,Inferred chemical classes as per Kim et al.; 2003.,text,column_header
-ClayWs,,,,column_header
+ClayWs,percent,Mean percent clay content of soils (STATSGO) within a catchment,numeric,column_header
 Column_or_Row_Name,N/A,Column or row headers from each csv file in the dataset.,text,column_header
-Cond_Hydrocarbon,,,,column_header
-Cond_Hydrocarbon_norm,,,,column_header
-Connecticut,,,,column_header
-DBE.O.mean,,,,column_header
-DBE.O.median,,,,column_header
-DBE.O.sd,,,,column_header
-DBE.mean,,,,column_header
-DBE.median,,,,column_header
-DBE.sd,,,,column_header
-DBE_1,,,,column_header
+Cond_Hydrocarbon,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class,numeric,column_header
+Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Connecticut,N/A,Name of one of the watersheds under study,text,column_header
+DBE.O.mean,N/A,Mean double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.O.median,N/A,Median double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.O.sd,N/A,Standard deviation of double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.mean,N/A,Mean double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.median,N/A,Median double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.sd,N/A,Standard deviation of double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE_1,N/A,Double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 DBE_AI,N/A,The minimum number of C-C double bonds plus rings in a common molecular structure containing heteroatoms. Calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 DBE_O,N/A,Double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
-DOC,,,,column_header
-DOC_SD,,,,column_header
-DOC_mgL,,,,column_header
-DOC_mgL_cv,,,,column_header
-DOC_mgL_max,,,,column_header
-DOC_mgL_mean,,,,column_header
-DOC_mgL_min,,,,column_header
-DOC_mgL_n,,,,column_header
-DOC_mgL_sd,,,,column_header
-Da,,,,column_header
-Da_cv,,,,column_header
-Da_max,,,,column_header
-Da_mean,,,,column_header
-Da_min,,,,column_header
-Da_n,,,,column_header
-Da_sd,,,,column_header
-DamDensWs,,,,column_header
+DOC,milligrams_per_liter,Dissolved organic carbon,numeric,column_header
+DOC_SD,N/A,Standard deviation for the dissolved organic carbon,numeric,column_header
+DOC_mgL,milligrams_per_liter,Dissolved organic carbon,numeric,column_header
+DOC_mgL_cv,N/A,Coefficient of variation for dissolved organic carbon,numeric,column_header
+DOC_mgL_max,milligrams_per_liter,Maximun value for dissolved organic carbon,numeric,column_header
+DOC_mgL_mean,milligrams_per_liter,Mean value for dissolved organic carbon,numeric,column_header
+DOC_mgL_min,milligrams_per_liter,Minimun value for dissolved organic carbon,numeric,column_header
+DOC_mgL_n,N/A,Number of samples with dissolved organic carbon concentations,numeric,column_header
+DOC_mgL_sd,N/A,Standard deviation for dissolved organic carbon,numeric,column_header
+Da,N/A,Damkohler number,numeric,column_header
+Da_cv,N/A,Coefficient of variation for the Damkohler number,numeric,column_header
+Da_max,N/A,Maximun value for the Damkohler number,numeric,column_header
+Da_mean,N/A,Mean value for the Damkohler number,numeric,column_header
+Da_min,N/A,Minimun value for the Damkohler number,numeric,column_header
+Da_n,N/A,Number of samples with Damkohler number,numeric,column_header
+Da_sd,N/A,Standard deviation for the Damkohler number,numeric,column_header
+DamDensWs,dams_per_square_kilometer ,Density of georeferenced dams within a watershed as per StreamCat database,numeric,column_header
 Data_Type,N/A,Type of data (numeric; text; date; time; datetime).,text,column_header
 Date,YYYY-MM-DD,Date of sample collection.,date,column_header
 Date_End,YYYY-MM-DD,The latest date in the file.,date,column_header
 Date_Start,YYYY-MM-DD,The earliest date in the file.,date,column_header
 Definition,N/A,Description of the information in a given column or row in the dataset.,text,column_header
-Deschutes,,,,column_header
+Deschutes,N/A,Name of one of the watersheds under study,text,column_header
 El_comp,N/A,Assigned elemental group(s) that are known.,text,column_header
-ElevWs,,,,column_header
+ElevWs,meter,Mean watershed elevation as per StreamCat database,numeric,column_header
 Error_ppm,parts_per_million,Parts per million error calculated as [expected molecular mass - measured molecular mass]/expected molecular mass * 1e6).,numeric,column_header
 Field_Name,N/A,Name of field of header rows before data.,text,column_header
 Field_Staff,N/A,"The name of field staff involved in data collection; recorded as ""FirstName_LastName"" and separated by semicolons.",text,column_header
@@ -102,31 +102,31 @@ File_Name,N/A,Name of files in the data package.,text,column_header
 File_Path,N/A,File path within the data package.,text,column_header
 GFE,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions. Calculated as per LaRowe and Van Cappellen; 2011.,numeric,column_header
 GPS_Accuracy,feet,Accuracy of GPS location data accuracy; measured in feet.,numeric,column_header
-Gunnison,,,,column_header
+Gunnison,N/A,Name of one of the watersheds under study,text,column_header
 H,N/A,Hydrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-HtoC.mean,,,,column_header
-HtoC.median,,,,column_header
-HtoC.sd,,,,column_header
+HtoC.mean,N/A,Mean value for H to C ratios,numeric,column_header
+HtoC.median,N/A,Median value for H to C ratios,numeric,column_header
+HtoC.sd,N/A,Standard deviation for H to C ratios,numeric,column_header
 HtoC_ratio,N/A,Hydrogen to carbon ratio.,numeric,column_header
-HydrlCondWs,,,,column_header
-KenDef.mean,,,,column_header
-KenDef.median,,,,column_header
-KenDef.sd,,,,column_header
-KenMass.mean,,,,column_header
-KenMass.median,,,,column_header
-KenMass.sd,,,,column_header
-KffactWs,,,,column_header
+HydrlCondWs,micrometers_per_second,Mean lithological hydraulic conductivity content in surface or near surface geology within a watershed as per StreamCat database,numeric,column_header
+KenDef.mean,Dalton,Mean Kendrick mass defect,numeric,column_header
+KenDef.median,Dalton,Median Kendrick mass defect,numeric,column_header
+KenDef.sd,N/A,Standard deviation Kendrick mass defect,numeric,column_header
+KenMass.mean,Dalton,Mean Kendrick mass,numeric,column_header
+KenMass.median,Dalton,Median Kendrick mass,numeric,column_header
+KenMass.sd,N/A,Standard deviation Kendrick mass,numeric,column_header
+KffactWs,N/A,Mean soil erodibility within a watershed as per Streamcat database,numeric,column_header
 Latitude,decimal_degrees_WGS1984,Geographic location (latitude) of site.,numeric,column_header
-Lignin,,,,column_header
-Lignin_Amino_Sugar,,,,column_header
-Lignin_Amino_Sugar_norm,,,,column_header
-Lignin_Tannin,,,,column_header
-Lignin_Tannin_norm,,,,column_header
-Lignin_norm,,,,column_header
-Lipid,,,,column_header
-Lipid_Protein,,,,column_header
-Lipid_Protein_norm,,,,column_header
-Lipid_norm,,,,column_header
+Lignin,peaks,Number of molecular formulae in the Lignin-like chemical class,numeric,column_header
+Lignin_Amino_Sugar,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class,numeric,column_header
+Lignin_Amino_Sugar_norm,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Lignin_Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class,numeric,column_header
+Lignin_Tannin_norm,peaks,Number of molecular formulae in the Lignin_Tannin-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Lignin_norm,peaks,Number of molecular formulae in the Lignin-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Lipid,peaks,Number of molecular formulae in the Lipid-like chemical class,numeric,column_header
+Lipid_Protein,peaks,Number of molecular formulae in the Lipid_Protein-like chemical class,numeric,column_header
+Lipid_Protein_norm,peaks,Number of molecular formulae in the Lignin_Protein-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Lipid_norm,peaks,Number of molecular formulae in the Lipid-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 Longitude,decimal_degrees_WGS1984,Geographic location (longitude) of site.,numeric,column_header
 Mass,mass_to_charge_ratio,Measured ionic mass. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
 Material,N/A,Type of sample (e.g. Liquid>aqueous; sediment; etc). Uses a controlled vocabulary from IGSN SESAR (https://www.geosamples.org/).,text,column_header
@@ -150,69 +150,69 @@ Mean_71870_Br_mg_per_L,milligrams_per_liter,"Mean bromide. 5-digit prefix refers
 Mean_Missing_Reps,N/A,Indication of whether all replicates (reps) are included in the calculation of the mean (with a FALSE flag) or all replicates are not included (with a TRUE flag).,text,column_header
 Missing_Value_Codes,N/A,"Cells with missing data are represented with a missing value code rather than an empty cell. This column describes which missing value codes were used. The recommendation for numeric data is ""-9999"" and for character data is ""N/A"". Some files also use a missing value format specific to when a data value is below the limit of detection or above/below the standard curve. For these cases: a text string is included in the format ""[data type]_*|*_Raw_Not_Corrected|*_Final_Corrected"" in which the asterisks are the denoted individual data values. See the associated methods deviation (DTL_003) for more details.",text,column_header
 MolForm,N/A,Molecular Formula.,text,column_header
-Month,,,,column_header
+Month,N/A,Month of the year when the sample was collected,text,column_header
 N,N/A,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-NA,,,,column_header
+NA,N/A,Peaks with molecular formulae that could not be assigned to the existing chemical classes,numeric,column_header
 NOSC,N/A,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
-NOSC.mean,,,,column_header
-NOSC.median,,,,column_header
-NOSC.sd,,,,column_header
+NOSC.mean,N/A,Mean nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC.median,N/A,Median nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC.sd,N/A,Standard deviation nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 Na,N/A,Sodium atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 Name,N/A,Column headers from each csv file in the dataset.,text,column_header
 NeutralMass,N/A,Zero-charge or neutral molecular mass. Calculated from observed ionic mass by balancing charge with protons or electrons).,numeric,column_header
 Notes,N/A,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
-NtoC.mean,,,,column_header
-NtoC.median,,,,column_header
-NtoC.sd,,,,column_header
+NtoC.mean,N/A,Mean Nitrogen to Carbon ratio.,numeric,column_header
+NtoC.median,N/A,Median Nitrogen to Carbon ratio.,numeric,column_header
+NtoC.sd,N/A,Standard deviation Nitrogen to Carbon ratio.,numeric,column_header
 NtoC_ratio,N/A,Nitrogen to Carbon ratio.,numeric,column_header
-NtoP.mean,,,,column_header
-NtoP.median,,,,column_header
-NtoP.sd,,,,column_header
+NtoP.mean,N/A,Mean Nitrogen to Phosphorus ratio.,numeric,column_header
+NtoP.median,N/A,Median Nitrogen to Phosphorus ratio.,numeric,column_header
+NtoP.sd,N/A,Standard deviation Nitrogen to Phosphorus ratio.,numeric,column_header
 NtoP_ratio,N/A,Nitrogen to Phosphorous ratio.,numeric,column_header
 O,N/A,Oxygen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-OmWs,,,,column_header
-Other,,,,column_header
-Other_norm,,,,column_header
-OtoC.mean,,,,column_header
-OtoC.median,,,,column_header
-OtoC.sd,,,,column_header
+OmWs,percent_by_weight,Mean organic matter content of soils within a watershed as per the StreamCat database,numeric,column_header
+Other,N/A,Peaks with molecular formulae that could not be assigned to the existing chemical classes and were assigned as other,numeric,column_header
+Other_norm,N/A,Number of molecular formulae in the Other chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+OtoC.mean,N/A,Mean Oxygen to Carbon ratio.,numeric,column_header
+OtoC.median,N/A,Median Oxygen to Carbon ratio.,numeric,column_header
+OtoC.sd,N/A,Standard deviation Oxygen to Carbon ratio.,numeric,column_header
 OtoC_ratio,N/A,Oxygen to Carbon ratio.,numeric,column_header
 P,N/A,Phosphorous atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-PctConif2019Ws,,,,column_header
-PctConif2019Ws_cv,,,,column_header
-PctConif2019Ws_max,,,,column_header
-PctConif2019Ws_mean,,,,column_header
-PctConif2019Ws_min,,,,column_header
-PctConif2019Ws_n,,,,column_header
-PctConif2019Ws_sd,,,,column_header
-PctCrop2019Ws,,,,column_header
-PctDecid2019Ws,,,,column_header
-PctDecid2019Ws_cv,,,,column_header
-PctDecid2019Ws_max,,,,column_header
-PctDecid2019Ws_mean,,,,column_header
-PctDecid2019Ws_min,,,,column_header
-PctDecid2019Ws_n,,,,column_header
-PctDecid2019Ws_sd,,,,column_header
-PctHbWet2019Ws,,,,column_header
-PctImp2019Ws,,,,column_header
-PctMxFst2019Ws,,,,column_header
-PctOw2019Ws,,,,column_header
-PctUrbHi2019Ws,,,,column_header
-PctWdWet2019Ws,,,,column_header
-PermWs,,,,column_header
-PopDen2010Ws,,,,column_header
-PrecipSite,,,,column_header
-Protein,,,,column_header
-Protein_Amino_Sugar,,,,column_header
-Protein_Amino_Sugar_norm,,,,column_header
-Protein_Lignin,,,,column_header
-Protein_Lignin_Amino_Sugar,,,,column_header
-Protein_Lignin_Amino_Sugar_norm,,,,column_header
-Protein_Lignin_norm,,,,column_header
-Protein_norm,,,,column_header
-PtoC.mean,,,,column_header
-PtoC.median,,,,column_header
-PtoC.sd,,,,column_header
+PctConif2019Ws,percent,Percent area classified as evergreen forest land cover as per NCDL and StreamCat databases,numeric,column_header
+PctConif2019Ws_cv,N/A,Coefficient of variation of the percent evergreen forest land cover,numeric,column_header
+PctConif2019Ws_max,percent,Maximun value for the percent of evergreen forest land cover,numeric,column_header
+PctConif2019Ws_mean,percent,Mean value for the percent of evergreen forest land cover,numeric,column_header
+PctConif2019Ws_min,percent,Minimun value for the percent of evergreen forest land cover,numeric,column_header
+PctConif2019Ws_n,N/A,Number of sites with percent evergreen forest land cover,numeric,column_header
+PctConif2019Ws_sd,N/A,Standard deviation for the percent of evergreen forest land cover,numeric,column_header
+PctCrop2019Ws,percent,Percent area classified as crop land cover as per NCDL and StreamCat databases,numeric,column_header
+PctDecid2019Ws,percent,Percent area classified as deciduous land cover as per NCDL and StreamCat databases,numeric,column_header
+PctDecid2019Ws_cv,N/A,Coefficient of variation of the percent deciduous forest land cover,numeric,column_header
+PctDecid2019Ws_max,percent,Maximun value for the percent of deciduous forest land cover,numeric,column_header
+PctDecid2019Ws_mean,percent,Mean value for the percent of deciduous forest land cover,numeric,column_header
+PctDecid2019Ws_min,percent,Minimun value for the percent of deciduous forest land cover,numeric,column_header
+PctDecid2019Ws_n,N/A,Number of sites with percent deciduous forest land cover,numeric,column_header
+PctDecid2019Ws_sd,N/A,Standard deviation for the percent of deciduous forest land cover,numeric,column_header
+PctHbWet2019Ws,percent,Percent area classified as herbaceous wetland land cover as per NCDL and StreamCat databases,numeric,column_header
+PctImp2019Ws,percent,Mean imperviousness of anthropogenic surfaces within the watershed as per NCDL and StreamCat databases,numeric,column_header
+PctMxFst2019Ws,percent,Percent area classified as classified as mixed deciduous/evergreen forest land cover as per NCDL and StreamCat databases,numeric,column_header
+PctOw2019Ws,percent,Percent area classified as open water land cover as per NCDL and StreamCat databases,numeric,column_header
+PctUrbHi2019Ws,percent,"Percent area classified as developed, high-intensity land use as per NCDL and StreamCat databases",numeric,column_header
+PctWdWet2019Ws,percent,Percent area classified as woody wetland land cover as per NCDL and StreamCat databases,numeric,column_header
+PermWs,centimeter_per_hour,Mean permeability of soils within a watershed as per StreamCat,numeric,column_header
+PopDen2010Ws,people_square_kilometer,Mean populating density within a watershed as per the StreamCat database,numeric,column_header
+PrecipSite,mm,Mean precipitation per site,numeric,column_header
+Protein,N/A,Number of molecular formulae in the Protein-like chemical class,numeric,column_header
+Protein_Amino_Sugar,N/A,Number of molecular formulae in the Protein_Amino_Sugar-like chemical class,numeric,column_header
+Protein_Amino_Sugar_norm,N/A,Number of molecular formulae in the Protein_Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Protein_Lignin,N/A,Number of molecular formulae in the Protein_Lignin-like chemical class,numeric,column_header
+Protein_Lignin_Amino_Sugar,N/A,Number of molecular formulae in the Protein_Lignin_Amino_Sugar-like chemical class,numeric,column_header
+Protein_Lignin_Amino_Sugar_norm,N/A,Number of molecular formulae in the Protein_Lignin_Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Protein_Lignin_norm,N/A,Number of molecular formulae in the Protein_Lignin-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Protein_norm,N/A,Number of molecular formulae in the Protein-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+PtoC.mean,,Mean of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.median,,Median of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.sd,,Standard devian of Phosphorus to Carbon ratio.,numeric,column_header
 PtoC_ratio,N/A,Phosphorus to Carbon ratio.,numeric,column_header
 RC2_0001,,,,column_header
 RC2_0002,,"[bibi note for VGC: fill in the info for ""RC2_0001"". No need to fill in the rest. Write what the 4 digits represent]",,column_header
