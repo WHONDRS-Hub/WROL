@@ -1,4 +1,4 @@
-# Bibi pulled all column headers. No need to edit this column.,"# directions: First, read through existing units and edit for accuracy. Then, fill in remaining cells in this column with the unit spelling out all abbreviations (e.g., ""meters"" not ""m""). If unit doesn't apply, write ""N/A"".","# directions: First, read through existing definitions and edit for accuracy. Then, fill out this column with the definition of the header. Include information that covers what the data are and why it's relevant to your data package. Use full sentences (capital first letter and period at end). Try to avoid using commas (use semi colors or reword if possible). Spell out all abbreviations and acryonmns (e.g., ""Fourier-transform ion cyclotron resonance (FTICR)"" not ""FTICR"").",# fill in the class/structure of the header column. Choose between numeric; text; date; time; datetime,# Bibi pulled all column headers. No need to edit this column.
+# Bibi pulled all column headers. No need to edit this column.,# Bibi pulled all column headers. No need to edit this column.,"# directions: First, read through existing definitions and edit for accuracy. Then, fill out this column with the definition of the header. Include information that covers what the data are and why it's relevant to your data package. Use full sentences (capital first letter and period at end). Try to avoid using commas (use semi colors or reword if possible). Spell out all abbreviations and acryonmns (e.g., ""Fourier-transform ion cyclotron resonance (FTICR)"" not ""FTICR"").",# fill in the class/structure of the header column. Choose between numeric; text; date; time; datetime,# Bibi pulled all column headers. No need to edit this column.
 Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
 AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
 AI.Mod.mean,N/A,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
@@ -214,7 +214,7 @@ PtoC.mean,,Mean of Phosphorus to Carbon ratio.,numeric,column_header
 PtoC.median,,Median of Phosphorus to Carbon ratio.,numeric,column_header
 PtoC.sd,,Standard devian of Phosphorus to Carbon ratio.,numeric,column_header
 PtoC_ratio,N/A,Phosphorus to Carbon ratio.,numeric,column_header
-RC2_0001,,,,column_header
+RC2_0001,NA,Samples. The four numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence,numeric,column_header
 RC2_0002,,"[bibi note for VGC: fill in the info for ""RC2_0001"". No need to fill in the rest. Write what the 4 digits represent]",,column_header
 RC2_0003,,,,column_header
 RC2_0004,,,,column_header
@@ -407,38 +407,38 @@ RC2_0208,,,,column_header
 RC2_0209,,,,column_header
 RC2_0210,,,,column_header
 RC2_0211,,,,column_header
-RMSE,,,,column_header
-RdDensWs,,,,column_header
-RunoffWs,,,,column_header
+RMSE,N/A,Root mean square error,,column_header
+RdDensWs,kilometer_per_square_kilometer,Density of roads within a watershed as per StreamCat database (km/square km),numeric,column_header
+RunoffWs,millimiters,Mean runoff within a watershed as per StreamCat database,numeric,column_header
 S,N/A,Sulphur atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 Sample_Name,N/A,"Name of sample. If the sample name includes the material (i.e. ##_###_Water), the row is referring to all of samples of that analysis of a given material. Individual samples follow the format of [Parent_ID]_[analysis-specific indicator code]-[replicate number] (i.e. ##_###_OCN-1). Not all sample types have replicates. See  file ending in ""readme.pdf"" for more details.",text,column_header
-Sampling_Event,,,,column_header
-SandWs,,,,column_header
-Site,,,,column_header
+Sampling_Event,N/A,Sampling event,text,column_header
+SandWs,percent,Mean percent sand content of soils within a watershed as per StreamCat,numeric,column_header
+Site,N/A,Sampling site.,text,column_header
 Site_ID,N/A,Site ID. Three-digit alphanumeric code used to identify site.,text,column_header
 Site_Name,N/A,Name of site.,text,column_header
 Standard,N/A,ESS-DIVE Reporting Format or other standard applied to the data file.,text,column_header
-TN,,,,column_header
-TN_SD,,,,column_header
-TN_mgL,,,,column_header
-TSS_mgL,,,,column_header
-Tannin,,,,column_header
-Tannin_Cond_Hydrocarbon,,,,column_header
-Tannin_Cond_Hydrocarbon_norm,,,,column_header
-Tannin_norm,,,,column_header
+TN,milligrams_per_liter,Total dissolved nitrogen concentration,numeric,column_header
+TN_SD,N/A,Standard deviation for total dissolved nitrogen concentrations,numeric,column_header
+TN_mgL,milligrams_per_liter,Total dissolved nitrogen concentration,numeric,column_header
+TSS_mgL,milligrams_per_liter,Total suspended solids concentration,numeric,column_header
+Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class,numeric,column_header
+Tannin_Cond_Hydrocarbon,peaks,Number of molecular formulae in the Tannin_Cond_Hydrocarbon-like chemical class,numeric,column_header
+Tannin_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Tannin_Cond_Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Tannin_norm,peaks,Number of molecular formulae in the Tannin-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 Term_Type,N/A,Indicates whether the header is a column header or row header.,text,column_header
 Time_Arriving,hh:mm UTC-07:00,Site arrival time. Recorded in Pacific Standard Time.,time,column_header
 Time_Leaving,hh:mm UTC-07:00,Site departure time. Recorded in Pacific Standard Time.,time,column_header
 Time_Zone,N/A,Local time zone.,text,column_header
-TmeanSite,,,,column_header
-Twat_degC,,,,column_header
+TmeanSite,degree_celsius,PRISM climate data - 30-year normal mean temperature. Annual period 2008 and 2009.,numeric,column_header
+Twat_degC,degree_celsius,Water temperature,numeric,column_header
 Ultrameter_Temperature_Mean,degree_celsius,The mean value calculated for three consecutive Ultrameter temperature measurements.,numeric,column_header
 Unit,N/A,Unit of measurement that applies to a given column in the data package.,text,column_header
-Unsat_Hydrocarbon,,,,column_header
-Unsat_Hydrocarbon_Cond_Hydrocarbon,,,,column_header
-Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,,,,column_header
-Unsat_Hydrocarbon_norm,,,,column_header
-WROL2019_001,,,,column_header
+Unsat_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class,numeric,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class,numeric,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Unsat_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+WROL2019_001,NA,Samples. The three numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence,numeric,column_header
 WROL2019_002,,"[bibi note for VGC: fill in the info for ""WROL2019_001"". No need to fill in the rest. Write what the 3 digits represent]",,column_header
 WROL2019_003,,,,column_header
 WROL2019_004,,,,column_header
@@ -607,83 +607,83 @@ WROL2019_212,,,,column_header
 WROL2019_213,,,,column_header
 WROL2019_215,,,,column_header
 WROL2019_216,,,,column_header
-WWTPAllDensWs,,,,column_header
-Watershed,,,,column_header
-Willamette,,,,column_header
-WsAreaSqKm,,,,column_header
-WsAreaSqKm_cv,,,,column_header
-WsAreaSqKm_max,,,,column_header
-WsAreaSqKm_mean,,,,column_header
-WsAreaSqKm_min,,,,column_header
-WsAreaSqKm_n,,,,column_header
-WsAreaSqKm_sd,,,,column_header
-Yakima,,,,column_header
-adj.r.squared,,,,column_header
-areasqkm,,,,column_header
+WWTPAllDensWs,ADD,Density of waste water treatment plants within the watershed as per XXX database,numeric,column_header
+Watershed,N/A,Name of the watersheds under study. ,text,column_header
+Willamette,N/A,Name of one of the watersheds under study,text,column_header
+WsAreaSqKm,square_kilometer,Watershed area,numeric,column_header
+WsAreaSqKm_cv,N/A,Coefficient of variation of the watershed area,numeric,column_header
+WsAreaSqKm_max,square_kilometer,Maximun value of the watershed area,numeric,column_header
+WsAreaSqKm_mean,square_kilometer,Mean value of the watershed area,numeric,column_header
+WsAreaSqKm_min,square_kilometer,Minumun value of the watershed area,numeric,column_header
+WsAreaSqKm_n,square_kilometer,Number of sites with watershed area,numeric,column_header
+WsAreaSqKm_sd,N/A,Standard deviation of the value of the watershed area,numeric,column_header
+Yakima,N/A,Name of one of the watersheds under study,text,column_header
+adj.r.squared,N/A,Adjusted r-square,numeric,column_header
+areasqkm,square_kilometer,Watershed area,numeric,column_header
 bs1_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 1 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
 bs2_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 2 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
 bs3_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets  3 further integrate stoichiometry to assign modified compound classes (Rivas-Urbach et al.; 2018).,text,column_header
-comid,,,,column_header
-dataset,,,,column_header
+comid,N/A, Stream segment unique identifier in the NHDPlus database. ,numeric,column_header
+dataset,N/A,Dataset label,text,column_header
 delGcox0PerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions (pH = 0). Calculated as  per LaRowe and Van Cappellen; 2011.,numeric,column_header
 delGcoxPerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
 delGd,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
 delGd0,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 0. Calculated as per Song et al.; 2023.,numeric,column_header
-dep_names,,,,column_header
-depth,,,,column_header
+dep_names,ADD,ADD,ADD,column_header
+depth,meters,Stream depth,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
-df,,,,column_header
-expl_names,,,,column_header
-fdate,,,,column_header
-gnis_id,,,,column_header
-gnis_name,,,,column_header
-id,,,,column_header
+df,ADD,ADD,ADD,column_header
+expl_names,ADD,ADD,ADD,column_header
+fdate,ADD,ADD,ADD,column_header
+gnis_id,ADD,ADD,ADD,column_header
+gnis_name,ADD,ADD,ADD,column_header
+id,ADD,ADD,ADD,column_header
 kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
 kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
 lamO2,N/A,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
 lamO20,N/A,Thermodynamic efficiency (defined by lambda) at standard state (pH = 0). Calculated as per Song et al.; 2020.,numeric,column_header
-latitude_dec_deg,,,,column_header
-longitude_dec_deg,,,,column_header
-lulc_H,,,,column_header
-lulc_evenness,,,,column_header
-lulc_evenness_cv,,,,column_header
-lulc_evenness_max,,,,column_header
-lulc_evenness_mean,,,,column_header
-lulc_evenness_min,,,,column_header
-lulc_evenness_n,,,,column_header
-lulc_evenness_sd,,,,column_header
-mass.mean,,,,column_header
-mass.median,,,,column_header
-mass.sd,,,,column_header
-max,,,,column_header
-min,,,,column_header
-mon,,,,column_header
-monthly_end_member,,,,column_header
-name,,,,column_header
-nobs,,,,column_header
-normalized.transformations,,,,column_header
-normalized.transformations_cv,,,,column_header
-normalized.transformations_max,,,,column_header
-normalized.transformations_mean,,,,column_header
-normalized.transformations_min,,,,column_header
-normalized.transformations_n,,,,column_header
-normalized.transformations_sd,,,,column_header
-number.of.peaks,,,,column_header
-number.of.peaks_cv,,,,column_header
-number.of.peaks_max,,,,column_header
-number.of.peaks_mean,,,,column_header
-number.of.peaks_min,,,,column_header
-number.of.peaks_n,,,,column_header
-number.of.peaks_sd,,,,column_header
-p,,,,column_header
-p.value,,,,column_header
-peaks.with.formula,,,,column_header
-peaks.with.formula_cv,,,,column_header
-peaks.with.formula_max,,,,column_header
-peaks.with.formula_mean,,,,column_header
-peaks.with.formula_min,,,,column_header
-peaks.with.formula_n,,,,column_header
-peaks.with.formula_sd,,,,column_header
+latitude_dec_deg,decimal_degrees,Latitude,numeric,column_header
+longitude_dec_deg,decimal_degrees,Longitude,numeric,column_header
+lulc_H,N/A,Land use land cover Shannon Diveristy Index,numeric,column_header
+lulc_evenness,N/A,Land use land cover evenness,numeric,column_header
+lulc_evenness_cv,N/A,Coefficient of variation of land use land cover evenness,numeric,column_header
+lulc_evenness_max,N/A,Maximun value for land use land cover evenness,numeric,column_header
+lulc_evenness_mean,N/A,Mean value for land use land cover evenness,numeric,column_header
+lulc_evenness_min,N/A,Minimun value for land use land cover evenness,numeric,column_header
+lulc_evenness_n,N/A,Number of sites with land use land cover evenness,numeric,column_header
+lulc_evenness_sd,N/A,Standard deviation of land use land cover evenness,numeric,column_header
+mass.mean,mass_over_charge,Mean value for masses identified in the FTICR-MS samples,numeric,column_header
+mass.median,mass_over_charge,Median value for masses identified in the FTICR-MS samples,numeric,column_header
+mass.sd,mass_over_charge,Standard deviation for masses identified in the FTICR-MS samples,numeric,column_header
+max,N/A,Maximun,numeric,column_header
+min,N/A,Minimun,numeric,column_header
+mon,ADD,ADD,ADD,column_header
+monthly_end_member,ADD,ADD,ADD,column_header
+name,ADD,ADD,ADD,column_header
+nobs,N/A,Number of observartions,numeric,column_header
+normalized.transformations,N/A,Total number of biochemical transformations divided by the number of peaks,numeric,column_header
+normalized.transformations_cv,N/A,Coefficent of variation of normalized transformations,numeric,column_header
+normalized.transformations_max,N/A,Maximun value of normalized transformations,numeric,column_header
+normalized.transformations_mean,N/A,Mean value of normalized transformations,numeric,column_header
+normalized.transformations_min,N/A,Minimun value of normalized transformations,numeric,column_header
+normalized.transformations_n,N/A,Number of samples with normalized transformations,numeric,column_header
+normalized.transformations_sd,N/A,Standard deviation of normalized transformations,numeric,column_header
+number.of.peaks,N/A,Number of peaks within a sample,numeric,column_header
+number.of.peaks_cv,N/A,Coefficent of variation of number of peaks,numeric,column_header
+number.of.peaks_max,N/A,Maximun value of number of peaks,numeric,column_header
+number.of.peaks_mean,N/A,Mean value of number of peaks,numeric,column_header
+number.of.peaks_min,N/A,Minimun value of number of peaks,numeric,column_header
+number.of.peaks_n,N/A,Number of samples with number of peaks,numeric,column_header
+number.of.peaks_sd,N/A,Standard deviation of number of peaks,numeric,column_header
+p,N/A,Statistical p-value,numeric,column_header
+p.value,N/A,Statistical p-value,numeric,column_header
+peaks.with.formula,N/A,Number of peaks with molecular formula assgned within a sample,numeric,column_header
+peaks.with.formula_cv,N/A,Coefficent of variation of number of peaks with molecular formula assigned,numeric,column_header
+peaks.with.formula_max,N/A,Maximun value of number of peaks with molecular formula assigned,numeric,column_header
+peaks.with.formula_mean,N/A,Mean value of number of peaks with molecular formula assigned,numeric,column_header
+peaks.with.formula_min,N/A,Minimun value of number of peaks with molecular formula assigned,numeric,column_header
+peaks.with.formula_n,N/A,Number of samples with number of peaks with molecular formula assigned,numeric,column_header
+peaks.with.formula_sd,N/A,Standard deviation of number of peaks with molecular formula assigned,numeric,column_header
 q_daily_cms,,,,column_header
 q_daily_mm,,,,column_header
 r,,,,column_header
@@ -700,9 +700,9 @@ season_n,,,,column_header
 season_tb,,,,column_header
 site,,,,column_header
 site_description,,,,column_header
-slope,milligrams_per_liter_per_centimeter,Slope of the linear regression between dissolved oxygen and column length,,column_header
+slope,meters_per_meters,Slope of flowline based on smoothed elevations as per NHDPlus database,numeric,column_header
 statistic,,,,column_header
-streamorde,,,,column_header
+streamorde,N/A,Modified Strahler Stream Order as per NHDPlus database,numeric,column_header
 total.transformations,,,,column_header
 tt_hr,,,,column_header
 tt_hr_cv,,,,column_header
