@@ -629,11 +629,11 @@ delGcox0PerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reac
 delGcoxPerCmol,kJ_per_C_mol,Gibbs free energy of the carbon oxidation half reaction at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
 delGd,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
 delGd0,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 0. Calculated as per Song et al.; 2023.,numeric,column_header
-dep_names,ADD,ADD,ADD,column_header
+dep_names,N/A,Dependent variable names,text,column_header
 depth,meters,Stream depth,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
 df,ADD,ADD,ADD,column_header
-expl_names,ADD,ADD,ADD,column_header
+expl_names,N/A,Explanatory variables names,text,column_header
 fdate,ADD,ADD,ADD,column_header
 gnis_id,ADD,ADD,ADD,column_header
 gnis_name,ADD,ADD,ADD,column_header
@@ -684,36 +684,36 @@ peaks.with.formula_mean,N/A,Mean value of number of peaks with molecular formula
 peaks.with.formula_min,N/A,Minimun value of number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_n,N/A,Number of samples with number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_sd,N/A,Standard deviation of number of peaks with molecular formula assigned,numeric,column_header
-q_daily_cms,,,,column_header
-q_daily_mm,,,,column_header
-r,,,,column_header
-r.sq.adj,,,,column_header
-r.squared,,,,column_header
-r2_labels,,,,column_header
-r_labels,,,,column_header
-resolution,,,,column_header
-sample,,,,column_header
-sample_date,,,,column_header
-sample_n,,,,column_header
-season,,,,column_header
-season_n,,,,column_header
-season_tb,,,,column_header
-site,,,,column_header
-site_description,,,,column_header
+q_daily_cms,ADD,Daily discharge,numeric,column_header
+q_daily_mm,ADD,Daily discharge,numeric,column_header
+r,N/A,Correlation coefficient,numeric,column_header
+r.sq.adj,N/A,Adjusted r-square,numeric,column_header
+r.squared,N/A,R-square,numeric,column_header
+r2_labels,N/A,R-square labels,text,column_header
+r_labels,N/A,Correlation coefficient labels,text,column_header
+resolution,ADD,ADD,ADD,column_header
+sample,N/A,Sample name,text,column_header
+sample_date,N/A,Sampling date,numeric,column_header
+sample_n,N/A,Number of samples,text,column_header
+season,N/A,Season,text,column_header
+season_n,N/A,Number of seasons,numeric,column_header
+season_tb,N/A,Seasons as defined by Ted,text,column_header
+site,N/A,Site name,text,column_header
+site_description,N/A,Site description,text,column_header
 slope,meters_per_meters,Slope of flowline based on smoothed elevations as per NHDPlus database,numeric,column_header
-statistic,,,,column_header
+statistic,ADD,ADD,ADD,column_header
 streamorde,N/A,Modified Strahler Stream Order as per NHDPlus database,numeric,column_header
-total.transformations,,,,column_header
-tt_hr,,,,column_header
-tt_hr_cv,,,,column_header
-tt_hr_max,,,,column_header
-tt_hr_mean,,,,column_header
-tt_hr_min,,,,column_header
-tt_hr_n,,,,column_header
-tt_hr_sd,,,,column_header
-vf_m_day,,,,column_header
-vf_md,,,,column_header
-watTemp_degC,,,,column_header
-whondrs_id,,,,column_header
-wrol_mo_end_member,,,,column_header
-wrol_sample_id,,,,column_header
+total.transformations,N/A,Total number of biochemical transformations,numeric,column_header
+tt_hr,hour,Travel time,numeric,column_header
+tt_hr_cv,N/A,Coefficient of variation of travel time,numeric,column_header
+tt_hr_max,hour,Maximun value for travel time,numeric,column_header
+tt_hr_mean,hour,Mean value for travel time,numeric,column_header
+tt_hr_min,hour,Minimun value for travel time,numeric,column_header
+tt_hr_n,N/A,Number of sites with travel time,numeric,column_header
+tt_hr_sd,N/A,Standard deviation for travel time,numeric,column_header
+vf_m_day,meters_per_day,Update velocity of DOC,numeric,column_header
+vf_md,meters_per_day,Update velocity of DOC,numeric,column_header
+watTemp_degC,degree_celsius,Water temperature,numeric,column_header
+whondrs_id,N/A,WHONDRS sample ID,text,column_header
+wrol_mo_end_member,ADD,ADD,ADD,column_header
+wrol_sample_id,N/A,WROL sample ID,text,column_header
