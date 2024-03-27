@@ -607,7 +607,7 @@ WROL2019_212,,,,column_header
 WROL2019_213,,,,column_header
 WROL2019_215,,,,column_header
 WROL2019_216,,,,column_header
-WWTPAllDensWs,ADD,Density of waste water treatment plants within the watershed as per XXX database,numeric,column_header
+WWTPAllDensWs,number_per_kilometer_squared,"Density of waste water treatment plants within the watershed, from https://www.sciencedirect.com/science/article/pii/S0048969720311724",numeric,column_header
 Watershed,N/A,Name of the watersheds under study. ,text,column_header
 Willamette,N/A,Name of one of the watersheds under study,text,column_header
 WsAreaSqKm,square_kilometer,Watershed area,numeric,column_header
@@ -637,7 +637,7 @@ expl_names,N/A,Explanatory variables names,text,column_header
 fdate,ADD,ADD,ADD,column_header
 gnis_id,ADD,ADD,ADD,column_header
 gnis_name,ADD,ADD,ADD,column_header
-id,ADD,ADD,ADD,column_header
+id,N/A,National Hydrography Dataset flowline identifier,text,column_header
 kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
 kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
 lamO2,N/A,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
@@ -657,9 +657,9 @@ mass.median,mass_over_charge,Median value for masses identified in the FTICR-MS 
 mass.sd,mass_over_charge,Standard deviation for masses identified in the FTICR-MS samples,numeric,column_header
 max,N/A,Maximun,numeric,column_header
 min,N/A,Minimun,numeric,column_header
-mon,ADD,ADD,ADD,column_header
-monthly_end_member,ADD,ADD,ADD,column_header
-name,ADD,ADD,ADD,column_header
+mon,N/A,Month of the year when the sample was collected,text,column_header
+monthly_end_member,N/A,Indicates whether the sample was part of a monthly sampling design,numeric,column_header
+name,ADD,ADD,text,column_header
 nobs,N/A,Number of observartions,numeric,column_header
 normalized.transformations,N/A,Total number of biochemical transformations divided by the number of peaks,numeric,column_header
 normalized.transformations_cv,N/A,Coefficent of variation of normalized transformations,numeric,column_header
@@ -684,14 +684,13 @@ peaks.with.formula_mean,N/A,Mean value of number of peaks with molecular formula
 peaks.with.formula_min,N/A,Minimun value of number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_n,N/A,Number of samples with number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_sd,N/A,Standard deviation of number of peaks with molecular formula assigned,numeric,column_header
-q_daily_cms,ADD,Daily discharge,numeric,column_header
-q_daily_mm,ADD,Daily discharge,numeric,column_header
+q_daily_cms,cubic_meters_per_second,Daily discharge,numeric,column_header
+q_daily_mm,millimeters,Daily discharge normalized to upstream watershed area,numeric,column_header
 r,N/A,Correlation coefficient,numeric,column_header
 r.sq.adj,N/A,Adjusted r-square,numeric,column_header
 r.squared,N/A,R-square,numeric,column_header
 r2_labels,N/A,R-square labels,text,column_header
 r_labels,N/A,Correlation coefficient labels,text,column_header
-resolution,ADD,ADD,ADD,column_header
 sample,N/A,Sample name,text,column_header
 sample_date,N/A,Sampling date,numeric,column_header
 sample_n,N/A,Number of samples,text,column_header
@@ -701,7 +700,7 @@ season_tb,N/A,Seasons as defined by Ted,text,column_header
 site,N/A,Site name,text,column_header
 site_description,N/A,Site description,text,column_header
 slope,meters_per_meters,Slope of flowline based on smoothed elevations as per NHDPlus database,numeric,column_header
-statistic,ADD,ADD,ADD,column_header
+statistic,N/A,Linear model test statistic,numeric,column_header
 streamorde,N/A,Modified Strahler Stream Order as per NHDPlus database,numeric,column_header
 total.transformations,N/A,Total number of biochemical transformations,numeric,column_header
 tt_hr,hour,Travel time,numeric,column_header
@@ -715,5 +714,5 @@ vf_m_day,meters_per_day,Update velocity of DOC,numeric,column_header
 vf_md,meters_per_day,Update velocity of DOC,numeric,column_header
 watTemp_degC,degree_celsius,Water temperature,numeric,column_header
 whondrs_id,N/A,WHONDRS sample ID,text,column_header
-wrol_mo_end_member,ADD,ADD,ADD,column_header
+wrol_mo_end_member,N/A,Indicates whether the sample was part of a seasonal sampling design or monthly sampling design,text,column_header
 wrol_sample_id,N/A,WROL sample ID,text,column_header
