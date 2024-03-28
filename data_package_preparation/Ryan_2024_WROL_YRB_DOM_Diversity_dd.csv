@@ -632,7 +632,7 @@ delGd0,kJ_per_Compound_mol,Gibbs free energy of the carbon oxidation half reacti
 dep_names,N/A,Dependent variable names,text,column_header
 depth,meters,Stream depth,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
-df,ADD,ADD,ADD,column_header
+df,N/A,Indicates the degrees of freedom from the numerator of the overall F-statistic for the linear regression model.,numeric,column_header
 expl_names,N/A,Explanatory variables names,text,column_header
 fdate,ADD,ADD,ADD,column_header
 gnis_id,ADD,ADD,ADD,column_header
@@ -659,7 +659,7 @@ max,N/A,Maximun,numeric,column_header
 min,N/A,Minimun,numeric,column_header
 mon,N/A,Month of the year when the sample was collected,text,column_header
 monthly_end_member,N/A,Indicates whether the sample was part of a monthly sampling design,numeric,column_header
-name,ADD,ADD,text,column_header
+name,N/A,Indicates the name of the variable and the summary statistics calculated where n = number of observations; mean = mean; sd = standard deviation; min = minimum; max = maximum; cv = coefficient of variation.,text,column_header
 nobs,N/A,Number of observartions,numeric,column_header
 normalized.transformations,N/A,Total number of biochemical transformations divided by the number of peaks,numeric,column_header
 normalized.transformations_cv,N/A,Coefficent of variation of normalized transformations,numeric,column_header
