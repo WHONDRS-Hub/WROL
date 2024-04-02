@@ -634,9 +634,9 @@ depth,meters,Stream depth,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
 df,N/A,Indicates the degrees of freedom from the numerator of the overall F-statistic for the linear regression model.,numeric,column_header
 expl_names,N/A,Explanatory variables names,text,column_header
-fdate,ADD,ADD,ADD,column_header
-gnis_id,ADD,ADD,ADD,column_header
-gnis_name,ADD,ADD,ADD,column_header
+fdate,M/D/YYYY HH:mm,Feature currency date. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,datetime,column_header
+gnis_id,N/A,Unique identifier assigned to each geographic feature in the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,numeric,column_header
+gnis_name,N/A,Feature name from the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,text,column_header
 id,N/A,National Hydrography Dataset flowline identifier,text,column_header
 kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
 kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
