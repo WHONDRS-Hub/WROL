@@ -143,13 +143,14 @@ lm_log_mods_watershed <- dat3 %>%
 
 lm_log_mods_watershed2 <- lm_log_mods_watershed %>% 
   select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
-  mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
-                       TRUE ~ "n.s.")) %>% 
-  mutate(r.sq.adj = case_when(p != "n.s." ~ 
+  mutate(p = case_when(p.value > 0.1 ~ "p > 0.1",,
+                       p.value < 0.001 ~ "p < 0.001",
+                       TRUE ~ paste0("p = ", substr(as.character(p.value), 1, 5)))) %>% 
+  mutate(r.sq.adj = case_when(p != "p > 0.1" ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
-         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+         r_labels = case_when(p != "p > 0.1" ~ paste0("r~'= '*", 
                                                    formatC(round(r, 2), format = 'f',
                                                                       digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
@@ -189,13 +190,14 @@ lm_log_mean_watershed_slopes <- lm_log_mean_watershed %>%
 
 lm_log_mean_watershed2 <- lm_log_mean_watershed %>% 
   select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
-  mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
-                       TRUE ~ "n.s.")) %>% 
-  mutate(r.sq.adj = case_when(p != "n.s." ~ 
+  mutate(p = case_when(p.value > 0.1 ~ "p > 0.1",
+                       p.value < 0.001 ~ "p < 0.001",
+                       TRUE ~ paste0("p = ", substr(as.character(p.value), 1, 5)))) %>% 
+  mutate(r.sq.adj = case_when(p != "p > 0.1" ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
-         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+         r_labels = case_when(p != "p > 0.1" ~ paste0("r~'= '*", 
                                                    formatC(round(r, 2), format = 'f',
                                                            digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
@@ -217,13 +219,14 @@ lm_mods_watershed <- dat3 %>%
 
 lm_mods_watershed2 <- lm_mods_watershed %>% 
   select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
-  mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
-                       TRUE ~ "n.s.")) %>% 
-  mutate(r.sq.adj = case_when(p != "n.s." ~ 
+  mutate(p = case_when(p.value > 0.1 ~ "p > 0.1",
+                       p.value < 0.001 ~ "p < 0.001",
+                       TRUE ~ paste0("p = ", substr(as.character(p.value), 1, 5)))) %>% 
+  mutate(r.sq.adj = case_when(p != "p > 0.1" ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
-         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+         r_labels = case_when(p != "p > 0.1" ~ paste0("r~'= '*", 
                                                    formatC(round(r, 2), format = 'f',
                                                            digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
@@ -244,14 +247,15 @@ lm_mods_mean_watershed <- dat6 %>%
   unnest(glance)
 
 lm_mods_mean_watershed2 <- lm_mods_mean_watershed %>% 
-  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>% 
-  mutate(p = case_when(p.value < 0.1 ~ "< 0.1",
-                       TRUE ~ "n.s.")) %>% 
-  mutate(r.sq.adj = case_when(p != "n.s." ~ 
+  select(dep_names, expl_names, nobs, p.value, r.squared, adj.r.squared, RMSE, statistic, df, r) %>%
+  mutate(p = case_when(p.value > 0.1 ~ "p > 0.1",
+                       p.value < 0.001 ~ "p < 0.001",
+                       TRUE ~ paste0("p = ", substr(as.character(p.value), 1, 5)))) %>%
+  mutate(r.sq.adj = case_when(p != "p > 0.1" ~ 
                                 formatC(round(adj.r.squared, 2), format = 'f',
                                         digits = 2),
                               TRUE ~ NA_character_),
-         r_labels = case_when(p != "n.s." ~ paste0("r~'= '*", 
+         r_labels = case_when(p != "p > 0.1" ~ paste0("r~'= '*", 
                                                    formatC(round(r, 2), format = 'f',
                                                            digits = 2))),
          r2_labels = case_when(!is.na(r.sq.adj) ~ paste0("r^2~'= '*", r.sq.adj)))
@@ -267,12 +271,14 @@ stats <- lm_log_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = max(expl_values, na.rm = T)*0.001,
+         y_pos = max(dep_mean, na.rm = T)*1.25,
+         x_pos2 = max(expl_values, na.rm = T)*0.05,
+         y_pos2 = max(dep_mean, na.rm = T)*1.25) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "WsAreaSqKm") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
@@ -293,14 +299,18 @@ dat5 %>%
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
-            size = 4) +
+            size = 3) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
+            size = 3) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
              switch = "y") +
   theme(axis.text.x = element_text(size= 9),
         strip.placement = "outside")
 
-ggsave(paste0(here, "/output/plots/f2_DepVarsVsWsArea_mean.png"),
+ggsave(paste0(here, "/output/plots/f2_DepVarsVsWsArea_mean2.png"),
        width = 8, height = 6)
 
 
@@ -310,12 +320,14 @@ stats <- lm_log_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = max(expl_values, na.rm = T)*0.001,
+         y_pos = max(dep_mean, na.rm = T)*1.2,
+         x_pos2 = max(expl_values, na.rm = T)*0.05,
+         y_pos2 = max(dep_mean, na.rm = T)*1.2) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "tt_hr") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
@@ -333,10 +345,14 @@ dat6 %>%
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = "Water Residence Time (h)", y = NULL) +
-  geom_text(data = stats,
+  geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
-            size = 4) +
+            size = 3) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
+            size = 3) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
              switch= "y") +
@@ -353,12 +369,14 @@ stats <- lm_log_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = max(expl_values, na.rm = T)*0.0008,
+         y_pos = max(dep_mean, na.rm = T)*1.2,
+         x_pos2 = max(expl_values, na.rm = T)*0.07,
+         y_pos2 = max(dep_mean, na.rm = T)*1.2) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "Da") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
@@ -376,10 +394,14 @@ dat6 %>%
                 labels = scales::trans_format("log10", scales::math_format(10^.x))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.25))) +
   labs(x = "Da (dimensionless)", y = NULL) +
-  geom_text(data = stats,
+  geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
-            size = 4) +
+            size = 3) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
+            size = 3) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
              switch= "y") +
@@ -396,12 +418,14 @@ stats <- lm_mods_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = 0.25,# max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = 0.2,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.25,
+         x_pos2 = max(expl_values, na.rm = T)*0.8,
+         y_pos2 = max(dep_mean, na.rm = T)*1.25) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "lulc_evenness") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
@@ -420,7 +444,11 @@ dat5 %>%
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
-            size = 4) +
+            size = 3) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
+            size = 3) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
              switch = "y") +
@@ -438,12 +466,14 @@ stats <- lm_mods_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = 50,# max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = 25,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.25,
+         x_pos2 = max(expl_values, na.rm = T)*0.75,
+         y_pos2 = max(dep_mean, na.rm = T)*1.25) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "PctConif2019Ws") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names"))
@@ -462,7 +492,11 @@ dat5 %>%
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
-            size = 4) +
+            size = 3) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
+            size = 3) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
              switch = "y") +
@@ -480,12 +514,14 @@ stats <- lm_mods_mean_watershed2 %>%
 
 label_coord <- dat5 %>% 
   group_by(dep_names, expl_names) %>% 
-  mutate(x_pos = 50,# max(expl_values, na.rm = T)*0.01,
-         y_pos = max(dep_mean, na.rm = T)*1.2) %>% 
+  mutate(x_pos = 25,# max(expl_values, na.rm = T)*0.01,
+         y_pos = max(dep_mean, na.rm = T)*1.25,
+         x_pos2 = max(expl_values, na.rm = T)*0.75,
+         y_pos2 = max(dep_mean, na.rm = T)*1.25) %>% 
   ungroup() %>% 
   distinct(Watershed, dep_names, expl_names, .keep_all = TRUE) %>% 
   filter(expl_names == "PctDecid2019Ws") %>% 
-  select(Watershed, dep_names, x_pos, y_pos)
+  select(Watershed, dep_names, x_pos, y_pos, x_pos2, y_pos2)
 
 stats <- stats %>% 
   left_join(., label_coord, by = c("Watershed", "dep_names")) %>% 
@@ -507,6 +543,10 @@ dat5 %>%
   geom_text(data = stats, 
             mapping = aes(x = x_pos, y = y_pos, label = r_labels),
             parse = TRUE,
+            size = 4) +
+  geom_text(data = stats, 
+            mapping = aes(x = x_pos2, y = y_pos2, label = p),
+            parse = FALSE,
             size = 4) +
   facet_grid(rows = vars(dep_names), cols = vars(Watershed),
              labeller = as_labeller(labels), scales = "free",
@@ -545,6 +585,14 @@ dat4 %>%
 
 ggsave(paste0(here, "/output/plots/fs2_DepVarsBoxplot_BySeason.png"),
        width = 8, height = 8)
+
+# Perform ANOVA test on seasons
+anova_res <- dat4 %>%
+  group_by(dep_names)%>%
+  nest() %>%
+  mutate(anova= map(data,
+                     ~anova_test(data = .x,
+                                 formula = dep_values~season_tb)))
 
 
 #clean environment
