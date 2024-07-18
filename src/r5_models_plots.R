@@ -572,7 +572,13 @@ dat4 %>%
 ggsave(paste0(here, "/output/plots/fs1_DepVarsBoxplot_ByWatershed.png"),
        width = 8, height = 8)
 
-
+# Perform ANOVA test on seasons
+anova_res <- dat4 %>%
+  group_by(dep_names)%>%
+  nest() %>%
+  mutate(anova= map(data,
+                    ~anova_test(data = .x,
+                                formula = dep_values~Watershed)))
 
 ##6.2 Box plot of dependent variables by season ----
 dat4 %>% 
@@ -587,13 +593,36 @@ ggsave(paste0(here, "/output/plots/fs2_DepVarsBoxplot_BySeason.png"),
        width = 8, height = 8)
 
 # Perform ANOVA test on seasons
-anova_res <- dat4 %>%
+anova_res2 <- dat4 %>%
   group_by(dep_names)%>%
   nest() %>%
   mutate(anova= map(data,
                      ~anova_test(data = .x,
                                  formula = dep_values~season_tb)))
 
+##6.3 Plot of Mean dependent vars vs WRT and Da variables for Yakima only----
+
+dat5 %>% 
+  filter(Watershed == "Yakima",
+         expl_names %in% c("tt_hr", "Da")) %>% 
+  ggplot() +
+  geom_point(data= dat3 %>%  filter(Watershed == "Yakima",
+                                    expl_names %in% c("tt_hr", "Da")),
+             mapping= aes(x= expl_values, y = dep_values),
+             alpha = 0.1, fill = "grey") + 
+  geom_point(mapping= aes(x= expl_values, y = dep_mean)) + 
+  geom_errorbar(mapping= aes(x= expl_values, ymin = dep_mean-dep_sd,
+                             ymax= dep_mean+dep_sd)) +
+  scale_x_log10() +
+  labs(x=NULL, y = NULL) +
+  facet_grid(rows = vars(dep_names), cols = vars(expl_names),
+             labeller = as_labeller(labels), scales = "free",
+             switch = "y") +
+  theme(axis.text.x = element_text(size= 9),
+        strip.placement = "outside")
+
+ggsave(paste0(here, "/output/plots/fs_Yakima_DepVarsVs_tt_Da.png"),
+       width = 8, height = 6)
 
 #clean environment
 to_remove <- ls() %>% as_tibble() %>%

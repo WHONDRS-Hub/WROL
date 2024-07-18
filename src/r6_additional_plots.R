@@ -468,7 +468,8 @@ dat %>% filter(Watershed == "Connecticut") %>% droplevels() %>%
   facet_wrap(~name, scales = "free") +
   labs(x = NULL)
 
-
+dat %>% filter(Watershed == "Yakima") %>% 
+  ggplot()
 
 #clean environment
 to_remove <- ls() %>% as_tibble() %>%
