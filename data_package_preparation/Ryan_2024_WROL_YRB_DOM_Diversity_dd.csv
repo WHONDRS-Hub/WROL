@@ -1,4 +1,3 @@
-# Bibi pulled all column headers. No need to edit this column.,"# directions: First, read through existing units and edit for accuracy. Then, fill in remaining cells in this column with the unit spelling out all abbreviations (e.g., ""meters"" not ""m""). If unit doesn't apply, write ""N/A"".","# directions: First, read through existing definitions and edit for accuracy. Then, fill out this column with the definition of the header. Include information that covers what the data are and why it's relevant to your data package. Use full sentences (capital first letter and period at end). Try to avoid using commas (use semi colors or reword if possible). Spell out all abbreviations and acryonmns (e.g., ""Fourier-transform ion cyclotron resonance (FTICR)"" not ""FTICR"").",# fill in the class/structure of the header column. Choose between numeric; text; date; time; datetime,# Bibi pulled all column headers. No need to edit this column.
 Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
 AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
 AI.Mod.mean,N/A,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
@@ -14,10 +13,10 @@ AI.mean,N/A,Mean aromaticity index calculated as per Koch and Dittmar; 2006; 201
 AI.median,N/A,Median aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.sd,N/A,Standard deviation of aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI_Mod,N/A,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-Amino_Sugar,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class,numeric,column_header
-Amino_Sugar_norm,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
+Amino_Sugar,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class.,numeric,column_header
+Amino_Sugar_norm,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample.,numeric,column_header
 C,N/A,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-C/N,N/A,Carbon and Nitrogen ratio,numeric,column_header
+C/N,N/A,Carbon and Nitrogen ratio.,numeric,column_header
 C13,N/A,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 CHO,peaks,Total number of CHO molecular formulae identified by FTICR-MS,numeric,column_header
 CHON,peaks,Total number of CHON molecular formulae identified by FTICR-MS,numeric,column_header
@@ -92,9 +91,6 @@ Date_End,YYYY-MM-DD,The latest date in the file.,date,column_header
 Date_Start,YYYY-MM-DD,The earliest date in the file.,date,column_header
 Definition,N/A,Description of the information in a given column or row in the dataset.,text,column_header
 Deschutes,N/A,Name of one of the watersheds under study,text,column_header
-Dist,,,,column_header
-Dist.minus,,,,column_header
-Dist.plus,,,,column_header
 El_comp,N/A,Assigned elemental group(s) that are known.,text,column_header
 ElevWs,meter,Mean watershed elevation as per StreamCat database,numeric,column_header
 Error_ppm,parts_per_million,Parts per million error calculated as [expected molecular mass - measured molecular mass]/expected molecular mass * 1e6).,numeric,column_header
@@ -155,7 +151,7 @@ Missing_Value_Codes,N/A,"Cells with missing data are represented with a missing 
 MolForm,N/A,Molecular Formula.,text,column_header
 Month,N/A,Month of the year when the sample was collected,text,column_header
 N,N/A,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-NA,,,,column_header
+NA,,,numeric,column_header
 NOSC,N/A,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.mean,N/A,Mean nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.median,N/A,Median nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
@@ -172,7 +168,6 @@ NtoP.mean,N/A,Mean Nitrogen to Phosphorus ratio.,numeric,column_header
 NtoP.median,N/A,Median Nitrogen to Phosphorus ratio.,numeric,column_header
 NtoP.sd,N/A,Standard deviation Nitrogen to Phosphorus ratio.,numeric,column_header
 NtoP_ratio,N/A,Nitrogen to Phosphorous ratio.,numeric,column_header
-Number_of_reps,,,,column_header
 O,N/A,Oxygen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 OmWs,percent_by_weight,Mean organic matter content of soils within a watershed as per the StreamCat database,numeric,column_header
 Other,N/A,Peaks with molecular formulae that could not be assigned to the existing chemical classes and were assigned as other,numeric,column_header
@@ -214,11 +209,11 @@ Protein_Lignin_Amino_Sugar,N/A,Number of molecular formulae in the Protein_Ligni
 Protein_Lignin_Amino_Sugar_norm,N/A,Number of molecular formulae in the Protein_Lignin_Amino_Sugar-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 Protein_Lignin_norm,N/A,Number of molecular formulae in the Protein_Lignin-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 Protein_norm,N/A,Number of molecular formulae in the Protein-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
-PtoC.mean,,Mean of Phosphorus to Carbon ratio.,numeric,column_header
-PtoC.median,,Median of Phosphorus to Carbon ratio.,numeric,column_header
-PtoC.sd,,Standard devian of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.mean,N/A,Mean of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.median,N/A,Median of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.sd,N/A,Standard devian of Phosphorus to Carbon ratio.,numeric,column_header
 PtoC_ratio,N/A,Phosphorus to Carbon ratio.,numeric,column_header
-RC2_0001,,Samples. The four numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence,numeric,column_header
+RC2_0001,N/A,Samples. The four numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence.,numeric,column_header
 RC2_0002,,"[bibi note for VGC: fill in the info for ""RC2_0001"". No need to fill in the rest. Write what the 4 digits represent]",,column_header
 RC2_0003,,,,column_header
 RC2_0004,,,,column_header
@@ -411,7 +406,7 @@ RC2_0208,,,,column_header
 RC2_0209,,,,column_header
 RC2_0210,,,,column_header
 RC2_0211,,,,column_header
-RMSE,N/A,Root mean square error,,column_header
+RMSE,N/A,Root mean square error,numeric,column_header
 RdDensWs,kilometer_per_square_kilometer,Density of roads within a watershed as per StreamCat database (km/square km),numeric,column_header
 RunoffWs,millimiters,Mean runoff within a watershed as per StreamCat database,numeric,column_header
 S,N/A,Sulphur atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
@@ -435,7 +430,6 @@ Time_Arriving,hh:mm UTC-07:00,Site arrival time. Recorded in Pacific Standard Ti
 Time_Leaving,hh:mm UTC-07:00,Site departure time. Recorded in Pacific Standard Time.,time,column_header
 Time_Zone,N/A,Local time zone.,text,column_header
 TmeanSite,degree_celsius,PRISM climate data - 30-year normal mean temperature. Annual period 2008 and 2009.,numeric,column_header
-Trans.name,,,,column_header
 Twat_degC,degree_celsius,Water temperature,numeric,column_header
 Ultrameter_Temperature_Mean,degree_celsius,The mean value calculated for three consecutive Ultrameter temperature measurements.,numeric,column_header
 Unit,N/A,Unit of measurement that applies to a given column in the data package.,text,column_header
@@ -443,7 +437,7 @@ Unsat_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-li
 Unsat_Hydrocarbon_Cond_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class,numeric,column_header
 Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
 Unsat_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class divided by the total numer of molecular formulae in a sample,numeric,column_header
-WROL2019_001,,Samples. The three numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence,numeric,column_header
+WROL2019_001,N/A,Samples. The three numeric digits in the columnare associated with the sample ID. Rows in the data represent peak intensities reflected as presence absence,numeric,column_header
 WROL2019_002,,"[bibi note for VGC: fill in the info for ""WROL2019_001"". No need to fill in the rest. Write what the 3 digits represent]",,column_header
 WROL2019_003,,,,column_header
 WROL2019_004,,,,column_header
@@ -638,10 +632,8 @@ dep_names,N/A,Dependent variable names,text,column_header
 depth,meters,Stream depth,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
 df,N/A,Indicates the degrees of freedom from the numerator of the overall F-statistic for the linear regression model.,numeric,column_header
-distinct,,,,column_header
 expl_names,N/A,Explanatory variables names,text,column_header
 fdate,M/D/YYYY HH:mm,Feature currency date. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,datetime,column_header
-final,,,,column_header
 gnis_id,N/A,Unique identifier assigned to each geographic feature in the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,numeric,column_header
 gnis_name,N/A,Feature name from the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,text,column_header
 id,N/A,National Hydrography Dataset flowline identifier,text,column_header
@@ -675,7 +667,6 @@ normalized.transformations_mean,N/A,Mean value of normalized transformations,num
 normalized.transformations_min,N/A,Minimun value of normalized transformations,numeric,column_header
 normalized.transformations_n,N/A,Number of samples with normalized transformations,numeric,column_header
 normalized.transformations_sd,N/A,Standard deviation of normalized transformations,numeric,column_header
-num.trans.involved.in,,,,column_header
 number.of.peaks,N/A,Number of peaks within a sample,numeric,column_header
 number.of.peaks_cv,N/A,Coefficent of variation of number of peaks,numeric,column_header
 number.of.peaks_max,N/A,Maximun value of number of peaks,numeric,column_header
@@ -685,9 +676,6 @@ number.of.peaks_n,N/A,Number of samples with number of peaks,numeric,column_head
 number.of.peaks_sd,N/A,Standard deviation of number of peaks,numeric,column_header
 p,N/A,Statistical p-value,numeric,column_header
 p.value,N/A,Statistical p-value,numeric,column_header
-peak,,,,column_header
-peak.x,,,,column_header
-peak.y,,,,column_header
 peaks.with.formula,N/A,Number of peaks with molecular formula assgned within a sample,numeric,column_header
 peaks.with.formula_cv,N/A,Coefficent of variation of number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_max,N/A,Maximun value of number of peaks with molecular formula assigned,numeric,column_header
@@ -695,7 +683,6 @@ peaks.with.formula_mean,N/A,Mean value of number of peaks with molecular formula
 peaks.with.formula_min,N/A,Minimun value of number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_n,N/A,Number of samples with number of peaks with molecular formula assigned,numeric,column_header
 peaks.with.formula_sd,N/A,Standard deviation of number of peaks with molecular formula assigned,numeric,column_header
-points,,,,column_header
 q_daily_cms,cubic_meters_per_second,Daily discharge,numeric,column_header
 q_daily_mm,millimeters,Daily discharge normalized to upstream watershed area,numeric,column_header
 r,N/A,Correlation coefficient,numeric,column_header
@@ -703,12 +690,9 @@ r.sq.adj,N/A,Adjusted r-square,numeric,column_header
 r.squared,N/A,R-square,numeric,column_header
 r2_labels,N/A,R-square labels,text,column_header
 r_labels,N/A,Correlation coefficient labels,text,column_header
-remaining,,,,column_header
-removed,,,,column_header
 sample,N/A,Sample name,text,column_header
 sample_date,N/A,Sampling date,numeric,column_header
 sample_n,N/A,Number of samples,text,column_header
-samples,,,,column_header
 season,N/A,Season,text,column_header
 season_n,N/A,Number of seasons,numeric,column_header
 season_tb,N/A,Seasons as defined by Ted,text,column_header
