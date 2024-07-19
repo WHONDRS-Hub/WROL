@@ -151,7 +151,7 @@ Missing_Value_Codes,N/A,"Cells with missing data are represented with a missing 
 MolForm,N/A,Molecular Formula.,text,column_header
 Month,N/A,Month of the year when the sample was collected,text,column_header
 N,N/A,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-NA,,,numeric,column_header
+NA,peaks,Number of molecular formulae that are not defined in any of the other chemical class columns.,numeric,column_header
 NOSC,N/A,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.mean,N/A,Mean nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.median,N/A,Median nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
