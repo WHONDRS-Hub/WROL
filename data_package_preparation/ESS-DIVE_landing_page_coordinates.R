@@ -66,3 +66,22 @@ locations <- rbind(locations_WROL, locations_YRB) %>%
 
 # export locations
 write_csv(locations, "./data_package_preparation/manuscript_geospatial.csv")
+
+
+
+### Upload coordinates #########################################################
+
+# update the landing page with coordinates
+
+# load functions
+devtools::source_url("https://raw.githubusercontent.com/river-corridors-sfa/rcsfa-data_processing_for_publication/main/Data_Transformation/functions/rename_column_headers.R")
+devtools::source_url("https://raw.githubusercontent.com/river-corridors-sfa/rcsfa-data_processing_for_publication/main/Data_Package_ESS-DIVE/update_ESS-DIVE_landing_page/update_landing_page_coordinates.R")
+
+# set wd to other repo
+setwd("C:/Users/powe419/Desktop/bpowers_github_repos/rcsfa-data_proceesing_for_publication")
+
+# upload
+update_landing_page_coordinates(api_token = "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJodHRwOlwvXC9vcmNpZC5vcmdcLzAwMDktMDAwNS0yMTI1LTEyNjgiLCJmdWxsTmFtZSI6IkJlY2sgUG93ZXJzLU1jQ29ybWFjayIsImlzc3VlZEF0IjoiMjAyNC0wNy0yMlQyMzo1MzoyNC44MDkrMDA6MDAiLCJjb25zdW1lcktleSI6InRoZWNvbnN1bWVya2V5IiwiZXhwIjoxNzIxNzU3MjA0LCJ1c2VySWQiOiJodHRwOlwvXC9vcmNpZC5vcmdcLzAwMDktMDAwNS0yMTI1LTEyNjgiLCJ0dGwiOjY0ODAwLCJpYXQiOjE3MjE2OTI0MDR9.iib9nORC20AGT4VMSBFlnzhYk-FJLl9Cql4UjCz0teQ9P4qSG_-zVTiodp5YweV0wZps6TBEFuDc6GGzkN-izFdXkFXYxrD2vQGn1_BPK7mwivHkoCcroYmtP-2XTg-PBJXCUf9CRuwJ8tEs9L1-XeE7AvHvclhwBUHhHhlxsWFjrXIxykYg9YE86vq-BtHxZCuL-i7udDLaR_-TSqtwaJlZIKY9lSUsnF8LhxDet_NOms5jOwEgmrB7CBWTiEufxiB3AFh1GEys1hxrkVT77e_nf2hZlpfHX5w8cqiqwFjGvkPe5KDHeo1Cbo0-FpOv5paB6PFaiQEJ4vOIeb7UDA",
+                                essdive_id = "ess-dive-46f7e4283b3870b-20240722T225318618",
+                                coordinates_file_path = "C:/Users/powe419/Desktop/bpowers_github_repos/rcsfa-RC4-WROL-YRB_DOM_Diversity/data_package_preparation/manuscript_geospatial.csv",
+                                upload_site = "main")
