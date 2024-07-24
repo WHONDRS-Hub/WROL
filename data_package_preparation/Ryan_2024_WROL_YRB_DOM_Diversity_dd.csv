@@ -157,7 +157,7 @@ NOSC.mean,N/A,Mean nominal Oxidation State of Carbon calculated as per Koch and 
 NOSC.median,N/A,Median nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 NOSC.sd,N/A,Standard deviation nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
 Na,N/A,Sodium atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-Name,N/A,,text,column_header
+Name,N/A,Name or molecular formula for commonly observed biochemical transformations.,text,column_header
 NeutralMass,N/A,Zero-charge or neutral molecular mass. Calculated from observed ionic mass by balancing charge with protons or electrons.,numeric,column_header
 Notes,N/A,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
 NtoC.mean,N/A,Mean Nitrogen to Carbon ratio.,numeric,column_header
@@ -177,27 +177,27 @@ OtoC.median,N/A,Median Oxygen to Carbon ratio.,numeric,column_header
 OtoC.sd,N/A,Standard deviation Oxygen to Carbon ratio.,numeric,column_header
 OtoC_ratio,N/A,Oxygen to Carbon ratio.,numeric,column_header
 P,N/A,Phosphorous atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-PctConif2019Ws,percent,Percent area classified as evergreen forest land cover as per NCDL and StreamCat databases.,numeric,column_header
+PctConif2019Ws,percent,Percent area classified as evergreen forest land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
 PctConif2019Ws_cv,N/A,Coefficient of variation of the percent evergreen forest land cover.,numeric,column_header
 PctConif2019Ws_max,percent,Maximum value for the percent of evergreen forest land cover.,numeric,column_header
 PctConif2019Ws_mean,percent,Mean value for the percent of evergreen forest land cover.,numeric,column_header
 PctConif2019Ws_min,percent,Minimum value for the percent of evergreen forest land cover.,numeric,column_header
 PctConif2019Ws_n,N/A,Number of sites with percent evergreen forest land cover.,numeric,column_header
 PctConif2019Ws_sd,N/A,Standard deviation for the percent of evergreen forest land cover.,numeric,column_header
-PctCrop2019Ws,percent,Percent area classified as crop land cover as per NCDL and StreamCat databases.,numeric,column_header
-PctDecid2019Ws,percent,Percent area classified as deciduous land cover as per NCDL and StreamCat databases.,numeric,column_header
+PctCrop2019Ws,percent,Percent area classified as crop land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctDecid2019Ws,percent,Percent area classified as deciduous land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
 PctDecid2019Ws_cv,N/A,Coefficient of variation of the percent deciduous forest land cover.,numeric,column_header
 PctDecid2019Ws_max,percent,Maximum value for the percent of deciduous forest land cover.,numeric,column_header
 PctDecid2019Ws_mean,percent,Mean value for the percent of deciduous forest land cover.,numeric,column_header
 PctDecid2019Ws_min,percent,Minimum value for the percent of deciduous forest land cover.,numeric,column_header
 PctDecid2019Ws_n,N/A,Number of sites with percent deciduous forest land cover.,numeric,column_header
 PctDecid2019Ws_sd,N/A,Standard deviation for the percent of deciduous forest land cover.,numeric,column_header
-PctHbWet2019Ws,percent,Percent area classified as herbaceous wetland land cover as per NCDL and StreamCat databases.,numeric,column_header
-PctImp2019Ws,percent,Mean imperviousness of anthropogenic surfaces within the watershed as per NCDL and StreamCat databases.,numeric,column_header
-PctMxFst2019Ws,percent,Percent area classified as classified as mixed deciduous/evergreen forest land cover as per NCDL and StreamCat databases.,numeric,column_header
-PctOw2019Ws,percent,Percent area classified as open water land cover as per NCDL and StreamCat databases.,numeric,column_header
-PctUrbHi2019Ws,percent,"Percent area classified as developed, high-intensity land use as per NCDL and StreamCat databases.",numeric,column_header
-PctWdWet2019Ws,percent,Percent area classified as woody wetland land cover as per NCDL and StreamCat databases.,numeric,column_header
+PctHbWet2019Ws,percent,Percent area classified as herbaceous wetland land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctImp2019Ws,percent,Mean imperviousness of anthropogenic surfaces within the watershed as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctMxFst2019Ws,percent,Percent area classified as classified as mixed deciduous/evergreen forest land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctOw2019Ws,percent,Percent area classified as open water land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctUrbHi2019Ws,percent,"Percent area classified as developed, high-intensity land use as per National Land Cover Database (NLCD) and StreamCat databases.",numeric,column_header
+PctWdWet2019Ws,percent,Percent area classified as woody wetland land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
 PermWs,centimeters_per_hour,Mean permeability of soils within a watershed as per StreamCat.,numeric,column_header
 PopDen2010Ws,people_square_kilometer,Mean populating density within a watershed as per the StreamCat database.,numeric,column_header
 PrecipSite,millimeters,Mean precipitation per site.,numeric,column_header
