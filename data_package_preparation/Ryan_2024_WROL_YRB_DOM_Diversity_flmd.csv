@@ -48,7 +48,7 @@ None,WROL.Rproj,R Studio Project File.,N/A,-9999,-9999,N/A,/rcsfa-RC4-WROL-YRB_D
 "File_Description, Date_Start, Date_End",fs_Da_vs_streamorder.png,Supplemental figure of Damkohler number vs stream order,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
 "File_Description, Date_Start, Date_End",fs_SampleDate.png,Supplemental figure of sampling dates across each watershed,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
 "File_Description, Date_Start, Date_End",fs_Yakima_DepVarsVs_tt_Da.png,Supplemental figure of water residence time and Damkohler numbers in the Yakima River Basin,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs5_site_vars_corrplot.png,Figure S5 showing dependent variables verses the land use land cover evenness index.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",fs5_site_vars_corrplot.png,Supplemental figure showing correlation matrix among environmental and explanatory variables.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
 "File_Description, Date_Start, Date_End",pca_active_ind.png,PCA plots for samples from all watersheds,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
 "File_Description, Date_Start, Date_End",pca_active_ind2.png,PCA plots for samples from all watersheds except the Connecticut Watershed,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
 "File_Description, Date_Start, Date_End",pca_active_scree.png,Scree plot of explained variance in PCA analysis for all watersheds,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
