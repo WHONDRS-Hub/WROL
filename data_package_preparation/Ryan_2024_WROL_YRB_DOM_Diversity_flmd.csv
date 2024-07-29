@@ -30,9 +30,9 @@ None,WROL.Rproj,R Studio Project File.,N/A,-9999,-9999,N/A,/rcsfa-RC4-WROL-YRB_D
 "Date_Start, Date_End, Missing_Value_Codes",dat_wide.csv,Table of all study data in wide format.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output
 "Date_Start, Date_End",meta.Rds,R data file of metadata for each sample.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output
 "Date_Start, Date_End, Missing_Value_Codes",meta.csv,Table of metadata for each sample.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output
-"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Total_Transformations.csv,Total number of transformations for each sample ,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
-"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Total_and_Normalized_Transformations.csv,Total number of transformations for each sample and normalized transfomations. Normalized transformations are the total number of transformations divided by the number of peaks in the sample,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
-"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Trans_Profiles.csv,Number of biochemical transformations per sample,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
+"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Total_Transformations.csv,Deleted,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
+"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Total_and_Normalized_Transformations.csv,Deleted,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
+"File_Description, Date_Start, Date_End, Missing_Value_Codes",RC2_WROL_Trans_Profiles.csv,Deleted,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/Transformation_Analysis_Outputs
 "Date_Start, Date_End",geospat_indices.Rds,R data file of geospatial indices for each sample site.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/geospat
 "Date_Start, Date_End, Missing_Value_Codes",geospat_indices.csv,Filtered table of geospatial indices for each sample site.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/geospat
 "Date_Start, Date_End",f2_DepVarsVsWsArea_mean.png,Figure 2 showing dependent variables verses watershed area.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
@@ -43,18 +43,18 @@ None,WROL.Rproj,R Studio Project File.,N/A,-9999,-9999,N/A,/rcsfa-RC4-WROL-YRB_D
 "Date_Start, Date_End",f7_DepVarsVsPctDecid_mean.png,Figure showing dependent variables verses the percent of deciduous cover.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
 "Date_Start, Date_End",fs1_DepVarsBoxplot_ByWatershed.png,Figure showing boxplots of dependent variables verses watershed.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
 "Date_Start, Date_End",fs2_DepVarsBoxplot_BySeason.png,Figure showing boxplots of dependent variables versus season.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs3_DepVarsVsQ_mean.png,PNG file with the plots of molecular characteristics vs water residence time,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs4_DepVarsVsStreamOrd_mean.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs_Da_vs_streamorder.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs_SampleDate.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs_Yakima_DepVarsVs_tt_Da.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
-"File_Description, Date_Start, Date_End",fs5_site_vars_corrplot.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_active_ind.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_active_ind2.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_active_scree.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_active_scree2.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_vars_active.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
-"File_Description, Date_Start, Date_End",pca_vars_active2.png,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",fs3_DepVarsVsQ_mean.png,Plots of molecular characteristics vs water residence time,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
+"File_Description, Date_Start, Date_End",fs4_DepVarsVsStreamOrd_mean.png,Plots of molecular characteristics vs Damkohler number,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
+"File_Description, Date_Start, Date_End",fs_Da_vs_streamorder.png,Plots of Damkohler number vs stream order,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
+"File_Description, Date_Start, Date_End",fs_SampleDate.png,Plot with sampling dates across each watershed,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
+"File_Description, Date_Start, Date_End",fs_Yakima_DepVarsVs_tt_Da.png,Plots of water residence time and Damkohler numbers in the Yakima River Basin,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots
+"File_Description, Date_Start, Date_End",fs5_site_vars_corrplot.png,Plots of molecular characteristics vs landuse landcover evenness,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_active_ind.png,PCA plots,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_active_ind2.png,PCA plots,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_active_scree.png,Plot of explained variance in PCA analysis,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_active_scree2.png,Plot of explained variance in PCA analysis,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_vars_active.png,PCA analysis with loadings,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
+"File_Description, Date_Start, Date_End",pca_vars_active2.png,PCA analysis with loadings,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/plots/pca
 "Date_Start, Date_End, Missing_Value_Codes",A_tab_site_n.csv,Table of the number of samples per sample site.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/tables
 "Date_Start, Date_End, Missing_Value_Codes",B_tab_site_ds.csv,Table of descriptive statistics for variables per sample site.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/tables
 "Date_Start, Date_End, Missing_Value_Codes",C_tab_watershed_ds.csv,Table of descriptive statistics for variables per watershed.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/tables
@@ -64,7 +64,7 @@ None,WROL.Rproj,R Studio Project File.,N/A,-9999,-9999,N/A,/rcsfa-RC4-WROL-YRB_D
 "Date_Start, Date_End, Missing_Value_Codes",lm_mods_mean_watershed.csv,Table of model results for the linear models of site mean dependent variables versus explanatory variables.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/tables
 "Date_Start, Date_End, Missing_Value_Codes",lm_mods_watershed.csv,Table of model results for the linear models of sample dependent variables versus explanatory variables.,ESS-DIVE Reporting Format for Comma-separated Values (CSV) File Structure (Velliquette et al. 2021).,,,,/rcsfa-RC4-WROL-YRB_DOM_Diversity/output/tables
 "Date_Start, Date_End",SRC_README,R script used to document notes regarding other R scripts.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
-"File_Description, Date_Start, Date_End",depth_testing.R,,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
+"File_Description, Date_Start, Date_End",depth_testing.R,R script to retrieve parameter informations from USGS for New York sites,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
 "Date_Start, Date_End",r1_sample_meta.R,R script used to compile the sample set metadata.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
 "Date_Start, Date_End",r2_geospatial_indices.R,R script used to compile the geospatial indices for each sample site.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
 "Date_Start, Date_End",r3_data_compilation.R,R script used to combine all data sources.,N/A,,,N/A,/rcsfa-RC4-WROL-YRB_DOM_Diversity/src
