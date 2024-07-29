@@ -5,12 +5,12 @@ library(tidyr); library (reshape2)
 options(digits=10) # Sig figs in mass resolution data
 
 # Set working directory
-setwd("C:/Users/gara009/Documents/WROL_RC2/")
-trans.path = "C:/Users/gara009/Documents/WROL_RC2/Transformation Peak Comparisons/WROL_RC2/"
+setwd("data/WROL-RC2_Processed_FTICR_Data")
+trans.path = "src/Pre-processing_scripts/"
 
 Sample_Name = "RC2_WROL"
 # Read in the data file that has all sample names
-data = read.csv("Processed_WROL_RC2_Data_Clean.csv")
+data = read.csv("Processed_WROL_RC2_Data_Clean_083023.csv")
 profiles.of.trans =  read.csv("Transformation_Database_07-2020.csv")
 
 
@@ -42,10 +42,10 @@ tot.trans$sample = as.character(tot.trans$sample)
 tot.trans$total.transformations = as.numeric(as.character(tot.trans$total.transformations))
 str(tot.trans)
 
-write.csv(tot.trans,paste(Sample_Name,"_Total_Transformations.csv", sep=""),quote = F,row.names = F)
+write.csv(tot.trans,paste(Sample_Name,"_Total_Transformations_083023.csv", sep=""),quote = F,row.names = F)
 
 # write out the trans profiles across samples
-write.csv(profiles.of.trans,paste(Sample_Name, "_Trans_Profiles.csv", sep=""),quote = F,row.names = F)
+write.csv(profiles.of.trans,paste(Sample_Name, "_Trans_Profiles_083023.csv", sep=""),quote = F,row.names = F)
 
 # Calculating number of peaks per each sample and normalizing the transformations
 
@@ -58,4 +58,4 @@ for (i in 1:nrow(tot.trans)){
 
 tot.trans$normalized.transformations = tot.trans$total.transformations/tot.trans$number.of.peaks
 
-write.csv(tot.trans,paste(Sample_Name,"_Total_and_Normalized_Transformations.csv", sep=""),quote = F,row.names = F)
+write.csv(tot.trans,paste(Sample_Name,"_Total_and_Normalized_Transformations_083023.csv", sep=""),quote = F,row.names = F)

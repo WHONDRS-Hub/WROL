@@ -13,9 +13,9 @@ Sample_Name = "WROL_RC2"
 #######################
 
 # Loading in ICR data
-input.path = "C:/Users/gara009/Documents/WROL_RC2/"
+input.path = "data/WROL-RC2_Processed_FTICR_Data"
 setwd(input.path)
-data = read.csv(list.files(pattern = "Data_Clean_v2"), row.names = 1) 
+data = read.csv(list.files(pattern = "Data_Clean_083023"), row.names = 1) 
 df = data # save original file
 # Need to get the dataset into a format that the transformations code receive
 

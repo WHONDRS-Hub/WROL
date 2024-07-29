@@ -5,10 +5,10 @@ library(tidyr); library (reshape2)
 options(digits=10) # Sig figs in mass resolution data
 
 # Set working directory
-setwd("C:/Users/gara009/Documents/WROL_RC2/")
+setwd("Formularity_Output_Folder") #See GitHub Readme for more details on data processing
 
 # Load in ICR data
-data = read.csv("Processed_WROL_RC2_Data.csv", check.names = F, row.names = 1)
+data = read.csv("Processed_WROL_RC2_Data.csv", check.names = F, row.names = 1) 
 mol = read.csv("Processed_WROL_RC2_Mol.csv", check.names = F, row.names = 1)
 
 
@@ -16,6 +16,10 @@ poor.cal = read.csv("WROL_RC2_Poorly_Calibrated_Samples.csv")
   
 # Convert data to presence/absence
 data[data > 0] = 1
+# Fix naming issues identified
+#Rename sample WROL2019_084-1 to WROL2019_078-1 in NPOC and ICR data, metadata, and IGSN.
+colnames(data) = gsub('WROL2019_084_ICR.1','WROL2019_078_ICR.1',colnames(data))
+
 # Fixing colnames
 colnames(data)=gsub("ICR.1","ICR-1",colnames(data))
 colnames(data)=gsub("ICR.2","ICR-2",colnames(data))
@@ -60,8 +64,8 @@ data = merge.data; data[data < 1] = 0
 data[data > 0] = 1
 
 # Writing merged and cleaned data
-write.csv(data, "Processed_WROL_RC2_Data_Clean.csv", quote = F)
-write.csv(mol, "Processed_WROL_RC2_Mol_Clean.csv", quote = F)
+write.csv(data, "Processed_WROL_RC2_Data_Clean_083023.csv", quote = F)
+write.csv(mol, "Processed_WROL_RC2_Mol_Clean_083023.csv", quote = F)
 
 # Writing out the number of reps each site has
 reps = as.data.frame(matrix(NA, ncol = 2,nrow= length(uniq.site)))
