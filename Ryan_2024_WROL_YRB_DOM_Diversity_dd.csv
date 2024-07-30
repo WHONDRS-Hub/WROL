@@ -1,0 +1,357 @@
+Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
+adj.r.squared,N/A,Adjusted r-square.,numeric,column_header
+AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
+AI.mean,N/A,Mean aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.median,N/A,Median aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean,N/A,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_cv,N/A,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_max,N/A,Maximum value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_mean,N/A,Mean value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_min,N/A,Minimum values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_n,N/A,Number of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_sd,N/A,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.median,N/A,Median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.sd,N/A,Standard deviation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.sd,N/A,Standard deviation of aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI_Mod,N/A,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+Amino_Sugar,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class.,numeric,column_header
+Amino_Sugar_norm,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+areasqkm,square kilometer,Watershed area.,numeric,column_header
+bs1_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 1 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
+bs2_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 2 are Van Krevelen-based (Kim et al.; 2003 & Bailey et al.; 2017).,text,column_header
+bs3_class,N/A,Boundaries used to assign compound classes to molecular formula. Boundary sets 3 further integrate stoichiometry to assign modified compound classes (Rivas-Urbach et al.; 2018).,text,column_header
+C,N/A,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+C/N,N/A,Carbon and Nitrogen ratio.,numeric,column_header
+C13,N/A,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+Candidates,N/A,Possible known molecules the analyzed molecule could be. Assigned by checking against a known database. Value of -1 when molecule was not checked against database.,numeric,column_header
+Carbohydrate,peaks,Number of molecular formulae in the Carbohydrate-like chemical class.,numeric,column_header
+Carbohydrate_Amino_Sugar,peaks,Number of molecular formulae in the Carbohydrate_Amino_Sugar-like chemical class.,numeric,column_header
+Carbohydrate_Amino_Sugar_norm,peaks,Number of molecular formulae in the Carbohydrate_Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Carbohydrate_norm,peaks,Number of molecular formulae in the Carbohydrate-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+CatAreaSqKm,square kilometer,Catchment area in square kilometers.,numeric,column_header
+CHO,peaks,Total number of CHO (carbon-hydrogen-oxygen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHO_norm,peaks,Total number of CHO (carbon-hydrogen-oxygen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHON,peaks,Total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_cv,peaks,Coefficient of variation of the total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_max,peaks,Maximum value for the total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_mean,peaks,Mean value for the total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_min,peaks,Minimum value for the total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_n,peaks,Number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHON_norm,peaks,Total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHON_norm_cv,peaks,Coefficient of variation of the normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_norm_max,peaks,Maximum value for the normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_norm_mean,peaks,Mean value for the normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_norm_min,peaks,Minimum value for the normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_norm_n,peaks,Number of normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_norm_sd,peaks,Standard deviation of normalized CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHON_sd,peaks,Standard deviation of total CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae.,numeric,column_header
+CHONP,peaks,Total number of CHONP (carbon-hydrogen-oxygen-nitrogen-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHONP_norm,peaks,Total number of CHONP (carbon-hydrogen-oxygen-nitrogen-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHONS,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHONS_norm,peaks,Total number of CHONS (carbon-hydrogen-oxygen-nitrogen-sulfur) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHONSP,peaks,Total number of CHONSP (carbon-hydrogen-oxygen-nitrogen-sulfur-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHONSP_norm,peaks,Total number of CHONSP (carbon-hydrogen-oxygen-nitrogen-sulfur-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHOP,peaks,Total number of CHOP (carbon-hydrogen-oxygen-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHOP_norm,peaks,Total number of CHOP (carbon-hydrogen-oxygen-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHOS,peaks,Total number of CHOS (carbon-hydrogen-oxygen-sulfur) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHOS_norm,peaks,Total number of CHOS (carbon-hydrogen-oxygen-sulfur) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+CHOSP,peaks,Total number of CHOSP (carbon-hydrogen-oxygen-sulfur-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
+CHOSP_norm,peaks,Total number of CHOSP (carbon-hydrogen-oxygen-sulfur-phosphorus) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) divided by the total number of peaks with molecular formulae assigned in a sample.,numeric,column_header
+Class,N/A,Inferred chemical classes as per Kim et al.; 2003.,text,column_header
+ClayWs,percent,Mean percent clay content of soils (STATSGO) within a catchment.,numeric,column_header
+Column_or_Row_Name,N/A,Column or row headers from each comma-separated values (.csv) file in the dataset.,text,column_header
+COMID,N/A,NHDPlus version 2 common identifier (COMID). The COMID can be used to extract geospatial variables from various sources.,numeric,column_header
+comid,N/A,Stream segment unique identifier in the National Hydrography Dataset Plus (NHDPlus) database.,numeric,column_header
+Cond_Hydrocarbon,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class.,numeric,column_header
+Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Connecticut,N/A,Summary statistics for the Connecticut watershed. Each row is the summary statistic indicated in the first column.,text,column_header
+Da,N/A,Damkohler number.,numeric,column_header
+Da_cv,N/A,Coefficient of variation for the Damkohler number.,numeric,column_header
+Da_max,N/A,Maximum value for the Damkohler number.,numeric,column_header
+Da_mean,N/A,Mean value for the Damkohler number.,numeric,column_header
+Da_min,N/A,Minimum value for the Damkohler number.,numeric,column_header
+Da_n,N/A,Number of samples with Damkohler number.,numeric,column_header
+Da_sd,N/A,Standard deviation for the Damkohler number.,numeric,column_header
+DamDensWs,dams per square kilometer,Density of georeferenced dams within a watershed as per StreamCat database.,numeric,column_header
+Data_Type,N/A,Type of data (numeric; text; date; time; datetime).,text,column_header
+dataset,N/A,Dataset label.,text,column_header
+Date,YYYY-MM-DD,Date of sample collection.,date,column_header
+Date_End,YYYY-MM-DD,The latest date in the file.,date,column_header
+Date_Start,YYYY-MM-DD,The earliest date in the file.,date,column_header
+DBE.mean,N/A,Mean double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.median,N/A,Median double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.O.mean,N/A,Mean double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.O.median,N/A,Median double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.O.sd,N/A,Standard deviation of double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE.sd,N/A,Standard deviation of double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE_1,N/A,Double bond equivalent calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE_AI,N/A,The minimum number of C-C (carbon-carbon) double bonds plus rings in a common molecular structure containing heteroatoms. Calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+DBE_O,N/A,Double bond equivalent minus Oxygen calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+Definition,N/A,Description of the information in a given column or row in the dataset.,text,column_header
+delGcox0PerCmol,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions (pH = 0). Calculated as per LaRowe and Van Cappellen; 2011.,numeric,column_header
+delGcoxPerCmol,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half reaction at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
+delGd,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 7. Calculated as per Song et al.; 2020.,numeric,column_header
+delGd0,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half reaction per compound mol at pH 0. Calculated as per Song et al.; 2023.,numeric,column_header
+dep_names,N/A,Dependent variable names.,text,column_header
+depth,meters,Stream depth.,numeric,column_header
+depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
+Deschutes,N/A,Summary statistics for the Deschutes watershed. Each row is the summary statistic indicated in the first column.,text,column_header
+df,N/A,Indicates the degrees of freedom from the numerator of the overall F-statistic for the linear regression model.,numeric,column_header
+DOC,milligrams per liter,Dissolved organic carbon.,numeric,column_header
+DOC_mgL,milligrams per liter,Dissolved organic carbon.,numeric,column_header
+DOC_mgL_cv,N/A,Coefficient of variation for dissolved organic carbon.,numeric,column_header
+DOC_mgL_max,milligrams per liter,Maximum value for dissolved organic carbon.,numeric,column_header
+DOC_mgL_mean,milligrams per liter,Mean value for dissolved organic carbon.,numeric,column_header
+DOC_mgL_min,milligrams per liter,Minimum value for dissolved organic carbon.,numeric,column_header
+DOC_mgL_n,N/A,Number of samples with dissolved organic carbon concentrations.,numeric,column_header
+DOC_mgL_sd,N/A,Standard deviation for dissolved organic carbon.,numeric,column_header
+DOC_SD,N/A,Standard deviation for the dissolved organic carbon.,numeric,column_header
+El_comp,N/A,Assigned elemental group(s) that are known.,text,column_header
+ElevWs,meters,Mean watershed elevation as per StreamCat database.,numeric,column_header
+Error_ppm,parts per million,Parts per million error calculated as [expected molecular mass - measured molecular mass]/expected molecular mass * 1e6).,numeric,column_header
+expl_names,N/A,Explanatory variables names.,text,column_header
+fdate,M/D/YYYY HH:mm,Feature currency date. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,datetime,column_header
+Field_Name,N/A,Name of field of header rows before data.,text,column_header
+Field_Staff,N/A,"The name of field staff involved in data collection; recorded as ""FirstName_LastName"" and separated by semicolons.",text,column_header
+File_Description,N/A,A brief description of the files in the data package.,text,column_header
+File_Name,N/A,Name of files in the data package.,text,column_header
+File_Path,N/A,File path within the data package.,text,column_header
+GFE,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half reaction under standard conditions. Calculated as per LaRowe and Van Cappellen; 2011.,numeric,column_header
+gnis_id,N/A,Unique identifier assigned to each geographic feature in the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,numeric,column_header
+gnis_name,N/A,Feature name from the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,text,column_header
+GPS_Accuracy,feet,Accuracy of GPS location data accuracy; measured in feet.,numeric,column_header
+Gunnison,N/A,Summary statistics for the Gunnison watershed. Each row is the summary statistic indicated in the first column.,text,column_header
+H,N/A,Hydrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+HtoC.mean,N/A,Mean value for Hydrogen to Carbon ratios.,numeric,column_header
+HtoC.median,N/A,Median value for Hydrogen to Carbon ratios.,numeric,column_header
+HtoC.sd,N/A,Standard deviation for Hydrogen to Carbon ratios.,numeric,column_header
+HtoC_ratio,N/A,Hydrogen to carbon ratio.,numeric,column_header
+HydrlCondWs,micrometers per second,Mean lithological hydraulic conductivity content in surface or near surface geology within a watershed as per StreamCat database.,numeric,column_header
+id,N/A,National Hydrography Dataset flowline identifier.,text,column_header
+kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
+KenDef.mean,Dalton,Mean Kendrick mass defect.,numeric,column_header
+KenDef.median,Dalton,Median Kendrick mass defect.,numeric,column_header
+KenDef.sd,N/A,Standard deviation Kendrick mass defect.,numeric,column_header
+KenMass.mean,Dalton,Mean Kendrick mass.,numeric,column_header
+KenMass.median,Dalton,Median Kendrick mass.,numeric,column_header
+KenMass.sd,N/A,Standard deviation Kendrick mass.,numeric,column_header
+KffactWs,N/A,Mean soil erodibility within a watershed as per Streamcat database.,numeric,column_header
+kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
+lamO2,N/A,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
+lamO20,N/A,Thermodynamic efficiency (defined by lambda) at standard state (pH = 0). Calculated as per Song et al.; 2020.,numeric,column_header
+Latitude,decimal degrees WGS1984,Geographic location (latitude) of site.,numeric,column_header
+latitude_dec_deg,decimal degrees WGS1984,Latitude.,numeric,column_header
+Lignin,peaks,Number of molecular formulae in the Lignin-like chemical class.,numeric,column_header
+Lignin_Amino_Sugar,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class.,numeric,column_header
+Lignin_Amino_Sugar_norm,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Lignin_norm,peaks,Number of molecular formulae in the Lignin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Lignin_Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class.,numeric,column_header
+Lignin_Tannin_norm,peaks,Number of molecular formulae in the Lignin_Tannin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Lipid,peaks,Number of molecular formulae in the Lipid-like chemical class.,numeric,column_header
+Lipid_norm,peaks,Number of molecular formulae in the Lipid-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Lipid_Protein,peaks,Number of molecular formulae in the Lipid_Protein-like chemical class.,numeric,column_header
+Lipid_Protein_norm,peaks,Number of molecular formulae in the Lignin_Protein-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Longitude,decimal degrees WGS1984,Geographic location (longitude) of site.,numeric,column_header
+longitude_dec_deg,decimal degrees WGS1984,Longitude.,numeric,column_header
+lulc_evenness,N/A,Land use land cover evenness.,numeric,column_header
+lulc_evenness_cv,N/A,Coefficient of variation of land use land cover evenness.,numeric,column_header
+lulc_evenness_max,N/A,Maximum value for land use land cover evenness.,numeric,column_header
+lulc_evenness_mean,N/A,Mean value for land use land cover evenness.,numeric,column_header
+lulc_evenness_min,N/A,Minimum value for land use land cover evenness.,numeric,column_header
+lulc_evenness_n,N/A,Number of sites with land use land cover evenness.,numeric,column_header
+lulc_evenness_sd,N/A,Standard deviation of land use land cover evenness.,numeric,column_header
+lulc_H,N/A,Land use land cover Shannon Diversity Index.,numeric,column_header
+Mass,mass to charge ratio,Measured ionic mass. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
+mass.mean,mass to charge ratio,Mean value for masses identified in the Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) samples. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
+mass.median,mass to charge ratio,Median value for masses identified in the Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) samples. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
+mass.sd,mass to charge ratio,Standard deviation for masses identified in the Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS) samples. The units of mass to charge ration is commonly denoted as m/z.,numeric,column_header
+Material,N/A,Type of sample (e.g. Liquid>aqueous; sediment; etc). Uses a controlled vocabulary from IGSN SESAR (https://www.geosamples.org/).,text,column_header
+max,N/A,Maximum.,numeric,column_header
+Mean_00000_NH4_mg_per_L_as_NH4,milligrams per liter,"Mean ammonium reported as ammonium (rather than as nitrogen). 5-digit prefix typically refers to a US Geological Survey (USGS) parameter code in the column headers of this data package. The USGS does not have a parameter code for ammonium that is appropriate, so 00000 is used as a placeholder to keep column name formats consistent. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00530_TSS_mg_per_L,milligrams per liter,"Mean total suspended solids. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00602_TN_mg_per_L_as_N,milligrams per liter,"Mean dissolved nitrogen [nitrate + nitrite + ammonia + organic-N] reported as nitrogen. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001); the TN values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher; the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00653_PO4_mg_per_L_as_PO4,milligrams per liter,"Mean phosphate reported as phosphate (rather than as phosphorus). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00681_NPOC_mg_per_L_as_C,milligrams per liter,"Mean dissolved organic carbon data measured as non-purgeable organic carbon (NPOC) and reported as carbon. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00691_DIC_mg_per_L_as_C,milligrams per liter,"Mean dissolved inorganic carbon reported as carbon. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00915_Ca_mg_per_L,milligrams per liter,"Mean calcium. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00925_Mg_mg_per_L,milligrams per liter,"Mean magnesium. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00930_Na_mg_per_L,milligrams per liter,"Mean sodium. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00935_K_mg_per_L,milligrams per liter,"Mean potassium. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00940_Cl_mg_per_L,milligrams per liter,"Mean chloride. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00945_SO4_mg_per_L_as_SO4,milligrams per liter,"Mean sulfate reported as sulfate (rather than as sulfur). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_00950_F_mg_per_L,milligrams per liter,"Mean fluoride. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_01130_Li_mg_per_L,milligrams per liter,"Mean lithium. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_71851_NO3_mg_per_L_as_NO3,milligrams per liter,"Mean nitrate reported as nitrate (rather than as nitrogen). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_71856_NO2_mg_per_L_as_NO2,milligrams per liter,"Mean nitrite reported as nitrite (rather than as nitrogen). 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_71870_Br_mg_per_L,milligrams per liter,"Mean bromide. 5-digit prefix refers to a US Geological Survey parameter code. For each sampling event (e.g. RC2_0001), the NPOC values of each of the three biological replicates (e.g. RC2_0001-1; RC2_0001-2; RC2_0001-3) are averaged. Any replicate values that were identified as an outlier or were above/below the limit of detection are not included in the mean. Outliers were identified using distance based outlier detection. If the set of replicates had a coefficient of variation of 30 percent or higher, the outlier was identified by calculating the distance between each of the replicates. The replicate with the highest distance to the other two replicates was flagged as an outlier. The ""Mean_Missing_Reps"" column indicates if a mean does not include all three replicates using a TRUE/FALSE flag where TRUE indicates one or more replicates are missing from the mean.",numeric,column_header
+Mean_Missing_Reps,N/A,Indication of whether all replicates (reps) are included in the calculation of the mean (with a FALSE flag) or all replicates are not included (with a TRUE flag).,text,column_header
+min,N/A,Minimum.,numeric,column_header
+Missing_Value_Codes,N/A,"Cells with missing data are represented with a missing value code rather than an empty cell. This column describes which missing value codes were used. The recommendation for numeric data is ""-9999"" and for character data is ""N/A"". Some files also use a missing value format specific to when a data value is below the limit of detection or above/below the standard curve. For these cases: a text string is included in the format ""[data type]_*|*_Raw_Not_Corrected|*_Final_Corrected"" in which the asterisks are the denoted individual data values. See the associated methods deviation (DTL_003) for more details.",text,column_header
+MolForm,N/A,Molecular Formula.,text,column_header
+mon,N/A,Month of the year when the sample was collected.,text,column_header
+Month,N/A,Month of the year when the sample was collected.,text,column_header
+monthly_end_member,N/A,Indicates whether the sample was part of a monthly sampling design.,numeric,column_header
+N,N/A,Nitrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+NA,peaks,Number of molecular formulae that are not defined in any of the other chemical class columns.,numeric,column_header
+Na,N/A,Sodium atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+Name,N/A,Name or molecular formula associated with commonly observed biochemical transformations.,text,column_header
+name,N/A,Indicates the name of the variable and the summary statistics calculated where n = number of observations; mean = mean; sd = standard deviation; min = minimum; max = maximum; cv = coefficient of variation.,text,column_header
+NeutralMass,N/A,Zero-charge or neutral molecular mass. Calculated from observed ionic mass by balancing charge with protons or electrons.,numeric,column_header
+nobs,N/A,Number of observations.,numeric,column_header
+normalized.transformations,N/A,Total number of biochemical transformations divided by the number of peaks.,numeric,column_header
+normalized.transformations_cv,N/A,Coefficient of variation of normalized transformations.,numeric,column_header
+normalized.transformations_max,N/A,Maximum value of normalized transformations.,numeric,column_header
+normalized.transformations_mean,N/A,Mean value of normalized transformations.,numeric,column_header
+normalized.transformations_min,N/A,Minimum value of normalized transformations.,numeric,column_header
+normalized.transformations_n,N/A,Number of samples with normalized transformations.,numeric,column_header
+normalized.transformations_sd,N/A,Standard deviation of normalized transformations.,numeric,column_header
+NOSC,N/A,Nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC.mean,N/A,Mean nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC.median,N/A,Median nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+NOSC.sd,N/A,Standard deviation nominal Oxidation State of Carbon calculated as per Koch and Dittmar; 2006; 2018.,numeric,column_header
+Notes,N/A,Free text field to record notes related to the site visit; including weather; site disturbance; or other information relevant to the quality of data collected.,text,column_header
+NtoC.mean,N/A,Mean Nitrogen to Carbon ratio.,numeric,column_header
+NtoC.median,N/A,Median Nitrogen to Carbon ratio.,numeric,column_header
+NtoC.sd,N/A,Standard deviation Nitrogen to Carbon ratio.,numeric,column_header
+NtoC_ratio,N/A,Nitrogen to Carbon ratio.,numeric,column_header
+NtoP.mean,N/A,Mean Nitrogen to Phosphorus ratio.,numeric,column_header
+NtoP.median,N/A,Median Nitrogen to Phosphorus ratio.,numeric,column_header
+NtoP.sd,N/A,Standard deviation Nitrogen to Phosphorus ratio.,numeric,column_header
+NtoP_ratio,N/A,Nitrogen to Phosphorous ratio.,numeric,column_header
+number.of.peaks,N/A,Number of peaks within a sample.,numeric,column_header
+number.of.peaks_cv,N/A,Coefficient of variation of number of peaks.,numeric,column_header
+number.of.peaks_max,N/A,Maximum value of number of peaks.,numeric,column_header
+number.of.peaks_mean,N/A,Mean value of number of peaks.,numeric,column_header
+number.of.peaks_min,N/A,Minimum value of number of peaks.,numeric,column_header
+number.of.peaks_n,N/A,Number of samples with number of peaks.,numeric,column_header
+number.of.peaks_sd,N/A,Standard deviation of number of peaks.,numeric,column_header
+O,N/A,Oxygen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+OmWs,percent by weight,Mean organic matter content of soils within a watershed as per the StreamCat database.,numeric,column_header
+Other,N/A,Peaks with molecular formulae that could not be assigned to the existing chemical classes and were assigned as other.,numeric,column_header
+Other_norm,N/A,Number of molecular formulae in the Other chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+OtoC.mean,N/A,Mean Oxygen to Carbon ratio.,numeric,column_header
+OtoC.median,N/A,Median Oxygen to Carbon ratio.,numeric,column_header
+OtoC.sd,N/A,Standard deviation Oxygen to Carbon ratio.,numeric,column_header
+OtoC_ratio,N/A,Oxygen to Carbon ratio.,numeric,column_header
+P,N/A,Phosphorous atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+p,N/A,Statistical p-value.,numeric,column_header
+p.value,N/A,Statistical p-value.,numeric,column_header
+PctConif2019Ws,percent,Percent area classified as evergreen forest land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctConif2019Ws_cv,N/A,Coefficient of variation of the percent evergreen forest land cover.,numeric,column_header
+PctConif2019Ws_max,percent,Maximum value for the percent of evergreen forest land cover.,numeric,column_header
+PctConif2019Ws_mean,percent,Mean value for the percent of evergreen forest land cover.,numeric,column_header
+PctConif2019Ws_min,percent,Minimum value for the percent of evergreen forest land cover.,numeric,column_header
+PctConif2019Ws_n,N/A,Number of sites with percent evergreen forest land cover.,numeric,column_header
+PctConif2019Ws_sd,N/A,Standard deviation for the percent of evergreen forest land cover.,numeric,column_header
+PctCrop2019Ws,percent,Percent area classified as crop land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctDecid2019Ws,percent,Percent area classified as deciduous land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctDecid2019Ws_cv,N/A,Coefficient of variation of the percent deciduous forest land cover.,numeric,column_header
+PctDecid2019Ws_max,percent,Maximum value for the percent of deciduous forest land cover.,numeric,column_header
+PctDecid2019Ws_mean,percent,Mean value for the percent of deciduous forest land cover.,numeric,column_header
+PctDecid2019Ws_min,percent,Minimum value for the percent of deciduous forest land cover.,numeric,column_header
+PctDecid2019Ws_n,N/A,Number of sites with percent deciduous forest land cover.,numeric,column_header
+PctDecid2019Ws_sd,N/A,Standard deviation for the percent of deciduous forest land cover.,numeric,column_header
+PctHbWet2019Ws,percent,Percent area classified as herbaceous wetland land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctImp2019Ws,percent,Mean imperviousness of anthropogenic surfaces within the watershed as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctMxFst2019Ws,percent,Percent area classified as classified as mixed deciduous/evergreen forest land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctOw2019Ws,percent,Percent area classified as open water land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+PctUrbHi2019Ws,percent,"Percent area classified as developed, high-intensity land use as per National Land Cover Database (NLCD) and StreamCat databases.",numeric,column_header
+PctWdWet2019Ws,percent,Percent area classified as woody wetland land cover as per National Land Cover Database (NLCD) and StreamCat databases.,numeric,column_header
+peaks.with.formula,N/A,Number of peaks with molecular formula assigned within a sample.,numeric,column_header
+peaks.with.formula_cv,N/A,Coefficient of variation of number of peaks with molecular formula assigned.,numeric,column_header
+peaks.with.formula_max,N/A,Maximum value of number of peaks with molecular formula assigned.,numeric,column_header
+peaks.with.formula_mean,N/A,Mean value of number of peaks with molecular formula assigned.,numeric,column_header
+peaks.with.formula_min,N/A,Minimum value of number of peaks with molecular formula assigned.,numeric,column_header
+peaks.with.formula_n,N/A,Number of samples with number of peaks with molecular formula assigned.,numeric,column_header
+peaks.with.formula_sd,N/A,Standard deviation of number of peaks with molecular formula assigned.,numeric,column_header
+PermWs,centimeters per hour,Mean permeability of soils within a watershed as per StreamCat.,numeric,column_header
+PopDen2010Ws,people square kilometer,Mean populating density within a watershed as per the StreamCat database.,numeric,column_header
+PrecipSite,millimeters,Mean precipitation per site.,numeric,column_header
+Protein,N/A,Number of molecular formulae in the Protein-like chemical class.,numeric,column_header
+Protein_Amino_Sugar,N/A,Number of molecular formulae in the Protein_Amino_Sugar-like chemical class.,numeric,column_header
+Protein_Amino_Sugar_norm,N/A,Number of molecular formulae in the Protein_Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Protein_Lignin,N/A,Number of molecular formulae in the Protein_Lignin-like chemical class.,numeric,column_header
+Protein_Lignin_Amino_Sugar,N/A,Number of molecular formulae in the Protein_Lignin_Amino_Sugar-like chemical class.,numeric,column_header
+Protein_Lignin_Amino_Sugar_norm,N/A,Number of molecular formulae in the Protein_Lignin_Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Protein_Lignin_norm,N/A,Number of molecular formulae in the Protein_Lignin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Protein_norm,N/A,Number of molecular formulae in the Protein-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+PtoC.mean,N/A,Mean of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.median,N/A,Median of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC.sd,N/A,Standard deviation of Phosphorus to Carbon ratio.,numeric,column_header
+PtoC_ratio,N/A,Phosphorus to Carbon ratio.,numeric,column_header
+q_daily_cms,cubic meters per second,Daily discharge.,numeric,column_header
+q_daily_mm,millimeters,Daily discharge normalized to upstream watershed area.,numeric,column_header
+r,N/A,Correlation coefficient.,numeric,column_header
+r.sq.adj,N/A,Adjusted r-square.,numeric,column_header
+r.squared,N/A,R-square.,numeric,column_header
+r_labels,N/A,Correlation coefficient labels.,text,column_header
+r2_labels,N/A,R-square labels.,text,column_header
+RC2_*,N/A,"Samples. The four numeric digits in the column name are associated with the sample ID (e.g. ""RC2_0001""). Rows in the data represent peak intensities reflected as presence absence.",numeric,column_header
+RdDensWs,kilometer per square kilometer,Density of roads within a watershed as per StreamCat database (kilometer/square kilometer).,numeric,column_header
+RMSE,N/A,Root mean square error.,numeric,column_header
+RunoffWs,millimeters,Mean runoff within a watershed as per StreamCat database.,numeric,column_header
+S,N/A,Sulphur atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
+sample,N/A,Sample name.,text,column_header
+sample_date,N/A,Sampling date.,numeric,column_header
+sample_n,N/A,Number of samples.,text,column_header
+Sample_Name,N/A,"Name of sample. The format is RC2_*, where the asterisk indicates a 4 digit unique identifier. The RC2 indicates that these samples came from the Worldwide Hydrobiogeochemistry Observation Network for Dynamic River Systems (WHONDRS) Yakima River Basin  (YRB) data package.",text,column_header
+Sampling_Event,N/A,Sampling event.,text,column_header
+SandWs,percent,Mean percent sand content of soils within a watershed as per StreamCat.,numeric,column_header
+season,N/A,Season.,text,column_header
+season_n,N/A,Number of seasons.,numeric,column_header
+season_tb,N/A,Seasons as defined by Ted.,text,column_header
+Site,N/A,Sampling site.,text,column_header
+site,N/A,Site name.,text,column_header
+site_description,N/A,Site description.,text,column_header
+Site_ID,N/A,Site ID. Three-digit alphanumeric code used to identify site.,text,column_header
+Site_Name,N/A,Name of site.,text,column_header
+slope,meters per meters,Slope of flowline based on smoothed elevations as per National Hydrography Database Plus (NHDPlus) database.,numeric,column_header
+Standard,N/A,Environmental System Science Data Infrastructure for a Virtual Ecosystem (ESS-DIVE) Reporting Format or other standard applied to the data file.,text,column_header
+statistic,N/A,Linear model test statistic.,numeric,column_header
+streamorde,N/A,Modified Strahler Stream Order as per National Hydrography Database Plus (NHDPlus) database.,numeric,column_header
+Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class.,numeric,column_header
+Tannin_Cond_Hydrocarbon,peaks,Number of molecular formulae in the Tannin_Cond_Hydrocarbon-like chemical class.,numeric,column_header
+Tannin_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Tannin_Cond_Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Tannin_norm,peaks,Number of molecular formulae in the Tannin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Term_Type,N/A,Indicates whether the header is a column header or row header.,text,column_header
+Time_Arriving,hh:mm UTC-07:00,Site arrival time. Recorded in Pacific Standard Time.,time,column_header
+Time_Leaving,hh:mm UTC-07:00,Site departure time. Recorded in Pacific Standard Time.,time,column_header
+Time_Zone,N/A,Local time zone.,text,column_header
+TmeanSite,degree celsius,PRISM climate data - 30-year normal mean temperature. Annual period 2008 and 2009.,numeric,column_header
+TN,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
+TN_mgL,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
+TN_SD,N/A,Standard deviation for total dissolved nitrogen concentrations.,numeric,column_header
+total.transformations,N/A,Total number of biochemical transformations.,numeric,column_header
+TSS_mgL,milligrams per liter,Total suspended solids concentration.,numeric,column_header
+tt_hr,hour,Travel time.,numeric,column_header
+tt_hr_cv,N/A,Coefficient of variation of travel time.,numeric,column_header
+tt_hr_max,hour,Maximum value for travel time.,numeric,column_header
+tt_hr_mean,hour,Mean value for travel time.,numeric,column_header
+tt_hr_min,hour,Minimum value for travel time.,numeric,column_header
+tt_hr_n,N/A,Number of sites with travel time.,numeric,column_header
+tt_hr_sd,N/A,Standard deviation for travel time.,numeric,column_header
+Twat_degC,degree celsius,Water temperature.,numeric,column_header
+Ultrameter_Temperature_Mean,degree celsius,The mean value calculated for three consecutive Ultrameter temperature measurements.,numeric,column_header
+Unit,N/A,The mean value calculated for three consecutive Ultrameter temperature measurements.,text,column_header
+Unsat_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class.,numeric,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class.,numeric,column_header
+Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon_Cond_Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+Unsat_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
+vf_m_day,meters per day,Update velocity of dissolved organic carbon (DOC).,numeric,column_header
+vf_md,meters per day,Update velocity of dissolved organic carbon (DOC).,numeric,column_header
+Watershed,N/A,Name of the watershed.,text,column_header
+watTemp_degC,degree celsius,Water temperature.,numeric,column_header
+whondrs_id,N/A,WHONDRS sample ID. These samples came from the Worldwide Hydrobiogeochemistry Observation Network for Dynamic River Systems (WHONDRS) Yakima River Basin  (YRB) data package.,text,column_header
+Willamette,N/A,Summary statistics for the Willamette watershed. Each row is the summary statistic indicated in the first column.,text,column_header
+wrol_mo_end_member,N/A,Indicates whether the sample was part of a seasonal sampling design or monthly sampling design.,text,column_header
+wrol_sample_id,N/A,WROL sample ID. These samples came from the Watershed Rules of Life (WROL) data package.,text,column_header
+WROL2019_*,N/A,"Samples. The three numeric digits in the column name are associated with the sample ID (e.g. ""WROL2019_001""). Rows in the data represent peak intensities reflected as presence absence.",numeric,column_header
+WsAreaSqKm,square kilometer,Watershed area.,numeric,column_header
+WsAreaSqKm_cv,N/A,Coefficient of variation of the watershed area.,numeric,column_header
+WsAreaSqKm_max,square kilometer,Maximum value of the watershed area.,numeric,column_header
+WsAreaSqKm_mean,square kilometer,Mean value of the watershed area.,numeric,column_header
+WsAreaSqKm_min,square kilometer,Minimum value of the watershed area.,numeric,column_header
+WsAreaSqKm_n,square kilometer,Number of sites with watershed area.,numeric,column_header
+WsAreaSqKm_sd,N/A,Standard deviation of the value of the watershed area.,numeric,column_header
+WWTPAllDensWs,number per kilometer squared,Density of waste water treatment plants within the watershed from https://www.sciencedirect.com/science/article/pii/S0048969720311724.,numeric,column_header
+Yakima,N/A,Summary statistics for the Yakima watershed. Each row is the summary statistic indicated in the first column.,text,column_header
