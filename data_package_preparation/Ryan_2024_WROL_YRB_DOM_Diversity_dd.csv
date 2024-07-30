@@ -64,7 +64,7 @@ COMID,N/A,NHDPlus version 2 common identifier (COMID). The COMID can be used to 
 comid,N/A,Stream segment unique identifier in the National Hydrography Dataset Plus (NHDPlus) database.,numeric,column_header
 Cond_Hydrocarbon,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class.,numeric,column_header
 Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in the Condensed Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
-Connecticut,N/A,"Name of one of the watersheds. This column is found in a table that provides a series of summary statistics for each watershed, where watersheds are listed as columns and each summary statistics is a row. ",text,column_header
+Connecticut,N/A,Summary statistics for the Connecticut watershed. Each row is the summary statistic indicated in the first column.,text,column_header
 Da,N/A,Damkohler number.,numeric,column_header
 Da_cv,N/A,Coefficient of variation for the Damkohler number.,numeric,column_header
 Da_max,N/A,Maximum value for the Damkohler number.,numeric,column_header
@@ -95,7 +95,7 @@ delGd0,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half
 dep_names,N/A,Dependent variable names.,text,column_header
 depth,meters,Stream depth.,numeric,column_header
 depth_m,meters,Average depth of the Hanford reach; estimated from the MASS-1 model (Niehus et al; 2014).,numeric,column_header
-Deschutes,N/A,"Name of one of the watersheds. This column is found in a table that provides a series of summary statistics for each watershed, where watersheds are listed as columns and each summary statistics is a row. ",text,column_header
+Deschutes,N/A,Summary statistics for the Deschutes watershed. Each row is the summary statistic indicated in the first column.,text,column_header
 df,N/A,Indicates the degrees of freedom from the numerator of the overall F-statistic for the linear regression model.,numeric,column_header
 DOC,milligrams per liter,Dissolved organic carbon.,numeric,column_header
 DOC_mgL,milligrams per liter,Dissolved organic carbon.,numeric,column_header
@@ -120,7 +120,7 @@ GFE,kilograms per Compound mol,Gibbs free energy of the carbon oxidation half re
 gnis_id,N/A,Unique identifier assigned to each geographic feature in the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,numeric,column_header
 gnis_name,N/A,Feature name from the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,text,column_header
 GPS_Accuracy,feet,Accuracy of GPS location data accuracy; measured in feet.,numeric,column_header
-Gunnison,N/A,"Name of one of the watersheds. This column is found in a table that provides a series of summary statistics for each watershed, where watersheds are listed as columns and each summary statistics is a row. ",text,column_header
+Gunnison,N/A,Summary statistics for the Gunnison watershed. Each row is the summary statistic indicated in the first column.,text,column_header
 H,N/A,Hydrogen atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 HtoC.mean,N/A,Mean value for Hydrogen to Carbon ratios.,numeric,column_header
 HtoC.median,N/A,Median value for Hydrogen to Carbon ratios.,numeric,column_header
@@ -318,8 +318,8 @@ Time_Arriving,hh:mm UTC-07:00,Site arrival time. Recorded in Pacific Standard Ti
 Time_Leaving,hh:mm UTC-07:00,Site departure time. Recorded in Pacific Standard Time.,time,column_header
 Time_Zone,N/A,Local time zone.,text,column_header
 TmeanSite,degree celsius,PRISM climate data - 30-year normal mean temperature. Annual period 2008 and 2009.,numeric,column_header
-TN,milligrams per liter,Total dissolved nitrogen concentration.,numeric,column_header
-TN_mgL,milligrams per liter,Total dissolved nitrogen concentration.,numeric,column_header
+TN,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
+TN_mgL,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
 TN_SD,N/A,Standard deviation for total dissolved nitrogen concentrations.,numeric,column_header
 total.transformations,N/A,Total number of biochemical transformations.,numeric,column_header
 TSS_mgL,milligrams per liter,Total suspended solids concentration.,numeric,column_header
@@ -339,10 +339,10 @@ Unsat_Hydrocarbon_Cond_Hydrocarbon_norm,peaks,Number of molecular formulae in th
 Unsat_Hydrocarbon_norm,peaks,Number of molecular formulae in the Unsat_Hydrocarbon-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
 vf_m_day,meters per day,Update velocity of dissolved organic carbon (DOC).,numeric,column_header
 vf_md,meters per day,Update velocity of dissolved organic carbon (DOC).,numeric,column_header
-Watershed,N/A,Name of the watersheds under study.,text,column_header
+Watershed,N/A,Name of the watershed.,text,column_header
 watTemp_degC,degree celsius,Water temperature.,numeric,column_header
 whondrs_id,N/A,WHONDRS sample ID. These samples came from the Worldwide Hydrobiogeochemistry Observation Network for Dynamic River Systems (WHONDRS) Yakima River Basin  (YRB) data package.,text,column_header
-Willamette,N/A,"Name of one of the watersheds under study. This column is found in a table that provides a series of summary statistics for each watershed, where watersheds are listed as columns and each summary statistics is a row. ",text,column_header
+Willamette,N/A,Summary statistics for the Willamette watershed. Each row is the summary statistic indicated in the first column.,text,column_header
 wrol_mo_end_member,N/A,Indicates whether the sample was part of a seasonal sampling design or monthly sampling design.,text,column_header
 wrol_sample_id,N/A,WROL sample ID. These samples came from the Watershed Rules of Life (WROL) data package.,text,column_header
 WROL2019_*,N/A,"Samples. The three numeric digits in the column name are associated with the sample ID (e.g. ""WROL2019_001""). Rows in the data represent peak intensities reflected as presence absence.",numeric,column_header
@@ -354,4 +354,4 @@ WsAreaSqKm_min,square kilometer,Minimum value of the watershed area.,numeric,col
 WsAreaSqKm_n,square kilometer,Number of sites with watershed area.,numeric,column_header
 WsAreaSqKm_sd,N/A,Standard deviation of the value of the watershed area.,numeric,column_header
 WWTPAllDensWs,number per kilometer squared,Density of waste water treatment plants within the watershed from https://www.sciencedirect.com/science/article/pii/S0048969720311724.,numeric,column_header
-Yakima,N/A,"Name of one of the watersheds. This column is found in a table that provides a series of summary statistics for each watershed, where watersheds are listed as columns and each summary statistics is a row. ",text,column_header
+Yakima,N/A,Summary statistics for the Yakima watershed. Each row is the summary statistic indicated in the first column.,text,column_header
