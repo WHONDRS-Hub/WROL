@@ -1,10 +1,10 @@
 Column_or_Row_Name,Unit,Definition,Data_Type,Term_Type
 AI,N/A,Aromaticity index calculated as per Koch and Dittmar; 2006; 2015.,numeric,column_header
 AI.Mod.mean,N/A,Mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_cv,N/A,Coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_cv,N/A,Mean coefficient of variation of modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_max,N/A,Maximum value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_mean,N/A,Mean value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
-AI.Mod.mean_min,N/A,Minimum values in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
+AI.Mod.mean_min,N/A,Minimum value in mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_n,N/A,Number of samples used to calculate mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.mean_sd,N/A,Standard deviation of mean modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
 AI.Mod.median,N/A,Median modified aromaticity index calculated as per Koch and Dittmar; 2006; 2016.,numeric,column_header
@@ -119,7 +119,7 @@ Latitude,decimal degrees WGS1984,Geographic location (latitude) of site.,numeric
 Lignin,peaks,Number of molecular formulae in the Lignin-like chemical class.,numeric,column_header
 Lignin_Amino_Sugar,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class.,numeric,column_header
 Lignin_Amino_Sugar_norm,peaks,Number of molecular formulae in the Lignin_Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
-Lignin_Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class.,numeric,column_header
+Lignin_Tannin,peaks,Number of molecular formulae in the Lignin_Tannin-like chemical class.,numeric,column_header
 Lignin_Tannin_norm,peaks,Number of molecular formulae in the Lignin_Tannin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
 Lignin_norm,peaks,Number of molecular formulae in the Lignin-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
 Lipid,peaks,Number of molecular formulae in the Lipid-like chemical class.,numeric,column_header
@@ -277,7 +277,7 @@ fdate,M/D/YYYY HH:mm,Feature currency date. Details regarding this column can be
 gnis_id,N/A,Unique identifier assigned to each geographic feature in the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,numeric,column_header
 gnis_name,N/A,Feature name from the Geographic Names Information System (GNIS) database. Details regarding this column can be located at https://www.horizon-systems.com/NHDPlusData/NHDPlusV21/Data/NationalData/0Release_Notes_NationalData_Seamless_GeoDatabase.pdf.,text,column_header
 id,N/A,National Hydrography Dataset flowline identifier.,text,column_header
-kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
+kdefect.CH2,N/A,Kendrick Defect = Nominal Kendrick Mass - Kendrick Mass; Hughey et al.; 2001.,numeric,column_header
 kmass.CH2,N/A,(IUPACmass)(14/14.01565); where IUPAC mass is based on the 12C atomic mass as exactly 12 Da. Hughey et al.; 2001.,numeric,column_header
 lamO2,N/A,Thermodynamic efficiency (defined by lambda) at pH 7. Calculated as per Song et al.; 2022.,numeric,column_header
 lamO20,N/A,Thermodynamic efficiency (defined by lambda) at standard state (pH = 0). Calculated as per Song et al.; 2020.,numeric,column_header
