@@ -1,3 +1,9 @@
+##################################
+# Author: Vanessa Garayburu-Caruso
+# Pacific Northwest National Laboratory
+# email = vanessa.garayburu-caruso@pnnl.gov
+#######################################
+
 rm(list=ls(all=T))
 library(dplyr)
 library(tidyr); library (reshape2)
@@ -9,12 +15,12 @@ setwd("data/WROL-RC2_Processed_FTICR_Data")
 trans.path = "src/Pre-processing_scripts/"
 
 Sample_Name = "RC2_WROL"
-# Read in the data file that has all sample names
+# Read in the data
 data = read.csv("Processed_WROL_RC2_Data_Clean_083023.csv")
 profiles.of.trans =  read.csv("Transformation_Database_07-2020.csv")
 
 
-# Since we had to split the data multiple times for teh transformations code not to crash, we have to calculate again the total transformations and the trasnformation profiles for the 362 samples and then perfom the normalization
+# Since we had to split the data multiple times for the transformations code not to crash, we have to calculate again the total transformations and the transformation profiles for the 362 samples and then perform the normalization
 files = list.files(path = trans.path, full.names = T)
 tot.trans = numeric()
 
@@ -42,10 +48,6 @@ tot.trans$sample = as.character(tot.trans$sample)
 tot.trans$total.transformations = as.numeric(as.character(tot.trans$total.transformations))
 str(tot.trans)
 
-write.csv(tot.trans,paste(Sample_Name,"_Total_Transformations_083023.csv", sep=""),quote = F,row.names = F)
-
-# write out the trans profiles across samples
-write.csv(profiles.of.trans,paste(Sample_Name, "_Trans_Profiles_083023.csv", sep=""),quote = F,row.names = F)
 
 # Calculating number of peaks per each sample and normalizing the transformations
 

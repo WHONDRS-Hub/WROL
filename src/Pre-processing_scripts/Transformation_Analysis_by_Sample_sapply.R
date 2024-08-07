@@ -1,3 +1,9 @@
+##################################
+# Author: Vanessa Garayburu-Caruso
+# Pacific Northwest National Laboratory
+# email = vanessa.garayburu-caruso@pnnl.gov
+#######################################
+
 ### Determing carbon transformations ###
 rm(list=ls(all=T))
 library(dplyr)
@@ -26,11 +32,9 @@ rownames(data) = gsub("X","",rownames(data))
 data = as.data.frame(data)
 rownames(data) = as.numeric(rownames(data))
 
-# Fixing sample names
-colnames(data) = gsub("S19S.","S19S-",colnames(data))
 
 # Loading in transformations
-trans.full =  read.csv("Transformation_Database_07-2020.csv")
+trans.full =  read.csv("src/Transformation_Database_07-2020.csv")
 trans.full$Name = as.character(trans.full$Name)
 
 # ############# #

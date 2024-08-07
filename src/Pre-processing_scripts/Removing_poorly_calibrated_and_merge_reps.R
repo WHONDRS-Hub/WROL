@@ -1,3 +1,13 @@
+##################################
+# Author: Vanessa Garayburu-Caruso
+# Pacific Northwest National Laboratory
+# email = vanessa.garayburu-caruso@pnnl.gov
+
+# Readme: FT-ICR-MS raw data (XML files) were processed following instructions in the “FTICR_Instructions-Report_Generation_SOP_v3.pdf” document present in the ESS-DIVE data package. Molecular formula were assigned using [Formultitude](https://github.com/PNNL-Comp-Mass-Spec/Formultitude) (formerly Formularity) software. Data were further processed and sample molecular properties were assigned using the R package “ftmsRanalysis”. The outputs from these steps are referenced as "Formultitude_Output_Folder" within the scripts in this data package.  
+
+# This script removes poorly calibrated samples from the dataset and merges sample replicates from each site where a peak was kept in the merged sample if it was present in at least one of the reps. 
+#######################################
+
 rm(list=ls(all=T))
 library(dplyr)
 library(tidyr); library (reshape2)
@@ -5,7 +15,7 @@ library(tidyr); library (reshape2)
 options(digits=10) # Sig figs in mass resolution data
 
 # Set working directory
-setwd("Formularity_Output_Folder") #See GitHub Readme for more details on data processing
+setwd("Formultitude_Output_Folder") #See GitHub Readme for more details on data processing
 
 # Load in ICR data
 data = read.csv("Processed_WROL_RC2_Data.csv", check.names = F, row.names = 1) 
@@ -67,13 +77,4 @@ data[data > 0] = 1
 write.csv(data, "Processed_WROL_RC2_Data_Clean_083023.csv", quote = F)
 write.csv(mol, "Processed_WROL_RC2_Mol_Clean_083023.csv", quote = F)
 
-# Writing out the number of reps each site has
-reps = as.data.frame(matrix(NA, ncol = 2,nrow= length(uniq.site)))
-colnames(reps) = c("Site","Number_of_reps")
 
-for (i in 1:uniq_n){
-  reps$Site[i] = uniq.site[i]
-  reps$Number_of_reps[i] = nrow(subset(factors, factors$Site == uniq.site[i]))
-}
-
-write.csv(reps, "Samples_and_reps.csv", row.names = F)
