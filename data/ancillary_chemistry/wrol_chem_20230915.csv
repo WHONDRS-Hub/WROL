@@ -1,196 +1,196 @@
-wrol_sample_id,whondrs_id,Site,Watershed,Sampling_Event,sample_date,DOC,DOC_SD,TN,TN_SD,C/N,season,season_n,season_tb,wrol_mo_end_member
-2,162,CT-EBRA,Connecticut,01-Summer 2019,5-Aug-19,2.428,0.311,0.244,0.039,9.969,Summer,3,Summer,seasonal
-4,,CT-MOOS,Connecticut,01-Summer 2019,5-Aug-19,4.171,0.544,0.244,0.037,17.089,Summer,8,Summer,seasonal
-9,,CT-SLPR,Connecticut,01-Summer 2019,5-Aug-19,1.855,0.399,0.286,0.153,6.494,Summer,8,Summer,seasonal
-6,166,CT-PASS,Connecticut,01-Summer 2019,6-Aug-19,2.246,0.064,0.432,0.165,5.194,Summer,3,Summer,seasonal
-8,164,CT-POPE,Connecticut,01-Summer 2019,6-Aug-19,0.789,0.013,0.696,0.01,1.134,Summer,3,Summer,seasonal
-13,165,CT-W9,Connecticut,01-Summer 2019,6-Aug-19,1.133,0.216,0.154,0.067,7.337,Summer,3,Summer,seasonal
-25,3,EAS-BRA,Gunnison,01-Summer 2019,16-Aug-19,0.4,,0.123,0.013,3.246,Summer,3,Summer,seasonal
-27,1,EAS-ROC,Gunnison,01-Summer 2019,16-Aug-19,1.304,0.058,0.116,1.566,11.195,Summer,3,Summer,seasonal
-28,2,EAS-RUS,Gunnison,01-Summer 2019,16-Aug-19,0.692,,0.302,0.612,2.289,Summer,3,Summer,seasonal
-33,5,TAY-RES,Gunnison,01-Summer 2019,16-Aug-19,2.828,0.891,0.121,0.09,23.425,Summer,3,Summer,seasonal
-34,4,TAY-TAY,Gunnison,01-Summer 2019,16-Aug-19,1.338,0.068,0.071,0.159,18.915,Summer,3,Summer,seasonal
-24,7,EAS-ALM,Gunnison,01-Summer 2019,17-Aug-19,1.238,,0.348,0.873,3.557,Summer,3,Summer,seasonal
-26,6,EAS-PUM,Gunnison,01-Summer 2019,17-Aug-19,0.548,,0.172,1.035,3.19,Summer,3,Summer,seasonal
-31,9,GUN-R32,Gunnison,01-Summer 2019,17-Aug-19,2.004,,0.124,0.161,16.205,Summer,3,Summer,seasonal
-29,11,GUN-GRJ,Gunnison,01-Summer 2019,18-Aug-19,4.427,0.354,1.303,0.05,3.397,Summer,3,Summer,monthly
-30,8,GUN-GUN,Gunnison,01-Summer 2019,18-Aug-19,1.777,,0.134,0.127,13.296,Summer,3,Summer,seasonal
-32,10,GUN-TUN,Gunnison,01-Summer 2019,18-Aug-19,3.356,0.559,0.24,0.108,14.014,Summer,3,Summer,seasonal
-1,169,CT-BUNN,Connecticut,01-Summer 2019,28-Aug-19,1.102,0.064,0.64,0.113,1.723,Summer,3,Summer,seasonal
-5,170,CT-NEPA,Connecticut,01-Summer 2019,28-Aug-19,2.437,0.177,0.679,0.073,3.59,Summer,3,Summer,seasonal
-7,168,CT-PHEL,Connecticut,01-Summer 2019,28-Aug-19,2.111,0.039,0.566,0.16,3.727,Summer,3,Summer,seasonal
-10,171,CT-STIL,Connecticut,01-Summer 2019,28-Aug-19,3.379,0.028,0.843,0.21,4.009,Summer,3,Summer,seasonal
-12,167,CT-UNIO,Connecticut,01-Summer 2019,28-Aug-19,3.212,0.007,0.816,0.096,3.938,Summer,3,Summer,seasonal
-3,173,CT-FARM,Connecticut,01-Summer 2019,29-Aug-19,2.722,0.636,1.255,0.045,2.169,Summer,3,Summer,seasonal
-11,172,CT-THOM,Connecticut,01-Summer 2019,29-Aug-19,2.818,0.021,0.485,0.063,5.808,Summer,3,Summer,monthly
-35,16,BLU-BLU,Willamette,01-Summer 2019,4-Sep-19,0.705,0.066,0.042,0.002,16.75,Fall,4,Summer,seasonal
-36,15,BLU-TID,Willamette,01-Summer 2019,4-Sep-19,0.613,0.008,0.079,0.03,7.786,Fall,4,Summer,seasonal
-37,13,LOO-BLU,Willamette,01-Summer 2019,4-Sep-19,0.534,0.039,0.047,0.021,11.35,Fall,4,Summer,seasonal
-38,14,HJA-WS1,Willamette,01-Summer 2019,4-Sep-19,0.673,0.013,0.122,0.091,5.501,Fall,4,Summer,seasonal
-39,12,HJA-WS2,Willamette,01-Summer 2019,4-Sep-19,1.572,0.036,0.046,0.069,34.16,Fall,4,Summer,seasonal
-40,17,MCK-WAL,Willamette,01-Summer 2019,4-Sep-19,0.612,0.049,0.031,0.106,19.722,Fall,4,Summer,seasonal
-43,20,WIL-HAR,Willamette,01-Summer 2019,4-Sep-19,1.074,0.081,0.087,0.168,12.355,Fall,4,Summer,seasonal
-41,21,WIL-COR,Willamette,01-Summer 2019,6-Sep-19,1.087,0.04,0.102,0.032,10.7,Fall,4,Summer,seasonal
-42,19,WIL-GOS,Willamette,01-Summer 2019,6-Sep-19,1.756,0.1,0.121,0.025,14.57,Fall,4,Summer,seasonal
-44,18,WIL-JAS,Willamette,01-Summer 2019,6-Sep-19,1.374,0.387,0.093,0.018,14.797,Fall,4,Summer,seasonal
-45,22,WIL-POR,Willamette,01-Summer 2019,7-Sep-19,1.559,0.079,0.464,0.072,3.363,Fall,4,Summer,monthly
-15,26,BRO-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.196,0.028,0.016,0.042,12.199,Fall,4,Summer,seasonal
-16,25,CUL-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.132,0.01,0.01,0.114,13.53,Fall,4,Summer,seasonal
-17,29,DES-BFA,Deschutes,01-Summer 2019,10-Sep-19,1.197,0.197,0.078,0.639,15.415,Fall,4,Summer,seasonal
-18,24,DES-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.612,0,0.043,0.103,14.375,Fall,4,Summer,seasonal
-21,,DES-WIC,Deschutes,01-Summer 2019,10-Sep-19,1.342,0.092,0.159,0.17,8.449,Summer,9,Summer,seasonal
-22,,LDS-LAP,Deschutes,01-Summer 2019,10-Sep-19,1.366,0.071,0.114,0.604,11.996,Summer,9,Summer,seasonal
-14,32,BEA-SHI,Deschutes,01-Summer 2019,11-Sep-19,0.388,0.071,0.035,,10.987,#N/A,#N/A,Summer,#N/A
-19,30,DES-MAD,Deschutes,01-Summer 2019,11-Sep-19,0.865,0.032,0.327,0.094,2.647,Fall,4,Summer,seasonal
-20,33,DES-MOO,Deschutes,01-Summer 2019,11-Sep-19,1.073,0.075,0.317,1.575,3.38,Fall,4,Summer,monthly
-23,31,WRM-HOT,Deschutes,01-Summer 2019,11-Sep-19,0.737,0.092,0.04,0.021,18.503,#N/A,#N/A,Summer,#N/A
-135,34,DES-MOO,Deschutes,99-Monthly,1-Oct-19,0.791,0.021,0.27,0.21,2.933,Fall,4,Fall,monthly
-148,35,WIL-POR,Willamette,99-Monthly,1-Oct-19,1.413,0.264,0.472,0.026,2.996,Fall,4,Fall,monthly
-67,216,EAS-ALM,Gunnison,02-Fall 2019,18-Oct-19,1.03,0.04,0.223,0.51,4.611,Fall,4,Fall,seasonal
-73,212,GUN-GUN,Gunnison,02-Fall 2019,18-Oct-19,1.42,0.173,0.133,0.262,10.708,Fall,4,Fall,seasonal
-74,210,GUN-R32,Gunnison,02-Fall 2019,18-Oct-19,1.495,,0.036,,41.478,Fall,4,Fall,seasonal
-76,215,TAY-RES,Gunnison,02-Fall 2019,18-Oct-19,2.006,0.349,0.258,0.061,7.763,Fall,4,Fall,seasonal
-77,211,TAY-TAY,Gunnison,02-Fall 2019,18-Oct-19,0.906,0.359,0.173,0.969,5.239,Fall,4,Fall,seasonal
-68,1004,EAS-BRA,Gunnison,02-Fall 2019,19-Oct-19,0.488,0.182,0.218,0.19,2.244,Fall,4,Fall,seasonal
-69,1003,EAS-PUM,Gunnison,02-Fall 2019,19-Oct-19,0.721,0.067,0.129,0.814,5.596,Fall,4,Fall,seasonal
-70,1001,EAS-ROC,Gunnison,02-Fall 2019,19-Oct-19,0.974,0.224,0.384,0.274,2.535,Fall,4,Fall,seasonal
-71,1002,EAS-RUS,Gunnison,02-Fall 2019,19-Oct-19,0.578,0.059,0.051,0.197,11.263,Fall,4,Fall,seasonal
-72,213,GUN-GRJ,Gunnison,02-Fall 2019,20-Oct-19,4,0.198,0.906,0.085,4.416,Fall,4,Fall,seasonal
-75,209,GUN-TUN,Gunnison,02-Fall 2019,20-Oct-19,3.496,0.905,0.337,0.935,10.383,Fall,4,Fall,seasonal
-47,183,CT-EBRA,Connecticut,02-Fall 2019,4-Nov-19,3.947,0.325,0.173,0.012,22.869,Fall,4,Fall,seasonal
-49,174,CT-MOOS,Connecticut,02-Fall 2019,4-Nov-19,6.098,0.601,0.193,0.02,31.638,Fall,4,Fall,seasonal
-51,175,CT-PASS,Connecticut,02-Fall 2019,4-Nov-19,3.972,0.361,0.269,0.052,14.77,Fall,4,Fall,seasonal
-54,184,CT-SLPR,Connecticut,02-Fall 2019,4-Nov-19,2.592,0.021,0.225,0.57,11.537,Fall,4,Fall,seasonal
-53,177,CT-POPE,Connecticut,02-Fall 2019,5-Nov-19,1.797,0.101,0.208,0.075,8.636,Fall,4,Fall,seasonal
-58,176,CT-W9,Connecticut,02-Fall 2019,5-Nov-19,1.574,0.467,0.119,0.02,13.193,Fall,4,Fall,seasonal
-48,179,CT-FARM,Connecticut,02-Fall 2019,7-Nov-19,3.632,0.304,0.674,0.043,5.392,Fall,4,Fall,seasonal
-55,180,CT-STIL,Connecticut,02-Fall 2019,7-Nov-19,3.987,0.184,0.266,0.004,14.977,Fall,4,Fall,seasonal
-56,178,CT-THOM,Connecticut,02-Fall 2019,7-Nov-19,4.163,0.629,0.366,0.06,11.363,Fall,4,Fall,monthly
-57,181,CT-UNIO,Connecticut,02-Fall 2019,7-Nov-19,4.075,0.311,0.283,0.313,14.404,Fall,4,Fall,seasonal
-46,186,CT-BUNN,Connecticut,02-Fall 2019,8-Nov-19,3.047,0.283,0.531,0.066,5.735,Fall,4,Fall,seasonal
-50,182,CT-NEPA,Connecticut,02-Fall 2019,8-Nov-19,3.753,0.474,0.314,0.136,11.959,Fall,4,Fall,seasonal
-52,185,CT-PHEL,Connecticut,02-Fall 2019,8-Nov-19,5.484,0.198,0.291,0.047,18.821,Fall,4,Fall,seasonal
-136,37,DES-MOO,Deschutes,99-Monthly,10-Nov-19,0.84,0.181,0.12,0.16,6.991,Fall,4,Fall,monthly
-149,36,WIL-POR,Willamette,99-Monthly,10-Nov-19,1.371,0.021,0.413,0.044,3.32,Fall,4,Fall,monthly
-59,43,BRO-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.272,0.04,0.041,0.411,6.633,Fall,4,Fall,seasonal
-60,42,CUL-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.209,0.105,0.011,0.056,19.444,Fall,4,Fall,seasonal
-62,41,DES-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.356,0.162,0.025,0.081,14.152,#N/A,#N/A,Fall,seasonal
-65,44,DES-WIC,Deschutes,02-Fall 2019,20-Nov-19,0.913,0.267,0.08,0.035,11.345,Fall,4,Fall,seasonal
-82,45,LDS-LAP,Deschutes,02-Fall 2019,20-Nov-19,1.174,0.057,0.046,0.172,25.474,Fall,4,Fall,seasonal
-61,46,DES-BFA,Deschutes,02-Fall 2019,21-Nov-19,0.56,0.214,0.041,0.122,13.805,Fall,4,Fall,seasonal
-63,48,DES-MAD,Deschutes,02-Fall 2019,21-Nov-19,0.663,0.12,0.274,0.416,2.419,Fall,4,Fall,seasonal
-64,50,DES-MOO,Deschutes,02-Fall 2019,21-Nov-19,0.79,0.134,0.198,0.082,3.98,Fall,4,Fall,monthly
-66,47,WHY-SIS,Deschutes,02-Fall 2019,21-Nov-19,0.453,0.195,0.024,0.039,18.779,#N/A,#N/A,Fall,seasonal
-85,49,TRO-GAT,Deschutes,02-Fall 2019,21-Nov-19,2.345,0.445,2.87,0.44,0.817,Fall,4,Fall,seasonal
-142,,GUN-GRJ,Gunnison,99-Monthly,24-Nov-19,3.641,0.375,0.668,0.132,5.447,Fall,11,Fall,monthly
-132,,CT-THOM,Connecticut,99-Monthly,3-Dec-19,3.048,0.049,0.4,0.053,7.624,Winter,12,Winter,monthly
-84,56,MCK-WAL,Willamette,02-Fall 2019,5-Dec-19,0.529,0.093,0.028,0.041,18.677,Winter,1,Fall,seasonal
-87,57,WIL-GOS,Willamette,02-Fall 2019,5-Dec-19,1.724,0.049,0.237,0.025,7.261,Winter,1,Fall,seasonal
-88,59,WIL-HAR,Willamette,02-Fall 2019,5-Dec-19,0.989,0.052,0.319,0.015,3.098,Winter,1,Fall,seasonal
-89,58,WIL-JAS,Willamette,02-Fall 2019,5-Dec-19,1.238,0.096,0.057,0.058,21.71,Winter,1,Fall,seasonal
-86,60,WIL-COR,Willamette,02-Fall 2019,6-Dec-19,1.162,0.107,0.345,0.001,3.366,Winter,1,Fall,seasonal
-90,61,WIL-POR,Willamette,02-Fall 2019,8-Dec-19,1.292,0.076,0.641,0.031,2.015,Winter,1,Fall,monthly
-78,55,BLU-BLU,Willamette,02-Fall 2019,10-Dec-19,0.939,0.432,0.138,0.045,6.803,Winter,1,Fall,seasonal
-79,53,BLU-TID,Willamette,02-Fall 2019,10-Dec-19,1.139,0.098,0.04,0.24,28.315,Winter,1,Fall,seasonal
-80,51,HJA-WS1,Willamette,02-Fall 2019,10-Dec-19,1.417,0.257,0.047,0.022,30.349,Winter,1,Fall,seasonal
-81,52,HJA-WS2,Willamette,02-Fall 2019,10-Dec-19,2.127,0.098,0.041,0.025,51.897,Winter,1,Fall,seasonal
-83,54,LOO-BLU,Willamette,02-Fall 2019,10-Dec-19,0.805,0.06,0.024,0.045,33.329,Winter,1,Fall,seasonal
-137,62,DES-MOO,Deschutes,99-Monthly,27-Dec-19,0.573,0.045,0.188,0.021,3.045,Winter,1,Fall,monthly
-150,63,WIL-POR,Willamette,99-Monthly,27-Dec-19,,,,,,Winter,1,Fall,monthly
-143,,GUN-GRJ,Gunnison,99-Monthly,8-Jan-20,3.003,0.969,0.78,0.716,3.849,Winter,1,Winter,monthly
-128,64,WIL-GOS,Willamette,03-Winter 2020,22-Jan-20,,,,,,Winter,1,Winter,seasonal
-130,65,WIL-JAS,Willamette,03-Winter 2020,22-Jan-20,,,,,,Winter,1,Winter,seasonal
-120,70,BLU-BLU,Willamette,03-Winter 2020,23-Jan-20,1.226,0.172,0.049,0.081,24.788,Winter,1,Winter,seasonal
-121,68,BLU-TID,Willamette,03-Winter 2020,23-Jan-20,1.368,0.065,0.035,0.035,39.264,Winter,1,Winter,seasonal
-122,67,HJA-WS1,Willamette,03-Winter 2020,23-Jan-20,1.327,,0.045,0.041,29.329,Winter,1,Winter,seasonal
-123,66,HJA-WS2,Willamette,03-Winter 2020,23-Jan-20,1.347,0.065,0.033,0.055,40.238,Winter,1,Winter,seasonal
-124,69,LOO-BLU,Willamette,03-Winter 2020,23-Jan-20,1.392,0.049,0.048,0.082,28.785,Winter,1,Winter,seasonal
-125,71,MCK-WAL,Willamette,03-Winter 2020,23-Jan-20,1.007,0.53,0.063,0.042,15.981,Winter,1,Winter,seasonal
-127,72,WIL-COR,Willamette,03-Winter 2020,24-Jan-20,2.239,0.156,0.389,0.002,5.756,Winter,1,Winter,seasonal
-129,23,WIL-HAR,Willamette,03-Winter 2020,24-Jan-20,1.527,0.076,0.059,0.02,25.759,Winter,1,Winter,seasonal
-133,,CT-THOM,Connecticut,99-Monthly,24-Jan-20,2.708,0.028,0.625,0.107,4.332,Winter,1,Winter,monthly
-131,73,WIL-POR,Willamette,03-Winter 2020,26-Jan-20,1.885,0.179,0.793,0.072,2.377,Winter,1,Winter,monthly
-144,,GUN-GRJ,Gunnison,99-Monthly,29-Jan-20,3.216,0.156,0.683,0.022,4.707,Winter,1,Winter,monthly
-108,81,DES-MAD,Deschutes,03-Winter 2020,4-Feb-20,0.407,0.374,0.287,0.046,1.419,Winter,1,Winter,seasonal
-110,77,DES-WIC,Deschutes,03-Winter 2020,4-Feb-20,0.435,0.142,0.057,0.027,7.626,Winter,1,Winter,seasonal
-111,78,LDS-LAP,Deschutes,03-Winter 2020,4-Feb-20,3.812,0.156,0.14,0.084,27.138,Winter,1,Winter,seasonal
-112,80,WHY-SIS,Deschutes,03-Winter 2020,4-Feb-20,0.647,1.008,0.019,0.045,33.977,Winter,1,Winter,seasonal
-126,82,TRO-GAT,Deschutes,03-Winter 2020,4-Feb-20,2.834,0.106,1.343,0.12,2.11,Winter,1,Winter,seasonal
-104,76,BRO-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.465,0.052,0.017,0.021,26.783,Winter,1,Winter,seasonal
-105,75,CUL-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.068,0.276,0.031,0.047,2.169,Winter,1,Winter,seasonal
-106,79,DES-BFA,Deschutes,03-Winter 2020,5-Feb-20,1.318,0.162,0.08,0.002,16.569,Winter,1,Winter,seasonal
-107,74,DES-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.329,0.226,0.024,0.054,13.927,Winter,1,Winter,seasonal
-109,83,DES-MOO,Deschutes,03-Winter 2020,8-Feb-20,1.07,,0.115,0.028,9.292,Winter,1,Winter,monthly
-113,189,EAS-ALM,Gunnison,03-Winter 2020,14-Feb-20,0.722,0.273,0.123,0.031,5.876,Winter,1,Winter,seasonal
-117,195,GUN-GUN,Gunnison,03-Winter 2020,14-Feb-20,1.089,0.182,0.086,0.148,12.724,Winter,1,Winter,seasonal
-118,188,GUN-R32,Gunnison,03-Winter 2020,14-Feb-20,1.278,0.099,0.149,0.214,8.57,Winter,1,Winter,seasonal
-114,192,EAS-PUM,Gunnison,03-Winter 2020,15-Feb-20,0.471,0.003,0.112,0.122,4.193,Winter,1,Winter,seasonal
-119,194,TAY-RES,Gunnison,03-Winter 2020,15-Feb-20,1.759,0.108,0.167,0.074,10.529,Winter,1,Winter,seasonal
-115,193,EAS-ROC,Gunnison,03-Winter 2020,20-Feb-20,0.973,0.079,0.085,0.071,11.433,Winter,1,Winter,seasonal
-116,190,EAS-RUS,Gunnison,03-Winter 2020,20-Feb-20,0.357,0.101,0.155,0.259,2.313,Winter,1,Winter,seasonal
-134,,CT-THOM,Connecticut,99-Monthly,2-Mar-20,2.663,0.064,0.423,0.006,6.292,Winter,3,Winter,monthly
-138,85,DES-MOO,Deschutes,99-Monthly,8-Mar-20,0.573,0.192,0.188,0.021,3.045,Spring,2,Winter,monthly
-151,86,WIL-POR,Willamette,99-Monthly,8-Mar-20,1.091,0.128,0.883,0.035,1.236,Spring,2,Winter,monthly
-145,,GUN-GRJ,Gunnison,99-Monthly,10-Mar-20,3.366,0.014,0.579,0.032,5.816,Winter,3,Winter,monthly
-94,126,CT-MOOS,Connecticut,03-Winter 2020,12-Mar-20,5.499,0.262,0.319,0.006,17.219,Spring,2,Winter,seasonal
-99,121,CT-SLPR,Connecticut,03-Winter 2020,12-Mar-20,1.787,0.025,0.365,0.057,4.891,Spring,2,Winter,seasonal
-92,124,CT-EBRA,Connecticut,03-Winter 2020,13-Mar-20,3.145,0.368,0.268,0.02,11.751,Spring,2,Winter,seasonal
-96,125,CT-PASS,Connecticut,03-Winter 2020,13-Mar-20,3.143,0.156,0.444,0.162,7.082,Spring,2,Winter,seasonal
-98,122,CT-POPE,Connecticut,03-Winter 2020,13-Mar-20,1.489,0.054,0.342,0.355,4.357,Spring,2,Winter,seasonal
-103,123,CT-W9,Connecticut,03-Winter 2020,13-Mar-20,1.728,0.019,0.54,0.146,3.199,Spring,2,Winter,seasonal
-93,,CT-FARM,Connecticut,03-Winter 2020,21-Mar-20,,,,,,Winter,3,Winter,seasonal
-95,,CT-NEPA,Connecticut,03-Winter 2020,21-Mar-20,,,,,,Winter,3,Winter,seasonal
-100,130,CT-STIL,Connecticut,03-Winter 2020,21-Mar-20,,,,,,Spring,2,Winter,seasonal
-101,128,CT-THOM,Connecticut,03-Winter 2020,21-Mar-20,,,,,,Spring,2,Winter,monthly
-91,134,CT-BUNN,Connecticut,03-Winter 2020,22-Mar-20,,,,,,Spring,2,Winter,seasonal
-97,,CT-PHEL,Connecticut,03-Winter 2020,22-Mar-20,,,,,,Winter,3,Winter,seasonal
-102,,CT-UNIO,Connecticut,03-Winter 2020,22-Mar-20,,,,,,Winter,3,Winter,seasonal
-139,104,DES-MOO,Deschutes,99-Monthly,3-Apr-20,0.977,0.04,0.035,0.021,27.914,Spring,2,Spring,monthly
-152,103,WIL-POR,Willamette,99-Monthly,3-Apr-20,2.273,0.478,0.814,0.051,2.792,Spring,2,Spring,monthly
-170,113,BLU-BLU,Willamette,04-Spring 2020,21-Apr-20,0.908,0.235,0.008,0.004,113.5,Spring,2,Spring,seasonal
-171,115,BLU-TID,Willamette,04-Spring 2020,21-Apr-20,0.761,0.054,0.003,0.051,253.667,Spring,2,Spring,seasonal
-172,106,HJA-WS1,Willamette,04-Spring 2020,21-Apr-20,0.9,0.032,0.007,0.078,128.571,Spring,2,Spring,seasonal
-173,109,HJA-WS2,Willamette,04-Spring 2020,21-Apr-20,0.909,0.377,0.013,0.024,69.923,Spring,2,Spring,seasonal
-174,110,LOO-BLU,Willamette,04-Spring 2020,21-Apr-20,0.66,0.023,0.026,0.036,25.385,Spring,2,Spring,seasonal
-175,107,MCK-WAL,Willamette,04-Spring 2020,23-Apr-20,0.956,0.059,0.02,0.082,47.8,Spring,2,Spring,seasonal
-176,114,WIL-COR,Willamette,04-Spring 2020,23-Apr-20,1.466,0.353,0.231,0.117,6.346,Spring,2,Spring,seasonal
-177,112,WIL-GOS,Willamette,04-Spring 2020,23-Apr-20,2.123723777,0.239002092,0.12904184,0.113844192,16.458,Spring,2,Spring,seasonal
-178,111,WIL-HAR,Willamette,04-Spring 2020,23-Apr-20,1.243,0.172,0.12,0.175,10.358,Spring,2,Spring,seasonal
-179,105,WIL-JAS,Willamette,04-Spring 2020,23-Apr-20,1.912490784,0.033234019,0.066061275,0.070144993,28.95,Spring,2,Spring,seasonal
-146,,GUN-GRJ,Gunnison,99-Monthly,24-Apr-20,3.898,0.707,0.42,0.077,9.281,Spring,4,Spring,monthly
-180,108,WIL-POR,Willamette,04-Spring 2020,27-Apr-20,1.387,0.076,0.469,0.1,2.957,Spring,2,Spring,monthly
-181,118,BRO-LAP,Deschutes,04-Spring 2020,7-May-20,0.331,0.065,-0.003,0.06,-110.333,Spring,2,Spring,seasonal
-182,117,CUL-LAP,Deschutes,04-Spring 2020,7-May-20,0.305,0.138,0.028,0.049,10.893,Spring,2,Spring,seasonal
-183,145,DES-BFA,Deschutes,04-Spring 2020,7-May-20,1.404,0.086,0.058,0.015,24.207,Spring,2,Spring,seasonal
-184,116,DES-LAP,Deschutes,04-Spring 2020,7-May-20,0.545,,-0.003,0.025,-181.667,Spring,2,Spring,seasonal
-185,147,DES-MAD,Deschutes,04-Spring 2020,7-May-20,0.752,0.008,0.1,0.024,7.52,Spring,2,Spring,seasonal
-187,119,DES-WIC,Deschutes,04-Spring 2020,7-May-20,1.024,0.241,0.064,0.044,16,Spring,2,Spring,seasonal
-188,120,LDS-LAP,Deschutes,04-Spring 2020,7-May-20,3.928,0.311,0.128,0.088,30.688,Spring,2,Spring,seasonal
-189,146,WHY-SIS,Deschutes,04-Spring 2020,7-May-20,0.893,0.055,0.02,0.009,44.65,Spring,2,Spring,seasonal
-190,148,TRO-GAT,Deschutes,04-Spring 2020,7-May-20,3.368,0.403,0.558,0.005,6.036,Spring,2,Spring,seasonal
-186,149,DES-MOO,Deschutes,04-Spring 2020,13-May-20,0.978,0.032,0.04,0.027,24.45,Spring,2,Spring,monthly
-154,138,CT-EBRA,Connecticut,04-Spring 2020,5-Jun-20,2.437,0.042,0.17,0.122,14.335,Summer,3,Summer,seasonal
-155,137,CT-MOOS,Connecticut,04-Spring 2020,5-Jun-20,4.504,0.325,0.178,0.037,25.303,Summer,3,Summer,seasonal
-156,135,CT-PASS,Connecticut,04-Spring 2020,5-Jun-20,2.455,0.354,0.234,0.071,10.491,Summer,3,Summer,seasonal
-157,139,CT-POPE,Connecticut,04-Spring 2020,5-Jun-20,1.217,0.105,0.293,0.048,4.154,Summer,3,Summer,seasonal
-158,136,CT-SLPR,Connecticut,04-Spring 2020,5-Jun-20,1.604,0.078,0.184,0.033,8.717,Summer,3,Summer,seasonal
-160,99,CT-BUNN,Connecticut,04-Spring 2020,5-Jun-20,2.093,0.248,0.578,0.079,3.621,Summer,3,Summer,seasonal
-163,98,CT-PHEL,Connecticut,04-Spring 2020,5-Jun-20,4.302,0.488,0.295,0.007,14.583,Summer,3,Summer,seasonal
-166,97,CT-UNIO,Connecticut,04-Spring 2020,5-Jun-20,3.001,0.177,0.24,0.036,12.504,Summer,3,Summer,seasonal
-159,140,CT-W9,Connecticut,04-Spring 2020,6-Jun-20,1.192,0.232,0.135,0.015,8.83,Summer,3,Summer,seasonal
-161,101,CT-FARM,Connecticut,04-Spring 2020,6-Jun-20,2.813,0.707,0.702,0.006,4.007,Summer,3,Summer,seasonal
-162,,CT-NEPA,Connecticut,04-Spring 2020,6-Jun-20,2.951,0.17,0.454,0.087,6.5,Summer,6,Summer,monthly
-164,102,CT-STIL,Connecticut,04-Spring 2020,6-Jun-20,3.538,0.431,0.544,0.016,6.504,Summer,3,Summer,seasonal
-165,100,CT-THOM,Connecticut,04-Spring 2020,6-Jun-20,2.72,0.544,0.463,0.061,5.875,Summer,3,Summer,monthly
-140,151,DES-MOO,Deschutes,99-Monthly,21-Jun-20,0.9,0.023,0.056,0.058,16.071,Summer,3,Summer,monthly
-228,150,WIL-POR,Willamette,99-Monthly,21-Jun-20,1.359,0.129,0.364,0.133,3.734,Summer,3,Summer,monthly
-147,,GUN-GRJ,Gunnison,99-Monthly,23-Jun-20,3.998,0.177,1.147,0.155,3.486,Summer,6,Summer,monthly
-224,152,DES-MOO,Deschutes,99-Monthly,30-Jul-20,0.901,0.038,0.079,0.025,11.405,Summer,3,Summer,monthly
-229,153,WIL-POR,Willamette,99-Monthly,30-Jul-20,1.28,0.035,0.421,0.034,3.04,Summer,3,Summer,monthly
-169,,GUN-GRJ,Gunnison,99-Monthly,5-Aug-20,4.007,0.021,1.43,0.05,2.802,Summer,8,Summer,monthly
-167,,CT-THOM,Connecticut,99-Monthly,30-Aug-20,2.992,0.127,0.53,0.185,5.645,Summer,8,Summer,monthly
-225,154,DES-MOO,Deschutes,99-Monthly,3-Sep-20,0.764,0.002,0.136,0.051,5.605,Fall,4,Summer,monthly
-230,155,WIL-POR,Willamette,99-Monthly,3-Sep-20,1.039,0.26,0.341,0.043,3.046,Fall,4,Summer,monthly
-234,,GUN-GRJ,Gunnison,99-Monthly,23-Sep-20,,,,,,Fall,9,Fall,monthly
-168,,CT-THOM,Connecticut,99-Monthly,1-Oct-20,2.708,0.573,0.559,0.037,4.843,Fall,10,Fall,monthly
-226,84,DES-MOO,Deschutes,99-Monthly,2-Oct-20,,,,,,Fall,10,Fall,seasonal
+wrol_sample_id,whondrs_id,Site,Watershed,Sampling_Event,sample_date,DOC,DOC_SD,season,season_n,season_tb,wrol_mo_end_member
+2,162,CT-EBRA,Connecticut,01-Summer 2019,5-Aug-19,2.428,0.311,Summer,3,Summer,seasonal
+4,,CT-MOOS,Connecticut,01-Summer 2019,5-Aug-19,4.171,0.544,Summer,8,Summer,seasonal
+9,,CT-SLPR,Connecticut,01-Summer 2019,5-Aug-19,1.855,0.399,Summer,8,Summer,seasonal
+6,166,CT-PASS,Connecticut,01-Summer 2019,6-Aug-19,2.246,0.064,Summer,3,Summer,seasonal
+8,164,CT-POPE,Connecticut,01-Summer 2019,6-Aug-19,0.789,0.013,Summer,3,Summer,seasonal
+13,165,CT-W9,Connecticut,01-Summer 2019,6-Aug-19,1.133,0.216,Summer,3,Summer,seasonal
+25,3,EAS-BRA,Gunnison,01-Summer 2019,16-Aug-19,0.4,,Summer,3,Summer,seasonal
+27,1,EAS-ROC,Gunnison,01-Summer 2019,16-Aug-19,1.304,0.058,Summer,3,Summer,seasonal
+28,2,EAS-RUS,Gunnison,01-Summer 2019,16-Aug-19,0.692,,Summer,3,Summer,seasonal
+33,5,TAY-RES,Gunnison,01-Summer 2019,16-Aug-19,2.828,0.891,Summer,3,Summer,seasonal
+34,4,TAY-TAY,Gunnison,01-Summer 2019,16-Aug-19,1.338,0.068,Summer,3,Summer,seasonal
+24,7,EAS-ALM,Gunnison,01-Summer 2019,17-Aug-19,1.238,,Summer,3,Summer,seasonal
+26,6,EAS-PUM,Gunnison,01-Summer 2019,17-Aug-19,0.548,,Summer,3,Summer,seasonal
+31,9,GUN-R32,Gunnison,01-Summer 2019,17-Aug-19,2.004,,Summer,3,Summer,seasonal
+29,11,GUN-GRJ,Gunnison,01-Summer 2019,18-Aug-19,4.427,0.354,Summer,3,Summer,monthly
+30,8,GUN-GUN,Gunnison,01-Summer 2019,18-Aug-19,1.777,,Summer,3,Summer,seasonal
+32,10,GUN-TUN,Gunnison,01-Summer 2019,18-Aug-19,3.356,0.559,Summer,3,Summer,seasonal
+1,169,CT-BUNN,Connecticut,01-Summer 2019,28-Aug-19,1.102,0.064,Summer,3,Summer,seasonal
+5,170,CT-NEPA,Connecticut,01-Summer 2019,28-Aug-19,2.437,0.177,Summer,3,Summer,seasonal
+7,168,CT-PHEL,Connecticut,01-Summer 2019,28-Aug-19,2.111,0.039,Summer,3,Summer,seasonal
+10,171,CT-STIL,Connecticut,01-Summer 2019,28-Aug-19,3.379,0.028,Summer,3,Summer,seasonal
+12,167,CT-UNIO,Connecticut,01-Summer 2019,28-Aug-19,3.212,0.007,Summer,3,Summer,seasonal
+3,173,CT-FARM,Connecticut,01-Summer 2019,29-Aug-19,2.722,0.636,Summer,3,Summer,seasonal
+11,172,CT-THOM,Connecticut,01-Summer 2019,29-Aug-19,2.818,0.021,Summer,3,Summer,monthly
+35,16,BLU-BLU,Willamette,01-Summer 2019,4-Sep-19,0.705,0.066,Fall,4,Summer,seasonal
+36,15,BLU-TID,Willamette,01-Summer 2019,4-Sep-19,0.613,0.008,Fall,4,Summer,seasonal
+37,13,LOO-BLU,Willamette,01-Summer 2019,4-Sep-19,0.534,0.039,Fall,4,Summer,seasonal
+38,14,HJA-WS1,Willamette,01-Summer 2019,4-Sep-19,0.673,0.013,Fall,4,Summer,seasonal
+39,12,HJA-WS2,Willamette,01-Summer 2019,4-Sep-19,1.572,0.036,Fall,4,Summer,seasonal
+40,17,MCK-WAL,Willamette,01-Summer 2019,4-Sep-19,0.612,0.049,Fall,4,Summer,seasonal
+43,20,WIL-HAR,Willamette,01-Summer 2019,4-Sep-19,1.074,0.081,Fall,4,Summer,seasonal
+41,21,WIL-COR,Willamette,01-Summer 2019,6-Sep-19,1.087,0.04,Fall,4,Summer,seasonal
+42,19,WIL-GOS,Willamette,01-Summer 2019,6-Sep-19,1.756,0.1,Fall,4,Summer,seasonal
+44,18,WIL-JAS,Willamette,01-Summer 2019,6-Sep-19,1.374,0.387,Fall,4,Summer,seasonal
+45,22,WIL-POR,Willamette,01-Summer 2019,7-Sep-19,1.559,0.079,Fall,4,Summer,monthly
+15,26,BRO-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.196,0.028,Fall,4,Summer,seasonal
+16,25,CUL-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.132,0.01,Fall,4,Summer,seasonal
+17,29,DES-BFA,Deschutes,01-Summer 2019,10-Sep-19,1.197,0.197,Fall,4,Summer,seasonal
+18,24,DES-LAP,Deschutes,01-Summer 2019,10-Sep-19,0.612,0,Fall,4,Summer,seasonal
+21,,DES-WIC,Deschutes,01-Summer 2019,10-Sep-19,1.342,0.092,Summer,9,Summer,seasonal
+22,,LDS-LAP,Deschutes,01-Summer 2019,10-Sep-19,1.366,0.071,Summer,9,Summer,seasonal
+14,32,BEA-SHI,Deschutes,01-Summer 2019,11-Sep-19,0.388,0.071,#N/A,#N/A,Summer,#N/A
+19,30,DES-MAD,Deschutes,01-Summer 2019,11-Sep-19,0.865,0.032,Fall,4,Summer,seasonal
+20,33,DES-MOO,Deschutes,01-Summer 2019,11-Sep-19,1.073,0.075,Fall,4,Summer,monthly
+23,31,WRM-HOT,Deschutes,01-Summer 2019,11-Sep-19,0.737,0.092,#N/A,#N/A,Summer,#N/A
+135,34,DES-MOO,Deschutes,99-Monthly,1-Oct-19,0.791,0.021,Fall,4,Fall,monthly
+148,35,WIL-POR,Willamette,99-Monthly,1-Oct-19,1.413,0.264,Fall,4,Fall,monthly
+67,216,EAS-ALM,Gunnison,02-Fall 2019,18-Oct-19,1.03,0.04,Fall,4,Fall,seasonal
+73,212,GUN-GUN,Gunnison,02-Fall 2019,18-Oct-19,1.42,0.173,Fall,4,Fall,seasonal
+74,210,GUN-R32,Gunnison,02-Fall 2019,18-Oct-19,1.495,,Fall,4,Fall,seasonal
+76,215,TAY-RES,Gunnison,02-Fall 2019,18-Oct-19,2.006,0.349,Fall,4,Fall,seasonal
+77,211,TAY-TAY,Gunnison,02-Fall 2019,18-Oct-19,0.906,0.359,Fall,4,Fall,seasonal
+68,1004,EAS-BRA,Gunnison,02-Fall 2019,19-Oct-19,0.488,0.182,Fall,4,Fall,seasonal
+69,1003,EAS-PUM,Gunnison,02-Fall 2019,19-Oct-19,0.721,0.067,Fall,4,Fall,seasonal
+70,1001,EAS-ROC,Gunnison,02-Fall 2019,19-Oct-19,0.974,0.224,Fall,4,Fall,seasonal
+71,1002,EAS-RUS,Gunnison,02-Fall 2019,19-Oct-19,0.578,0.059,Fall,4,Fall,seasonal
+72,213,GUN-GRJ,Gunnison,02-Fall 2019,20-Oct-19,4,0.198,Fall,4,Fall,seasonal
+75,209,GUN-TUN,Gunnison,02-Fall 2019,20-Oct-19,3.496,0.905,Fall,4,Fall,seasonal
+47,183,CT-EBRA,Connecticut,02-Fall 2019,4-Nov-19,3.947,0.325,Fall,4,Fall,seasonal
+49,174,CT-MOOS,Connecticut,02-Fall 2019,4-Nov-19,6.098,0.601,Fall,4,Fall,seasonal
+51,175,CT-PASS,Connecticut,02-Fall 2019,4-Nov-19,3.972,0.361,Fall,4,Fall,seasonal
+54,184,CT-SLPR,Connecticut,02-Fall 2019,4-Nov-19,2.592,0.021,Fall,4,Fall,seasonal
+53,177,CT-POPE,Connecticut,02-Fall 2019,5-Nov-19,1.797,0.101,Fall,4,Fall,seasonal
+58,176,CT-W9,Connecticut,02-Fall 2019,5-Nov-19,1.574,0.467,Fall,4,Fall,seasonal
+48,179,CT-FARM,Connecticut,02-Fall 2019,7-Nov-19,3.632,0.304,Fall,4,Fall,seasonal
+55,180,CT-STIL,Connecticut,02-Fall 2019,7-Nov-19,3.987,0.184,Fall,4,Fall,seasonal
+56,178,CT-THOM,Connecticut,02-Fall 2019,7-Nov-19,4.163,0.629,Fall,4,Fall,monthly
+57,181,CT-UNIO,Connecticut,02-Fall 2019,7-Nov-19,4.075,0.311,Fall,4,Fall,seasonal
+46,186,CT-BUNN,Connecticut,02-Fall 2019,8-Nov-19,3.047,0.283,Fall,4,Fall,seasonal
+50,182,CT-NEPA,Connecticut,02-Fall 2019,8-Nov-19,3.753,0.474,Fall,4,Fall,seasonal
+52,185,CT-PHEL,Connecticut,02-Fall 2019,8-Nov-19,5.484,0.198,Fall,4,Fall,seasonal
+136,37,DES-MOO,Deschutes,99-Monthly,10-Nov-19,0.84,0.181,Fall,4,Fall,monthly
+149,36,WIL-POR,Willamette,99-Monthly,10-Nov-19,1.371,0.021,Fall,4,Fall,monthly
+59,43,BRO-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.272,0.04,Fall,4,Fall,seasonal
+60,42,CUL-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.209,0.105,Fall,4,Fall,seasonal
+62,41,DES-LAP,Deschutes,02-Fall 2019,20-Nov-19,0.356,0.162,#N/A,#N/A,Fall,seasonal
+65,44,DES-WIC,Deschutes,02-Fall 2019,20-Nov-19,0.913,0.267,Fall,4,Fall,seasonal
+82,45,LDS-LAP,Deschutes,02-Fall 2019,20-Nov-19,1.174,0.057,Fall,4,Fall,seasonal
+61,46,DES-BFA,Deschutes,02-Fall 2019,21-Nov-19,0.56,0.214,Fall,4,Fall,seasonal
+63,48,DES-MAD,Deschutes,02-Fall 2019,21-Nov-19,0.663,0.12,Fall,4,Fall,seasonal
+64,50,DES-MOO,Deschutes,02-Fall 2019,21-Nov-19,0.79,0.134,Fall,4,Fall,monthly
+66,47,WHY-SIS,Deschutes,02-Fall 2019,21-Nov-19,0.453,0.195,#N/A,#N/A,Fall,seasonal
+85,49,TRO-GAT,Deschutes,02-Fall 2019,21-Nov-19,2.345,0.445,Fall,4,Fall,seasonal
+142,,GUN-GRJ,Gunnison,99-Monthly,24-Nov-19,3.641,0.375,Fall,11,Fall,monthly
+132,,CT-THOM,Connecticut,99-Monthly,3-Dec-19,3.048,0.049,Winter,12,Winter,monthly
+84,56,MCK-WAL,Willamette,02-Fall 2019,5-Dec-19,0.529,0.093,Winter,1,Fall,seasonal
+87,57,WIL-GOS,Willamette,02-Fall 2019,5-Dec-19,1.724,0.049,Winter,1,Fall,seasonal
+88,59,WIL-HAR,Willamette,02-Fall 2019,5-Dec-19,0.989,0.052,Winter,1,Fall,seasonal
+89,58,WIL-JAS,Willamette,02-Fall 2019,5-Dec-19,1.238,0.096,Winter,1,Fall,seasonal
+86,60,WIL-COR,Willamette,02-Fall 2019,6-Dec-19,1.162,0.107,Winter,1,Fall,seasonal
+90,61,WIL-POR,Willamette,02-Fall 2019,8-Dec-19,1.292,0.076,Winter,1,Fall,monthly
+78,55,BLU-BLU,Willamette,02-Fall 2019,10-Dec-19,0.939,0.432,Winter,1,Fall,seasonal
+79,53,BLU-TID,Willamette,02-Fall 2019,10-Dec-19,1.139,0.098,Winter,1,Fall,seasonal
+80,51,HJA-WS1,Willamette,02-Fall 2019,10-Dec-19,1.417,0.257,Winter,1,Fall,seasonal
+81,52,HJA-WS2,Willamette,02-Fall 2019,10-Dec-19,2.127,0.098,Winter,1,Fall,seasonal
+83,54,LOO-BLU,Willamette,02-Fall 2019,10-Dec-19,0.805,0.06,Winter,1,Fall,seasonal
+137,62,DES-MOO,Deschutes,99-Monthly,27-Dec-19,0.573,0.045,Winter,1,Fall,monthly
+150,63,WIL-POR,Willamette,99-Monthly,27-Dec-19,,,Winter,1,Fall,monthly
+143,,GUN-GRJ,Gunnison,99-Monthly,8-Jan-20,3.003,0.969,Winter,1,Winter,monthly
+128,64,WIL-GOS,Willamette,03-Winter 2020,22-Jan-20,,,Winter,1,Winter,seasonal
+130,65,WIL-JAS,Willamette,03-Winter 2020,22-Jan-20,,,Winter,1,Winter,seasonal
+120,70,BLU-BLU,Willamette,03-Winter 2020,23-Jan-20,1.226,0.172,Winter,1,Winter,seasonal
+121,68,BLU-TID,Willamette,03-Winter 2020,23-Jan-20,1.368,0.065,Winter,1,Winter,seasonal
+122,67,HJA-WS1,Willamette,03-Winter 2020,23-Jan-20,1.327,,Winter,1,Winter,seasonal
+123,66,HJA-WS2,Willamette,03-Winter 2020,23-Jan-20,1.347,0.065,Winter,1,Winter,seasonal
+124,69,LOO-BLU,Willamette,03-Winter 2020,23-Jan-20,1.392,0.049,Winter,1,Winter,seasonal
+125,71,MCK-WAL,Willamette,03-Winter 2020,23-Jan-20,1.007,0.53,Winter,1,Winter,seasonal
+127,72,WIL-COR,Willamette,03-Winter 2020,24-Jan-20,2.239,0.156,Winter,1,Winter,seasonal
+129,23,WIL-HAR,Willamette,03-Winter 2020,24-Jan-20,1.527,0.076,Winter,1,Winter,seasonal
+133,,CT-THOM,Connecticut,99-Monthly,24-Jan-20,2.708,0.028,Winter,1,Winter,monthly
+131,73,WIL-POR,Willamette,03-Winter 2020,26-Jan-20,1.885,0.179,Winter,1,Winter,monthly
+144,,GUN-GRJ,Gunnison,99-Monthly,29-Jan-20,3.216,0.156,Winter,1,Winter,monthly
+108,81,DES-MAD,Deschutes,03-Winter 2020,4-Feb-20,0.407,0.374,Winter,1,Winter,seasonal
+110,77,DES-WIC,Deschutes,03-Winter 2020,4-Feb-20,0.435,0.142,Winter,1,Winter,seasonal
+111,78,LDS-LAP,Deschutes,03-Winter 2020,4-Feb-20,3.812,0.156,Winter,1,Winter,seasonal
+112,80,WHY-SIS,Deschutes,03-Winter 2020,4-Feb-20,0.647,1.008,Winter,1,Winter,seasonal
+126,82,TRO-GAT,Deschutes,03-Winter 2020,4-Feb-20,2.834,0.106,Winter,1,Winter,seasonal
+104,76,BRO-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.465,0.052,Winter,1,Winter,seasonal
+105,75,CUL-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.068,0.276,Winter,1,Winter,seasonal
+106,79,DES-BFA,Deschutes,03-Winter 2020,5-Feb-20,1.318,0.162,Winter,1,Winter,seasonal
+107,74,DES-LAP,Deschutes,03-Winter 2020,5-Feb-20,0.329,0.226,Winter,1,Winter,seasonal
+109,83,DES-MOO,Deschutes,03-Winter 2020,8-Feb-20,1.07,,Winter,1,Winter,monthly
+113,189,EAS-ALM,Gunnison,03-Winter 2020,14-Feb-20,0.722,0.273,Winter,1,Winter,seasonal
+117,195,GUN-GUN,Gunnison,03-Winter 2020,14-Feb-20,1.089,0.182,Winter,1,Winter,seasonal
+118,188,GUN-R32,Gunnison,03-Winter 2020,14-Feb-20,1.278,0.099,Winter,1,Winter,seasonal
+114,192,EAS-PUM,Gunnison,03-Winter 2020,15-Feb-20,0.471,0.003,Winter,1,Winter,seasonal
+119,194,TAY-RES,Gunnison,03-Winter 2020,15-Feb-20,1.759,0.108,Winter,1,Winter,seasonal
+115,193,EAS-ROC,Gunnison,03-Winter 2020,20-Feb-20,0.973,0.079,Winter,1,Winter,seasonal
+116,190,EAS-RUS,Gunnison,03-Winter 2020,20-Feb-20,0.357,0.101,Winter,1,Winter,seasonal
+134,,CT-THOM,Connecticut,99-Monthly,2-Mar-20,2.663,0.064,Winter,3,Winter,monthly
+138,85,DES-MOO,Deschutes,99-Monthly,8-Mar-20,0.573,0.192,Spring,2,Winter,monthly
+151,86,WIL-POR,Willamette,99-Monthly,8-Mar-20,1.091,0.128,Spring,2,Winter,monthly
+145,,GUN-GRJ,Gunnison,99-Monthly,10-Mar-20,3.366,0.014,Winter,3,Winter,monthly
+94,126,CT-MOOS,Connecticut,03-Winter 2020,12-Mar-20,5.499,0.262,Spring,2,Winter,seasonal
+99,121,CT-SLPR,Connecticut,03-Winter 2020,12-Mar-20,1.787,0.025,Spring,2,Winter,seasonal
+92,124,CT-EBRA,Connecticut,03-Winter 2020,13-Mar-20,3.145,0.368,Spring,2,Winter,seasonal
+96,125,CT-PASS,Connecticut,03-Winter 2020,13-Mar-20,3.143,0.156,Spring,2,Winter,seasonal
+98,122,CT-POPE,Connecticut,03-Winter 2020,13-Mar-20,1.489,0.054,Spring,2,Winter,seasonal
+103,123,CT-W9,Connecticut,03-Winter 2020,13-Mar-20,1.728,0.019,Spring,2,Winter,seasonal
+93,,CT-FARM,Connecticut,03-Winter 2020,21-Mar-20,,,Winter,3,Winter,seasonal
+95,,CT-NEPA,Connecticut,03-Winter 2020,21-Mar-20,,,Winter,3,Winter,seasonal
+100,130,CT-STIL,Connecticut,03-Winter 2020,21-Mar-20,,,Spring,2,Winter,seasonal
+101,128,CT-THOM,Connecticut,03-Winter 2020,21-Mar-20,,,Spring,2,Winter,monthly
+91,134,CT-BUNN,Connecticut,03-Winter 2020,22-Mar-20,,,Spring,2,Winter,seasonal
+97,,CT-PHEL,Connecticut,03-Winter 2020,22-Mar-20,,,Winter,3,Winter,seasonal
+102,,CT-UNIO,Connecticut,03-Winter 2020,22-Mar-20,,,Winter,3,Winter,seasonal
+139,104,DES-MOO,Deschutes,99-Monthly,3-Apr-20,0.977,0.04,Spring,2,Spring,monthly
+152,103,WIL-POR,Willamette,99-Monthly,3-Apr-20,2.273,0.478,Spring,2,Spring,monthly
+170,113,BLU-BLU,Willamette,04-Spring 2020,21-Apr-20,0.908,0.235,Spring,2,Spring,seasonal
+171,115,BLU-TID,Willamette,04-Spring 2020,21-Apr-20,0.761,0.054,Spring,2,Spring,seasonal
+172,106,HJA-WS1,Willamette,04-Spring 2020,21-Apr-20,0.9,0.032,Spring,2,Spring,seasonal
+173,109,HJA-WS2,Willamette,04-Spring 2020,21-Apr-20,0.909,0.377,Spring,2,Spring,seasonal
+174,110,LOO-BLU,Willamette,04-Spring 2020,21-Apr-20,0.66,0.023,Spring,2,Spring,seasonal
+175,107,MCK-WAL,Willamette,04-Spring 2020,23-Apr-20,0.956,0.059,Spring,2,Spring,seasonal
+176,114,WIL-COR,Willamette,04-Spring 2020,23-Apr-20,1.466,0.353,Spring,2,Spring,seasonal
+177,112,WIL-GOS,Willamette,04-Spring 2020,23-Apr-20,2.123723777,0.239002092,Spring,2,Spring,seasonal
+178,111,WIL-HAR,Willamette,04-Spring 2020,23-Apr-20,1.243,0.172,Spring,2,Spring,seasonal
+179,105,WIL-JAS,Willamette,04-Spring 2020,23-Apr-20,1.912490784,0.033234019,Spring,2,Spring,seasonal
+146,,GUN-GRJ,Gunnison,99-Monthly,24-Apr-20,3.898,0.707,Spring,4,Spring,monthly
+180,108,WIL-POR,Willamette,04-Spring 2020,27-Apr-20,1.387,0.076,Spring,2,Spring,monthly
+181,118,BRO-LAP,Deschutes,04-Spring 2020,7-May-20,0.331,0.065,Spring,2,Spring,seasonal
+182,117,CUL-LAP,Deschutes,04-Spring 2020,7-May-20,0.305,0.138,Spring,2,Spring,seasonal
+183,145,DES-BFA,Deschutes,04-Spring 2020,7-May-20,1.404,0.086,Spring,2,Spring,seasonal
+184,116,DES-LAP,Deschutes,04-Spring 2020,7-May-20,0.545,,Spring,2,Spring,seasonal
+185,147,DES-MAD,Deschutes,04-Spring 2020,7-May-20,0.752,0.008,Spring,2,Spring,seasonal
+187,119,DES-WIC,Deschutes,04-Spring 2020,7-May-20,1.024,0.241,Spring,2,Spring,seasonal
+188,120,LDS-LAP,Deschutes,04-Spring 2020,7-May-20,3.928,0.311,Spring,2,Spring,seasonal
+189,146,WHY-SIS,Deschutes,04-Spring 2020,7-May-20,0.893,0.055,Spring,2,Spring,seasonal
+190,148,TRO-GAT,Deschutes,04-Spring 2020,7-May-20,3.368,0.403,Spring,2,Spring,seasonal
+186,149,DES-MOO,Deschutes,04-Spring 2020,13-May-20,0.978,0.032,Spring,2,Spring,monthly
+154,138,CT-EBRA,Connecticut,04-Spring 2020,5-Jun-20,2.437,0.042,Summer,3,Summer,seasonal
+155,137,CT-MOOS,Connecticut,04-Spring 2020,5-Jun-20,4.504,0.325,Summer,3,Summer,seasonal
+156,135,CT-PASS,Connecticut,04-Spring 2020,5-Jun-20,2.455,0.354,Summer,3,Summer,seasonal
+157,139,CT-POPE,Connecticut,04-Spring 2020,5-Jun-20,1.217,0.105,Summer,3,Summer,seasonal
+158,136,CT-SLPR,Connecticut,04-Spring 2020,5-Jun-20,1.604,0.078,Summer,3,Summer,seasonal
+160,99,CT-BUNN,Connecticut,04-Spring 2020,5-Jun-20,2.093,0.248,Summer,3,Summer,seasonal
+163,98,CT-PHEL,Connecticut,04-Spring 2020,5-Jun-20,4.302,0.488,Summer,3,Summer,seasonal
+166,97,CT-UNIO,Connecticut,04-Spring 2020,5-Jun-20,3.001,0.177,Summer,3,Summer,seasonal
+159,140,CT-W9,Connecticut,04-Spring 2020,6-Jun-20,1.192,0.232,Summer,3,Summer,seasonal
+161,101,CT-FARM,Connecticut,04-Spring 2020,6-Jun-20,2.813,0.707,Summer,3,Summer,seasonal
+162,,CT-NEPA,Connecticut,04-Spring 2020,6-Jun-20,2.951,0.17,Summer,6,Summer,monthly
+164,102,CT-STIL,Connecticut,04-Spring 2020,6-Jun-20,3.538,0.431,Summer,3,Summer,seasonal
+165,100,CT-THOM,Connecticut,04-Spring 2020,6-Jun-20,2.72,0.544,Summer,3,Summer,monthly
+140,151,DES-MOO,Deschutes,99-Monthly,21-Jun-20,0.9,0.023,Summer,3,Summer,monthly
+228,150,WIL-POR,Willamette,99-Monthly,21-Jun-20,1.359,0.129,Summer,3,Summer,monthly
+147,,GUN-GRJ,Gunnison,99-Monthly,23-Jun-20,3.998,0.177,Summer,6,Summer,monthly
+224,152,DES-MOO,Deschutes,99-Monthly,30-Jul-20,0.901,0.038,Summer,3,Summer,monthly
+229,153,WIL-POR,Willamette,99-Monthly,30-Jul-20,1.28,0.035,Summer,3,Summer,monthly
+169,,GUN-GRJ,Gunnison,99-Monthly,5-Aug-20,4.007,0.021,Summer,8,Summer,monthly
+167,,CT-THOM,Connecticut,99-Monthly,30-Aug-20,2.992,0.127,Summer,8,Summer,monthly
+225,154,DES-MOO,Deschutes,99-Monthly,3-Sep-20,0.764,0.002,Fall,4,Summer,monthly
+230,155,WIL-POR,Willamette,99-Monthly,3-Sep-20,1.039,0.26,Fall,4,Summer,monthly
+234,,GUN-GRJ,Gunnison,99-Monthly,23-Sep-20,,,Fall,9,Fall,monthly
+168,,CT-THOM,Connecticut,99-Monthly,1-Oct-20,2.708,0.573,Fall,10,Fall,monthly
+226,84,DES-MOO,Deschutes,99-Monthly,2-Oct-20,,,Fall,10,Fall,seasonal

@@ -1,3 +1,6 @@
+Author: Kevin A. Ryan, karyan@usgs.gov
+2024
+
 r1_sample_meta.R
   input: sample IDs output from putative biochemical transformation calculation
   input: sample site and dates for Yakima watershed

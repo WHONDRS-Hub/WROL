@@ -1,7 +1,11 @@
+# Author: Kevin A. Ryan, karyan@usgs.gov
+# 2024
+
 #0.0 Setup----
 library(here)
 here <- here()
 library(tidyverse)
+install.packages("naniar")
 library(naniar)
 library(rstatix)
 

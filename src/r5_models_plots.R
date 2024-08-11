@@ -1,3 +1,6 @@
+# Author: Kevin A. Ryan, karyan@usgs.gov
+# 2024
+
 #0.0 Setup----
 library(here)
 here <- here()
@@ -310,7 +313,7 @@ dat5 %>%
   theme(axis.text.x = element_text(size= 9),
         strip.placement = "outside")
 
-ggsave(paste0(here, "/output/plots/f2_DepVarsVsWsArea_mean2.png"),
+ggsave(paste0(here, "/output/plots/f2_DepVarsVsWsArea_mean.png"),
        width = 8, height = 6)
 
 
