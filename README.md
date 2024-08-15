@@ -1,13 +1,15 @@
-# WROL-RC2 Readme
+# rcsfa-RC4-WROL-YRB_DOM_Diversity
 
-This repository includes ultra-high resolution mass spectrometry data collected via FT-ICR-MS for the Watershed Rules of Life Project (WROL) and the RC-SFA Research Campaign 2 (RC2) Temporal Study samples. 
+#### Data and scripts associated with “Riverine dissolved organic matter transformations increase with watershed area, water residence time, and Damköhler numbers in nested watersheds”
+Kevin Ryan, Vanessa A. Garayburu-Caruso, Byron Crump, Ted Bambakidis, Peter Raymond, Shaoda Liu, Beck Powers-McCormack, Brieanne Forbes, James Stegen
+## Summary
+This data package is associated with the publication “Riverine dissolved organic matter transformations increase with watershed area, water residence time, and Damköhler numbers in nested watersheds” submitted to Biogeochemistry by Ryan et al., 2024 (DOI: https://doi.org/10.1007/s10533-024-01169-5).  
 
-WROL samples were collected across the Connecticut River, Deschutes River, Gunnison River, and Willamette River watersheds. Data collected and analyzed for this project can be accessed via [ESS-DIVE](https://data.ess-dive.lbl.gov/view/doi:10.15485/1895159)
-
-RC2 temporal samples were collected across 7 sites within the Yakima River Basin in Washington State 2021 to 2022. Data collected and analyzed for this project can be accessed via [ESS-DIVE](https://data.ess-dive.lbl.gov/view/doi:10.15485/1898912)
-
-## FT-ICR-MS Data Readme
-FT-ICR-MS raw data (XML files) were processed following instructions in the “FTICR_Instructions-Report_Generation_SOP_v3.pdf” document present in the ESS-DIVE data package. Molecular formula were assigned using [Formultitude](https://github.com/PNNL-Comp-Mass-Spec/Formultitude) (formerly Formularity) software. Data were further processed and sample molecular properties were assigned using the R package “ftmsRanalysis”. The outputs from these steps are referenced as "Formultitude_Output_Folder" within the scripts in this data package.  
-
-Further, poorly calibrated samples were removed from the dataset and sample replicates from each site were merge such that a peak was kept in the merged sample if it was present in at least one of the reps. This step is computed within src/Removing_poorly_calibrated_and_merge_reps.R script. Putative biochemical transformations were inferred following protocols previously described in [Garayburu-Caruso et al., 2020](https://www.mdpi.com/2218-1989/10/12/518/htm). Briefly, pairwise mass differences were calculated between every peak (with and without molecular formula assigned) in a merged sample and compared to a reference list of reference transformations (Transformation_Database_07-2020,csv). Mass differences were matched to the compounds in the reference list (within 1 ppm) to infer the gain or loss of that compound via a biochemical transformation. 
-Total number of transformations per sample and total number of transformations normalized per number of peaks in a sample were calculated. 
+This study aims to investigate fundamental and transferable drivers of dissolved organic matter (DOM) diversity across five nested watersheds within the contiguous United States. DOM diversity was explored using ultrahigh-resolution Fourier transform ion cyclotron resonance mass spectrometry (FTICR-MS). The samples and the unprocessed FTICR-MS data used in this study are publicly available on the Environmental System Science Data Infrastructure for a Virtual Ecosystem (ESS-DIVE) data repository (see DOIs below). The data for the Willamette, Gunnison, Connecticut, and Deschutes basins were collected as part of a collaboration between the Watershed Rules of Life (WROL) project and Worldwide Hydrobiogeochemistry Observation Network for Dynamic River Systems (WHONDRS). The data for the Yakima River basin (YRB) was collected by the PNNL River Corridor SFA. The raw, unprocessed FTICR-MS data with additional (meta)data can be found at [doi:10.15485/1895159](https://data.ess-dive.lbl.gov/view/doi:10.15485/1895159) for WROL samples and [doi:10.15485/1898912](https://data.ess-dive.lbl.gov/view/doi:10.15485/1898912) for YRB samples. This data package contains the processed data used in the associated manuscript. This package also contains ancillary geospatial, hydrological, and geochemical information that supports the interpretation of the FTICR-MS data within Ryan et al., 2024.
+## Manuscript Reference
+Ryan, K.A., Garayburu-Caruso, V.A., Crump, B.C. et al. Riverine dissolved organic matter transformations increase with watershed area, water residence time, and Damköhler numbers in nested watersheds. Biogeochemistry (2024). https://doi.org/10.1007/s10533-024-01169-5
+## Data Reference
+Ryan K ; Garayburu-Caruso V A ; Crump B ; Bambakidis T ; Raymond P ; Liu S ; Powers-McCormack B ; Forbes B ; Stegen J (2024): Data and scripts associated with “Riverine dissolved organic matter transformations increase with watershed area, water residence time, and Damköhler numbers in nested watersheds”. River Corridor and Watershed Biogeochemistry SFA, ESS-DIVE repository. Dataset. doi:10.15485/2406989 accessed via https://data.ess-dive.lbl.gov/datasets/doi:10.15485/2406989
+## Contact
+- Kevin A. Ryan, karyan@usgs.gov  
+- Vanessa Garayburu-Caruso, vanessa.garayburu-caruso@pnnl.gov
