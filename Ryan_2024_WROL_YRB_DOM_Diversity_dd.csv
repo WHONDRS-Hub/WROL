@@ -16,7 +16,6 @@ AI_Mod,N/A,Modified aromaticity index calculated as per Koch and Dittmar; 2006; 
 Amino_Sugar,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class.,numeric,column_header
 Amino_Sugar_norm,peaks,Number of molecular formulae in the Amino_Sugar-like chemical class divided by the total number of molecular formulae in a sample.,numeric,column_header
 C,N/A,Carbon atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
-C/N,N/A,Carbon and Nitrogen ratio.,numeric,column_header
 C13,N/A,Isotopic atoms in the analyzed molecule. Identified by an algorithm in Kujawinski and Behn 2006 and modified as described in Tfaily et al.; 2017.,numeric,column_header
 CHO,peaks,Total number of CHO (carbon-hydrogen-oxygen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
 CHON,peaks,Total number of CHON (carbon-hydrogen-oxygen-nitrogen) molecular formulae identified by Fourier-transform ion cyclotron resonance mass spectrometry (FTICR-MS).,numeric,column_header
@@ -225,8 +224,6 @@ Site,N/A,Sampling site.,text,column_header
 Site_ID,N/A,Site ID. Three-digit alphanumeric code used to identify site.,text,column_header
 Site_Name,N/A,Name of site.,text,column_header
 Standard,N/A,Environmental System Science Data Infrastructure for a Virtual Ecosystem (ESS-DIVE) Reporting Format or other standard applied to the data file.,text,column_header
-TN,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
-TN_SD,N/A,Standard deviation for total dissolved nitrogen concentrations.,numeric,column_header
 TN_mgL,milligrams per liter,Total dissolved nitrogen concentration. The following columns are synonymous: TN; TN_mgL.,numeric,column_header
 TSS_mgL,milligrams per liter,Total suspended solids concentration.,numeric,column_header
 Tannin,peaks,Number of molecular formulae in the Tannin-like chemical class.,numeric,column_header
