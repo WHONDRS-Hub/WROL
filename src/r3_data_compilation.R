@@ -53,10 +53,9 @@ chem_wrol <- read_csv(paste0(here, "/data/ancillary_chemistry/wrol_chem_20230915
   left_join(., meta %>% select(sample, dataset, sample_n),
             by = c("dataset", "sample_n")) %>% 
   drop_na(sample) %>% #Some HRMS samples excluded due to poor mass calibration
-  rename("DOC_mgL" = "DOC",
-         "TN_mgL" = "TN") %>% 
-  select(sample, DOC_mgL, TN_mgL) %>% 
-  mutate(across(.cols = DOC_mgL:TN_mgL, .fns = as.numeric))
+  rename("DOC_mgL" = "DOC") %>% 
+  select(sample, DOC_mgL) %>% 
+  mutate(DOC_mgL = as.numeric(DOC_mgL))
 
 
 #Check for duplicates
