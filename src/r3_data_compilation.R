@@ -66,13 +66,14 @@ chem_wrol %>% count(sample) %>% filter(n>1)
 chem_yrb <- read_csv(paste0(here, "/data/ancillary_chemistry/RC2_NPOC_TN_DIC_TSS_Ions_Summary_2021-2022.csv"),
                      skip = 2) %>% 
   slice(-c(1:11, 205)) %>% 
-  select(-c(Field_Name, Material)) %>% 
+  select(-c(Field_Name, Material, Mean_Missing_Reps)) %>% 
   rename("sample" = "Sample_Name",
          "DOC_mgL" = "Mean_00681_NPOC_mg_per_L_as_C",
-         "TN_mgL" = "Mean_00602_TN_mg_per_L_as_N") %>% 
-  select(sample, DOC_mgL, TN_mgL) %>% 
-  mutate(across(.cols = DOC_mgL:TN_mgL, .fns = as.numeric)) %>% 
-  mutate(across(.cols = DOC_mgL:TN_mgL,
+         "TN_mgL" = "Mean_00602_TN_mg_per_L_as_N",
+         "TSS_mgL" = "Mean_00530_TSS_mg_per_L") %>% 
+  select(sample, DOC_mgL, TN_mgL, TSS_mgL) %>% 
+  mutate(across(.cols = DOC_mgL:TSS_mgL, .fns = as.numeric)) %>% 
+  mutate(across(.cols = DOC_mgL:TSS_mgL,
                 .fns = ~case_when(.x < 0 ~ NA_real_,
                                   TRUE ~ .x)))
 
